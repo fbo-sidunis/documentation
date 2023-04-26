@@ -1,0 +1,88 @@
+{
+	"/": {
+		"alias": "root",
+		"vars": {
+			"p": "Documentation:Home:render",
+			"t": "@Documentation/documentation.html.twig",
+			"a": 0
+		}
+	},
+	"/doc/": {
+		"alias": "doc",
+		"vars": {
+			"p": "Documentation:Home:render",
+			"t": "@Documentation/documentation.html.twig",
+			"a": 0
+		}
+	},
+	"/doc/image/upload/file/": {
+		"alias": "image_upload_file",
+		"vars": {
+			"p": "Documentation:Image:uploadByFile",
+			"a": 0
+		}
+	},
+	"/doc/image/upload/url/": {
+		"alias": "image_upload_url",
+		"vars": {
+			"p": "Documentation:Image:uploadByUrl",
+			"a": 0
+		}
+	},
+	"/doc/page/save/": {
+		"alias": "page_save",
+		"vars": {
+			"p": "Documentation:Page:save",
+			"a": 0
+		}
+	},
+	"/doc/page/get/": {
+		"alias": "page_get",
+		"vars": {
+			"p": "Documentation:Page:get",
+			"a": 0
+		}
+	},
+	"/doc/menu/get/": {
+		"alias": "menu_get",
+		"vars": {
+			"p": "Documentation:Menu:get",
+			"a": 0
+		}
+	},
+	"/doc/menu/save/": {
+		"alias": "menu_save",
+		"vars": {
+			"p": "Documentation:Menu:saveMenu",
+			"a": 0
+		}
+	},
+	"/doc/menu/delete/": {
+		"alias": "menu_delete",
+		"vars": {
+			"p": "Documentation:Menu:removeMenu",
+			"a": 0
+		}
+	},
+	"/doc/menu/item/delete/": {
+		"alias": "menu_delete_item",
+		"vars": {
+			"p": "Documentation:Menu:removeItem",
+			"a": 0
+		}
+	},
+	"/doc/menu/item/save/": {
+		"alias": "menu_save_item",
+		"vars": {
+			"p": "Documentation:Menu:saveItem",
+			"a": 0
+		}
+	},
+	"/doc/menu/item/move/": {
+		"alias": "menu_move_item",
+		"vars": {
+			"p": "Documentation:Menu:moveItem",
+			"a": 0
+		}
+	}
+}

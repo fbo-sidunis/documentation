@@ -1,0 +1,52 @@
+{# layout.html.twig #}
+<!DOCTYPE html>
+<html lang="{{ Translator.getLocale() }}">
+  {% block head %}
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="robots" content="noindex, nofollow" />
+      <meta charset="UTF-8" />
+      {% block title %}
+        <title>{{ SITE_TITLE }}</title>
+      {% endblock %}
+      <script>console.clear()</script>
+      {{ jsconst('SITE_TITLE', SITE_TITLE) }}
+      {{ jsconst('ROOT_URL', ROOT_URL) }}
+      {{ jsconst('SITE_URL', SITE_URL) }}
+      {{ jsconst('LIBRARY_URL', LIBRARY_URL) }}
+      {{ jsconst('ROUTES', Route.getRoutes()) }}
+      {{ jsconst('LOCALE', Translator.getLocale()) }}
+      {{ jsconst('TRANSLATIONS', Translator.getTranslations()) }}
+      {{ jsconst('DEBUG', SITE.CONFIG.DEBUG) }}
+      {{ jsconst('AUTODEBUG', SITE.CONFIG.AUTODEBUG) }}
+      {{ script('cores/common/js/functions.js') }}
+      {{ script('cores/common/js/class/Route.js') }}
+      {{ script('vendor/components/jquery/jquery.min.js') }}
+      {{ script('cores/common/js/ajax.js') }}
+      {{ script('vendor/npm-asset/twig/twig.min.js') }}
+      {{ script('vendor/twbs/bootstrap/dist/js/bootstrap.min.js') }}
+      {{ style('vendor/twbs/bootstrap/dist/css/bootstrap.min.css') }}
+      {{ style('libs/font-awesome/css/all.min.css') }}
+      {{ script('libs/sweetalert2/sweetalert2.all.min.js') }}
+      {{ script('libs/bootstrap-select/bootstrap-select.min.js') }}
+      {{ script('libs/bootstrap-select/i18n/defaults-fr_FR.min.js') }}
+      {{ icon('favicon.ico') }}
+      {% block include_libs %}
+        {{ style('css/dist/styles.css') }}
+        {{ script('js/common.js') }}
+      {% endblock %}
+      {% block include_additional_libs %}{% endblock %}
+    </head>
+  {% endblock %}
+  <body id="p_body">
+    {% block body %}
+      <div class="d-flex">
+        {% block nav %}{% endblock %}
+        <div class="flex-grow-1">
+          {% block header %}{% endblock %}
+          {% block content %}{% endblock %}
+        </div>
+      </div>
+    {% endblock %}
+  </body>
+</html>

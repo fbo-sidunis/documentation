@@ -1,0 +1,48 @@
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+main {
+  height: 100vh;
+  height: -webkit-fill-available;
+  max-height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.dropdown-toggle {
+  outline: 0;
+}
+
+.btn-toggle {
+  font-weight: 600;
+  color: rgb(209, 205, 199);
+  background-color: transparent;
+  width: 1.25em;
+  color: rgb(209, 205, 199);
+  > i {
+    transition: transform 0.35s ease;
+  }
+  &[aria-expanded="true"] > i {
+    transform-origin: 50% 50%;
+    transform: rotate(90deg);
+  }
+}
+
+a.menu-entry {
+  &:hover,
+  &:focus,
+  &.active {
+    color: rgb(209, 205, 199);
+    background-color: rgb(17, 68, 57);
+  }
+}
+
+.scrollarea {
+  overflow-y: auto;
+}

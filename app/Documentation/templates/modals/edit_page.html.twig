@@ -1,0 +1,66 @@
+<div class="modal bg-dark py-5"
+	tabindex="-1"
+	role="dialog"
+	id="modal_edit_page">
+	<div class="modal-dialog modal-xl" role="document">
+		<div class="modal-content rounded-4 shadow">
+			<div class="modal-header p-5 pb-4 border-bottom-0">
+				<!-- <h1 class="modal-title fs-5" >Modal title</h1> -->
+				<h1 id="modal_edit_page_title" class="fw-bold mb-0 fs-2">
+					Edition d'une page
+				</h1>
+				<button type="button"
+					class="btn-close"
+					data-bs-dismiss="modal"
+					aria-label="Close"></button>
+			</div>
+
+			<div class="modal-body p-5 pt-0">
+				{% set form = formBuilder('page') %}
+				{{ form.begin() }}
+				{{
+					form.input(
+						'fullPath',
+						{
+							attributes: {
+								'data-col': 'fullPath',
+								type: 'hidden'
+							}
+						}
+					)
+				}}
+				{{
+					form.group(
+						'title',
+						{
+							type: 'input',
+							label: 'Titre',
+							attributes: {
+								'data-col': 'title'
+							}
+						}
+					)
+				}}
+				{{
+					form.group(
+						'content',
+						{
+							type: 'textarea',
+							label: 'Contenu',
+							attributes: {
+								'data-col': 'content'
+							}
+						}
+					)
+				}}
+				{{ form.end() }}
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-dark" id="button_save_page">
+					<i class="fas fa-save mr-2"></i>
+					<span>Sauvegarder</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

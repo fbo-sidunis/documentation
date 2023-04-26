@@ -1,0 +1,23 @@
+{
+	"require": {
+		"groupefbo/ezframe": "dev-main",
+		"php-curl-class/php-curl-class": "^9.14",
+		"npm-asset/twig": "^1.16"
+	},
+	"autoload": {
+		"psr-4": {
+			"App\\": [
+				"app/"
+			],
+			"Helper\\": [
+				"helpers/"
+			]
+		}
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://asset-packagist.org"
+		}
+	]
+}

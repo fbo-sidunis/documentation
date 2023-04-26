@@ -1,0 +1,16 @@
+{
+  "/db/": {
+    "alias": "eztool_db",
+    "vars": {
+      "m": "EzTools",
+      "c": "Database",
+      "f": "render"
+    }
+  },
+  "/error/path/":{
+    "alias": "path_error",
+    "vars": {
+      "p": "EzTools:Error:pathError"
+    }
+  }
+}

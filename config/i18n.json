@@ -1,0 +1,17 @@
+{
+	"DESCRIPTION": {
+		"fr": "DESCRIPTION",
+		"en": "DESCRIPTION",
+		"es": "DESCRIPCION"
+	},
+	"SEARCH_PLACEHOLDER": {
+		"fr": "Recherche",
+		"en": "Search",
+		"es": "Buscar"
+	},
+	"TITRE": {
+		"fr": "TITRE",
+		"en": "TITLE",
+		"es": "TITULO"
+	}
+}

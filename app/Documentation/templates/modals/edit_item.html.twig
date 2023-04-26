@@ -1,0 +1,88 @@
+<div class="modal bg-dark py-5"
+	tabindex="-1"
+	role="dialog"
+	id="modal_edit_item">
+	<div class="modal-dialog modal-xl" role="document">
+		<div class="modal-content rounded-4 shadow">
+			<div class="modal-header p-5 pb-4 border-bottom-0">
+				<!-- <h1 class="modal-title fs-5" >Modal title</h1> -->
+				<h1 id="modal_edit_item_title" class="fw-bold mb-0 fs-2">
+					Edition d'un item
+				</h1>
+				<button type="button"
+					class="btn-close"
+					data-bs-dismiss="modal"
+					aria-label="Close"></button>
+			</div>
+
+			<div class="modal-body p-5 pt-0">
+				{% set form = formBuilder('item') %}
+				{{ form.begin() }}
+				{{
+					form.input(
+						'fullPath',
+						{
+							attributes: {
+								'data-col': 'fullPath',
+								type: 'hidden'
+							}
+						}
+					)
+				}}
+				{{
+					form.input(
+						'path',
+						{
+							attributes: {
+								'data-col': 'path',
+								type: 'hidden'
+							}
+						}
+					)
+				}}
+				{{
+					form.input(
+						'action',
+						{
+							attributes: {
+								'data-col': 'action',
+								type: 'hidden'
+							}
+						}
+					)
+				}}
+				{{
+					form.group(
+						'itemName',
+						{
+							type: 'input',
+							label: 'Nom',
+							attributes: {
+								'data-col': 'itemName'
+							}
+						}
+					)
+				}}
+				{{
+					form.group(
+						'title',
+						{
+							type: 'input',
+							label: 'Titre',
+							attributes: {
+								'data-col': 'title'
+							}
+						}
+					)
+				}}
+				{{ form.end() }}
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-dark" id="button_save_item">
+					<i class="fas fa-save mr-2"></i>
+					<span>Sauvegarder</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
