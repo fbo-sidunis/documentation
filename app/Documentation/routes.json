@@ -84,5 +84,12 @@
 			"p": "Documentation:Menu:moveItem",
 			"a": 0
 		}
+	},
+	"/doc/search/": {
+		"alias": "doc_search",
+		"vars": {
+			"p": "Documentation:Recherche:recherche",
+			"a": 0
+		}
 	}
 }

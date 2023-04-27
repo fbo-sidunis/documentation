@@ -123,13 +123,7 @@ class Branch extends Tree
 
   public function getFullPath()
   {
-    $path = $this->name;
-    $parent = $this->parent;
-    while ($parent instanceof Branch) {
-      $path = $parent->name . "." . $path;
-      $parent = $parent->parent;
-    }
-    return $path;
+    return implode(".", $this->getFullPathArray());
   }
 
   public static function repercussionContent()
@@ -138,5 +132,62 @@ class Branch extends Tree
       $content = Content::getByFullPath($oldFullPath);
       $content->setFullPath($newFullPath);
     }
+  }
+
+  public function getFullPathArray()
+  {
+    $path = [$this->name];
+    $parent = $this->parent;
+    while ($parent instanceof Branch) {
+      array_unshift($path, $parent->name);
+      $parent = $parent->parent;
+    }
+    return $path;
+  }
+
+  public function getFilAriane()
+  {
+    $path = [$this];
+    $parent = $this->parent;
+    while ($parent instanceof Branch) {
+      $path[] = $parent;
+      $parent = $parent->parent;
+    }
+    return array_reverse($path);
+  }
+
+  public function getFilArianeString()
+  {
+    $filAriane = $this->getFilAriane();
+    return implode(" > ", array_map(function ($item) {
+      return $item->title;
+    }, $filAriane));
+  }
+
+  public function getChildren()
+  {
+    return $this->children;
+  }
+
+  /**
+   * On récupère un score selon le nombre de termes trouvés dans le titre (rapporte plus de points que dans le contenu) et le contenu, si les mots sont retrouvés dans l'ordre dans le contenu, on rapporte plus de points
+   * @param array $terms 
+   * @return mixed 
+   */
+  public function getScore(array $terms)
+  {
+    $contenu = Content::getByFullPath($this->getFullPath())->getRawTextContent();
+    $score = 0;
+    foreach ($terms as $term) {
+      $score += substr_count(self::cleanString($this->title), self::cleanString($term)) * 2;
+      $score += substr_count(self::cleanString($contenu), self::cleanString($term));
+      $score += substr_count(self::cleanString($this->name), self::cleanString($term)) * 2;
+    }
+    return $score;
+  }
+
+  public static function cleanString($string)
+  {
+    return stripAccents(strtolower(trim($string)));
   }
 }

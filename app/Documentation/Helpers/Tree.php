@@ -34,7 +34,11 @@ class Tree
 
   public function save()
   {
-    file_put_contents(self::FILE, json_encode($this->toArray()));
+    $json = preg_replace_callback('/^ +/m', function ($m) {
+      return str_repeat("\t", strlen($m[0]) / 4);
+      // return str_repeat(' ', strlen($m[0]) / 2);
+    }, json_encode($this->toArray(), JSON_PRETTY_PRINT));
+    file_put_contents(self::FILE, $json, 0);
     Branch::repercussionContent();
   }
 
@@ -126,5 +130,25 @@ class Tree
       }
     }
     return null;
+  }
+
+  /**
+   * 
+   * @return Branch[] 
+   */
+  public static function getListBranches()
+  {
+    $tree = self::getTree();
+    return $tree->getAllChildren();
+  }
+
+  public function getAllChildren()
+  {
+    $list = [];
+    foreach ($this->children as $child) {
+      $list[] = $child;
+      $list = array_merge($list, $child->getAllChildren());
+    }
+    return $list;
   }
 }

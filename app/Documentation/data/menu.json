@@ -1,1 +1,21 @@
-{"pour-commencer":{"name":"pour-commencer","title":"Pour commencer...","position":0,"items":{"presentation":{"name":"presentation","title":"Pr\u00e9sentation","position":0,"items":[]},"installation":{"name":"installation","title":"Installation","position":1,"items":[]}}}}
+{
+	"pour-commencer": {
+		"name": "pour-commencer",
+		"title": "Pour commencer...",
+		"position": 0,
+		"items": {
+			"presentation": {
+				"name": "presentation",
+				"title": "Pr\u00e9sentation",
+				"position": 0,
+				"items": []
+			},
+			"installation": {
+				"name": "installation",
+				"title": "Installation",
+				"position": 1,
+				"items": []
+			}
+		}
+	}
+}

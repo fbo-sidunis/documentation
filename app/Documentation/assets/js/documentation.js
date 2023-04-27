@@ -8,3 +8,4 @@ window.Menu = Menu;
 
 Page.init();
 Menu.init();
+Recherche.init();

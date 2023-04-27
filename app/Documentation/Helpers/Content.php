@@ -94,6 +94,29 @@ class Content
     return $this->title;
   }
 
+  public function getRawTextContent()
+  {
+    $blocks = $this->content["blocks"] ?? [];
+    $text = "";
+    foreach ($blocks as $block) {
+      $data = $block["data"] ?? [];
+      foreach ($data as $key => $value) {
+        switch ($key) {
+          case "code":
+          case "text":
+            $text .= $value . "\n";
+            break;
+          case "items":
+            foreach ($value as $item) {
+              $text .= $item . "\n";
+            }
+            break;
+        }
+      }
+    }
+    return $text;
+  }
+
   public function setTitle($title)
   {
     $this->title = $title;
