@@ -22,7 +22,11 @@ class Content
 
   public static function saveRawContents()
   {
-    file_put_contents(self::FILE, json_encode(self::$rawContents), 0);
+    $json = preg_replace_callback('/^ +/m', function ($m) {
+      return str_repeat("\t", strlen($m[0]) / 4);
+      // return str_repeat(' ', strlen($m[0]) / 2);
+    }, json_encode(self::$rawContents, JSON_PRETTY_PRINT));
+    file_put_contents(self::FILE, $json, 0);
   }
 
   public static function addRawContent($fullPath, $content)

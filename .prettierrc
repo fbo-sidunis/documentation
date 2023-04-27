@@ -1,7 +1,7 @@
 {
 	"tabWidth": 2,
-	"printWidth": 120,
-	"useTabs": false,
-	"trailingComma": "es5",
+	"printWidth": 240,
+	"useTabs": true,
+	"trailingComma": "all",
 	"plugins": ["./node_modules/@supersoniks/prettier-plugin-twig-melody"]
 }

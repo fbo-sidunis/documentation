@@ -12,18 +12,18 @@
 		{% for name, menu in menus %}
 			{% set fullPath = path ? path ~ '.' ~ name : name %}
 			<li class="mb-1">
-				<div class="d-flex">
-					<div class="flex-grow-1">
+				<div class="d-flex align-content-stretch flex-nowrap">
+					<div class="d-flex flex-grow-1 flex-nowrap">
 						{% if menu.items ?? false %}
 							<button class="btn btn-toggle border-0 align-middle"
 								data-bs-toggle="collapse"
 								data-bs-target="#menu_{{ fullPath|replace('.', '_') }}_collapse"
 								aria-expanded="true">
-								<i class="fa-solid fa-angle-right"></i>
+								<i class="fass fa-angle-right"></i>
 							</button>
 						{% endif %}
 						<a href="javascript:void(0);"
-							class="menu-entry d-inline-flex text-decoration-none text-white rounded align-middle p-1"
+							class="menu-entry d-inline-flex flex-nowrap text-decoration-none text-white rounded align-middle p-1"
 							data-name="{{ name }}"
 							data-path="{{ path }}"
 							data-full-path="{{ fullPath }}">
@@ -35,24 +35,24 @@
 							<button class="button-edit-menu-item btn btn-dark btn-sm"
 								data-full-path="{{ fullPath }}"
 								title="Modifier">
-								<i class="fas fa-edit"></i>
+								<i class="fass fa-pen-to-square"></i>
 							</button>
 							<button class="button-delete-menu-item btn btn-dark btn-sm"
 								data-full-path="{{ fullPath }}"
 								title="Supprimer">
-								<i class="fas fa-trash"></i>
+								<i class="fass fa-trash"></i>
 							</button>
 							<button class="button-move-menu-item btn btn-dark btn-sm"
 								data-direction="up"
 								data-full-path="{{ fullPath }}"
 								title="Décaler vers le haut">
-								<i class="fas fa-arrow-up"></i>
+								<i class="fass fa-arrow-up"></i>
 							</button>
 							<button class="button-move-menu-item btn btn-dark btn-sm"
 								data-direction="down"
 								data-full-path="{{ fullPath }}"
 								title="Décaler vers le bas">
-								<i class="fas fa-arrow-down"></i>
+								<i class="fass fa-arrow-down"></i>
 							</button>
 						</div>
 					{% endif %}
@@ -71,7 +71,7 @@
 							<li class="mb-1">
 								<button class="button-add-menu-item btn btn-dark btn-sm"
 									data-path="{{ fullPath }}">
-									<i class="fas fa-plus ml-2"></i>
+									<i class="fass fa-plus ml-2"></i>
 									<span>Ajouter un menu</span>
 								</button>
 							</li>
@@ -84,7 +84,7 @@
 			<li class="mb-1">
 				<button class="button-add-menu-item btn btn-dark btn-sm"
 					data-path="{{ path }}">
-					<i class="fas fa-plus ml-2"></i>
+					<i class="fass fa-plus ml-2"></i>
 					<span>Ajouter un menu</span>
 				</button>
 			</li>

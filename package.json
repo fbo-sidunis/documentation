@@ -1,6 +1,7 @@
 {
   "dependencies": {},
   "devDependencies": {
-    "@supersoniks/prettier-plugin-twig-melody": "^1.0.2"
+    "@supersoniks/prettier-plugin-twig-melody": "^1.0.2",
+    "@prettier/plugin-php": "^0.19.4"
   }
 }
