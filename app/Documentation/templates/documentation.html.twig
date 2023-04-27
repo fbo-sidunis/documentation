@@ -1,59 +1,59 @@
 {% extends '@Documentation/layout.html.twig' %}
 
 {% block include_additional_libs %}
-  {{ jsconst('STATE', STATE) }}
-  {{ script('helpers/js/Form.js') }}
-  {{ script('libs/highlight/highlight.min.js') }}
-  {{ style('libs/highlight/themes/atom-one-dark.min.css') }}
-  {{ script('libs/editor/editor.js') }}
-  {{ script('libs/editor/parser.js') }}
-  {{ script('libs/editor/mods/code.js') }}
-  {{ script('libs/editor/mods/header.js') }}
-  {{ script('libs/editor/mods/image.js') }}
-  {{ script('libs/editor/mods/list.js') }}
-  {{ script('libs/editor/mods/raw.js') }}
-  {{ script('libs/editor/mods/table.js') }}
-  {{ script('libs/editor/mods/nested-list.js') }}
-  {{
-    script(
-      'app/Documentation/assets/js/documentation.js',
-      {
-        attributes: {
-          type: 'module'
-        }
-      }
-    )
-  }}
+	{{ jsconst('STATE', STATE) }}
+	{{ script('helpers/js/Form.js') }}
+	{{ script('libs/highlight/highlight.min.js') }}
+	{{ style('libs/highlight/themes/atom-one-dark.min.css') }}
+	{{ script('libs/editor/editor.js') }}
+	{{ script('libs/editor/parser.js') }}
+	{{ script('libs/editor/mods/code.js') }}
+	{{ script('libs/editor/mods/header.js') }}
+	{{ script('libs/editor/mods/image.js') }}
+	{{ script('libs/editor/mods/list.js') }}
+	{{ script('libs/editor/mods/raw.js') }}
+	{{ script('libs/editor/mods/table.js') }}
+	{{ script('libs/editor/mods/nested-list.js') }}
+	{{
+		script(
+			'app/Documentation/assets/js/documentation.js',
+			{
+				attributes: {
+					type: 'module'
+				}
+			}
+		)
+	}}
 {% endblock %}
 
 {% block header %}
-  {% include '@Documentation/header.html.twig' %}
+	{% include '@Documentation/header.html.twig' %}
 {% endblock %}
 
 {% block nav %}
-  {% include '@Documentation/nav.html.twig' %}
+	{% include '@Documentation/nav.html.twig' %}
 {% endblock %}
 
 {% block content %}
-  <main class="flex-grow-1 p-3">
-    <div class="d-flex justify-content-center">
-      <div class="col-12 col-md-10 col-lg-8">
-        <div class="card">
-          <div class="card-body p-4">
-            <h2 id="h2_page_title"
-              class="card-title d-flex justify-content-between">
-              <span></span>
-              <button id="button_page_edit" class="btn btn-dark">
-                <i class="fass fa-edit"></i>
-              </button>
-            </h2>
-            <hr />
-            <div id="div_page_content"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-  {{ include('@Documentation/modals/edit_item.html.twig') }}
-  {{ include('@Documentation/modals/edit_page.html.twig') }}
+	<main class="flex-grow-1 p-3 h-100">
+		<div class="d-flex justify-content-center">
+			<div class="col-12 col-md-10 col-lg-8">
+				<div class="card">
+					<div class="card-body p-4">
+						<h2 id="h2_page_title"
+							class="card-title d-flex justify-content-between">
+							<span></span>
+							<button id="button_page_edit" class="btn btn-dark">
+								<i class="fass fa-edit"></i>
+							</button>
+						</h2>
+						<hr />
+						<div id="div_page_content"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	{{ include('@Documentation/modals/edit_item.html.twig') }}
+	{{ include('@Documentation/modals/edit_page.html.twig') }}
 {% endblock %}

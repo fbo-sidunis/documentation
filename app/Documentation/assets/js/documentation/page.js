@@ -124,9 +124,8 @@ export let Page = (() => {
     },
     init() {
       this.edition.init();
-      let page = STATE.page ?? "pour_commencer";
-      this.show(page);
-      Menu.setActive(page);
+      let page = STATE.page ?? "pour-commencer";
+			this.show(page);
     },
   };
   return self;

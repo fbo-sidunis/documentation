@@ -17,7 +17,7 @@
 						{% if menu.items ?? false %}
 							<button class="btn btn-toggle border-0 align-middle"
 								data-bs-toggle="collapse"
-								data-bs-target="#menu_{{ fullPath|replace('.', '_') }}_collapse"
+								data-bs-target=".menu-collapse[data-full-path='{{ fullPath }}']"
 								aria-expanded="true">
 								<i class="fass fa-angle-right"></i>
 							</button>
@@ -58,15 +58,15 @@
 					{% endif %}
 				</div>
 				{% if menu.items ?? false %}
-					<div class="collapse show ps-1"
-						id="menu_{{ fullPath|replace('.', '_') }}_collapse">
+					<div class="menu-collapse collapse show ps-1"
+						data-full-path="{{ fullPath }}">
 						<ul class="btn-toggle-nav list-unstyled fw-normal small ps-4">
 							{{ macros.menu_html(menu.items, fullPath, editmode ?? false) }}
 						</ul>
 					</div>
 				{% elseif editmode %}
-					<div class="collapse show ps-1"
-						id="menu_{{ fullPath|replace('.', '_') }}_collapse">
+					<div class="menu-collapse collapse show ps-1"
+						data-full-path="{{ fullPath }}">
 						<ul class="btn-toggle-nav list-unstyled fw-normal small ps-4">
 							<li class="mb-1">
 								<button class="button-add-menu-item btn btn-dark btn-sm"

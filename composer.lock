@@ -116,12 +116,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fbo-sidunis/ezframe.git",
-                "reference": "987fa71cb1849c3d5af3095cdeb134e1cfc017a2"
+                "reference": "bdcc8311397ceb9df62caab07f0e41f617760b55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fbo-sidunis/ezframe/zipball/987fa71cb1849c3d5af3095cdeb134e1cfc017a2",
-                "reference": "987fa71cb1849c3d5af3095cdeb134e1cfc017a2",
+                "url": "https://api.github.com/repos/fbo-sidunis/ezframe/zipball/bdcc8311397ceb9df62caab07f0e41f617760b55",
+                "reference": "bdcc8311397ceb9df62caab07f0e41f617760b55",
                 "shasum": ""
             },
             "require": {
@@ -133,6 +133,7 @@
                 "symfony/dotenv": "^6.2",
                 "symfony/var-dumper": "~5.0",
                 "twbs/bootstrap": "~5.0",
+                "twig/inky-extra": "^3.5",
                 "twig/twig": "~3.0"
             },
             "default-branch": true,
@@ -167,7 +168,60 @@
                 "issues": "https://github.com/fbo-sidunis/ezframe/issues",
                 "source": "https://github.com/fbo-sidunis/ezframe/tree/main"
             },
-            "time": "2023-04-26T15:25:49+00:00"
+            "time": "2023-04-27T12:25:23+00:00"
+        },
+        {
+            "name": "lorenzo/pinky",
+            "version": "1.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lorenzo/pinky.git",
+                "reference": "f890472e4a25f89591f176aa03d9588a9d3332a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lorenzo/pinky/zipball/f890472e4a25f89591f176aa03d9588a9d3332a7",
+                "reference": "f890472e4a25f89591f176aa03d9588a9d3332a7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "ext-xsl": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7.27 || ^6.5.14 || ^7.5.20 || ^8.5.21 || ^9.5.10"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/pinky.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jose Lorenzo Rodriguez",
+                    "email": "jose.zap@gmail.com"
+                }
+            ],
+            "description": "A Foundation for Emails (Inky) template transpiler",
+            "keywords": [
+                "email",
+                "foundation",
+                "inky",
+                "template",
+                "zurb"
+            ],
+            "support": {
+                "issues": "https://github.com/lorenzo/pinky/issues",
+                "source": "https://github.com/lorenzo/pinky/tree/1.0.9"
+            },
+            "time": "2023-01-12T16:15:52+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1126,6 +1180,77 @@
                 "source": "https://github.com/twbs/bootstrap/tree/v5.2.3"
             },
             "time": "2022-11-21T18:19:01+00:00"
+        },
+        {
+            "name": "twig/inky-extra",
+            "version": "v3.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/inky-extra.git",
+                "reference": "4efde499b99942a27e206898e55208a8692c16ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/inky-extra/zipball/4efde499b99942a27e206898e55208a8692c16ca",
+                "reference": "4efde499b99942a27e206898e55208a8692c16ca",
+                "shasum": ""
+            },
+            "require": {
+                "lorenzo/pinky": "^1.0.5",
+                "php": ">=7.1.3",
+                "twig/twig": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "^4.4.9|^5.0.9|^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Twig\\Extra\\Inky\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "A Twig extension for the inky email templating engine",
+            "homepage": "https://twig.symfony.com",
+            "keywords": [
+                "email",
+                "emails",
+                "inky",
+                "twig"
+            ],
+            "support": {
+                "source": "https://github.com/twigphp/inky-extra/tree/v3.5.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/twig/twig",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-02-08T07:44:55+00:00"
         },
         {
             "name": "twig/twig",
