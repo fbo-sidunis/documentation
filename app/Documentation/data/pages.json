@@ -654,15 +654,283 @@
 		"fullPath": "pour-commencer.arborescence.assets"
 	},
 	"templating.macros": {
-		"title": "Fonctions",
+		"title": "Fonctions et filtres TWIG sp\u00e9cifiques au Framework",
 		"content": {
-			"time": 1682686725426,
+			"time": 1682692844286,
 			"blocks": [
 				{
-					"id": "8S0DMU9Ooj",
+					"id": "iGApZf6WZZ",
+					"type": "header",
+					"data": {
+						"text": "Pr\u00e9ambule",
+						"level": 4
+					}
+				},
+				{
+					"id": "nf5YwrNsPu",
 					"type": "paragraph",
 					"data": {
-						"text": "test"
+						"text": "Cette rubrique va traiter des fonctions et filtres qui sont sp\u00e9cifiques au framework, pour les fonctions et filtres natives \u00e0 TWIG, veuillez vous r\u00e9f\u00e9rer \u00e0 la <a href=\"https:\/\/twig.symfony.com\/doc\/3.x\/\">documentation officielle<\/a>"
+					}
+				},
+				{
+					"id": "BJftwu0kFv",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "DT3JFFyOCI",
+					"type": "header",
+					"data": {
+						"text": "Filtres",
+						"level": 4
+					}
+				},
+				{
+					"id": "89tOUzp3Ud",
+					"type": "paragraph",
+					"data": {
+						"text": "<b>json_decode<\/b><b><\/b><br>M\u00eame fonctionnement que&nbsp; <a href=\"https:\/\/www.php.net\/manual\/fr\/function.json-decode.php\">la fonction PHP du m\u00eame nom<\/a> mais sous forme de filtre<br>"
+					}
+				},
+				{
+					"id": "-ttMK4tCzs",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Param\u00e8tre",
+								"Type",
+								"Valeur par d\u00e9faut<br>",
+								"Commentaire"
+							],
+							[
+								"$json",
+								"string",
+								"\u274c",
+								"La cha\u00eene de caract\u00e8re JSON<br>"
+							],
+							[
+								"$associative",
+								"bool",
+								"false",
+								"Retourne un objet stdClass si false, un tableau associatif si true<br>"
+							],
+							[
+								"$depth",
+								"int",
+								"512",
+								"Profondeur de traitement de la cha\u00eene<br>"
+							],
+							[
+								"$flags",
+								"int",
+								"0",
+								"\nMasque de bit compris de\n       JSON_BIGINT_AS_STRING,\n       JSON_INVALID_UTF8_IGNORE,\n       JSON_INVALID_UTF8_SUBSTITUTE,\n       JSON_OBJECT_AS_ARRAY,\n       JSON_THROW_ON_ERROR. <br>"
+							]
+						]
+					}
+				},
+				{
+					"id": "zMv7Q4pTCC",
+					"type": "code",
+					"data": {
+						"code": "{% set jsonString = \"{\\\"1+1\\\":\\\"2\\\",\\\"2+2\\\":\\\"4\\\"}\"  %}\n<ul>\n  {% for operation,resultat in jsonString|json_decode(true) %}\n    <li>{{operation}} = {{resultat}}<\/li>\n  {% endfor %}\n<\/ul>\n\n{# Retourne : #}\n<ul>\n  <li>1+1 = 2<\/li>\n  <li>2+2 = 4<\/li>\n<\/ul>"
+					}
+				},
+				{
+					"id": "YsEb84_aur",
+					"type": "paragraph",
+					"data": {
+						"text": "&nbsp;"
+					}
+				},
+				{
+					"id": "zkeDJJDrMW",
+					"type": "paragraph",
+					"data": {
+						"text": "<b>mois<br><\/b>Retourne le nom du mois en fonction du num\u00e9ro de mois fourni <b><br><\/b>"
+					}
+				},
+				{
+					"id": "15FjeU1smR",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Param\u00e8tre",
+								"Type",
+								"Valeur par d\u00e9faut<br>",
+								"Commentaire"
+							],
+							[
+								"$numero",
+								"int|string",
+								"\u274c",
+								"De 1 \u00e0 12, 1 retourne janvier, 12 retourne d\u00e9cembre<br>"
+							],
+							[
+								"$capitalized",
+								"bool",
+								"false",
+								"Retourne le nom du mois capitalis\u00e9 sur true<br>"
+							]
+						]
+					}
+				},
+				{
+					"id": "rj1T28t8oD",
+					"type": "code",
+					"data": {
+						"code": "{% set date_noel = \"2023-12-25\" %}\n<span>No\u00ebl 2023 se passera sans surprise fin {{date_noel|date('n')|mois}}<\/span>\n\n{# Retourne #}\n\n<span>No\u00ebl 2023 se passera sans surprise fin d\u00e9cembre<\/span>"
+					}
+				},
+				{
+					"id": "9nq18Yv08P",
+					"type": "paragraph",
+					"data": {
+						"text": "&nbsp;"
+					}
+				},
+				{
+					"id": "k9bHh4RdWh",
+					"type": "paragraph",
+					"data": {
+						"text": "<b>jour<br><\/b>Retourne le nom du jour en fonction du num\u00e9ro de jour fourni"
+					}
+				},
+				{
+					"id": "cQOxSL0fVd",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Param\u00e8tre",
+								"Type",
+								"Valeur par d\u00e9faut",
+								"Commentaire"
+							],
+							[
+								"$numero",
+								"int|string",
+								"\u274c",
+								"De 1 \u00e0 7, 1 retourne lundi, 7 retourne dimanche<br>"
+							],
+							[
+								"$capitalized",
+								"bool",
+								"false",
+								"Retourne le nom du jour capitalis\u00e9 sur true"
+							]
+						]
+					}
+				},
+				{
+					"id": "tfgmwTXh2F",
+					"type": "code",
+					"data": {
+						"code": "{% set date_noel = \"2023-12-25\" %}\n<span>No\u00ebl 2023 se passera un {{date_noel|date('N')|jour}}<\/span>\n\n{# Retourne #}\n\n<span>No\u00ebl 2023 se passera un lundi<\/span>"
+					}
+				},
+				{
+					"id": "qaPpXR5nqw",
+					"type": "paragraph",
+					"data": {
+						"text": "&nbsp;"
+					}
+				},
+				{
+					"id": "IaiKExsEqo",
+					"type": "paragraph",
+					"data": {
+						"text": "<b>date_literale<br><\/b>Retourne une date compl\u00e8te en fran\u00e7ais, r\u00e9utilise les deux fonctions ci-dessus dans son fonctionnement<b><br><\/b>"
+					}
+				},
+				{
+					"id": "Y1EFbAwe_j",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Param\u00e8tre",
+								"Type",
+								"Valeur par d\u00e9faut<br>",
+								"Commentaire"
+							],
+							[
+								"$date",
+								"string",
+								"\u274c",
+								"La date \u00e0 convertir en texte<br>"
+							],
+							[
+								"$jourCapitalized",
+								"bool",
+								"false",
+								"Si true, le jour sera capitalis\u00e9<br>"
+							],
+							[
+								"$moisCapitalized",
+								"bool",
+								"false",
+								"Si true, le mois sera capitaliz\u00e9<br>"
+							]
+						]
+					}
+				},
+				{
+					"id": "65Nogl2rJu",
+					"type": "code",
+					"data": {
+						"code": "{% set date_noel = \"2023-12-25\" %}\n<span>Date de no\u00eal 2023 : {{date_noel|date_literale(true,true)}}<\/span>\n\n{# Retourne #}\n\n<span>Date de no\u00eal 2023 : Lundi 25 D\u00e9cembre 2023<\/span>"
+					}
+				},
+				{
+					"id": "j8sbplIhVr",
+					"type": "paragraph",
+					"data": {
+						"text": "<b>sum<\/b>"
+					}
+				},
+				{
+					"id": "H15V_8GmTc",
+					"type": "paragraph",
+					"data": {
+						"text": "<b>match<\/b>"
+					}
+				},
+				{
+					"id": "0nlj-455Er",
+					"type": "paragraph",
+					"data": {
+						"text": "<b>strip_accents<\/b>"
+					}
+				},
+				{
+					"id": "ogZr-4MoIk",
+					"type": "paragraph",
+					"data": {
+						"text": "<b>group<\/b>"
+					}
+				},
+				{
+					"id": "hUJThpfq2J",
+					"type": "paragraph",
+					"data": {
+						"text": "<b>preg_replace<\/b>"
+					}
+				},
+				{
+					"id": "VPt5v1FIwd",
+					"type": "paragraph",
+					"data": {
+						"text": "<b>time_format<\/b>"
 					}
 				}
 			],
@@ -673,16 +941,8 @@
 	"templating.constantes": {
 		"title": "Constantes Twig",
 		"content": {
-			"time": 1682686745739,
-			"blocks": [
-				{
-					"id": "zGhZQLlNTp",
-					"type": "paragraph",
-					"data": {
-						"text": "test"
-					}
-				}
-			],
+			"time": 1682686854351,
+			"blocks": [],
 			"version": "2.26.5"
 		},
 		"fullPath": "templating.constantes"

@@ -1,6 +1,15 @@
 .ce-block__content {
   background-color: white;
 }
+.ce-block__content:hover {
+  background-color: lightgray;
+}
+
+#div_page_content table td, #div_page_content table th {
+  padding: 0.5em;
+  border: 1px solid darkgray;
+  border-collapse: collapse;
+}
 
 .dropdown-toggle {
   outline: 0;
