@@ -112,7 +112,7 @@
 		"items": {
 			"macros": {
 				"name": "macros",
-				"title": "Macros Twig",
+				"title": "Fonctions et filtres",
 				"position": 0,
 				"items": []
 			},

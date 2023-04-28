@@ -43,8 +43,12 @@ export let Page = (() => {
             title: self.data.title,
             fullPath: self.data.fullPath,
           });
-          if (self.data.content) {
+          if (self.data.content && (self.data.content.blocks || []).length) {
+            console.log(self.data.content.blocks);
             this.editeur.render(self.data.content);
+          }else{
+            console.log("clear");
+            this.editeur.blocks.clear();
           }
           this.modal.show();
         });

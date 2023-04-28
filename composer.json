@@ -1,6 +1,7 @@
 {
 	"require": {
-		"groupefbo/ezframe": "dev-main"
+		"groupefbo/ezframe": "dev-main",
+		"php-curl-class/php-curl-class": "^9.14"
 	},
 	"autoload": {
 		"psr-4": {

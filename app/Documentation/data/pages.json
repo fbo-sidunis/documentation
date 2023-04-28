@@ -259,13 +259,26 @@
 	"pour-commencer.arborescence.config": {
 		"title": "config",
 		"content": {
-			"time": 1682673710509,
+			"time": 1682684446619,
 			"blocks": [
 				{
 					"id": "0efllkW-84",
 					"type": "paragraph",
 					"data": {
 						"text": "Ce dossier contient les principaux fichiers de configuration du site ainsi que le fichier de route par d\u00e9faut et le fichier de langues."
+					}
+				},
+				{
+					"id": "rF3htg0Szv",
+					"type": "image",
+					"data": {
+						"file": {
+							"url": "\/documentation\/app\/Documentation\/assets\/upload\/images\/644bb6bfa2219.png"
+						},
+						"caption": "",
+						"withBorder": false,
+						"stretched": false,
+						"withBackground": false
 					}
 				},
 				{
@@ -284,11 +297,81 @@
 					}
 				},
 				{
+					"id": "u9sWFDhMTB",
+					"type": "paragraph",
+					"data": {
+						"text": "Ce fichier permet de stocker les informations n\u00e9cessaires \u00e0 la connexion \u00e0 la base de donn\u00e9es"
+					}
+				},
+				{
+					"id": "of7ZHIlHtr",
+					"type": "paragraph",
+					"data": {
+						"text": "sous la forme : "
+					}
+				},
+				{
+					"id": "xtI9ST9BA_",
+					"type": "code",
+					"data": {
+						"code": "{\n  \"prod\": {\n    \"dbname\": \"ezframe\",\n    \"host\": \"localhost\",\n    \"port\": 3306,\n    \"username\": \"root\",\n    \"password\": \"\",\n    \"charset\": \"utf8\"\n  },\n  \"dev\": {\n    \"dbname\": \"dev_ezframe\",\n    \"host\": \"192.168.10.25\",\n    \"port\": 3306,\n    \"username\": \"root\",\n    \"password\": \"motdepass\",\n    \"charset\": \"utf8\"\n  }\n}"
+					}
+				},
+				{
+					"id": "10RVT2sD71",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
 					"id": "-dj6e4uEzB",
 					"type": "header",
 					"data": {
 						"text": "i18n.json",
 						"level": 3
+					}
+				},
+				{
+					"id": "-5LPgP_9rj",
+					"type": "paragraph",
+					"data": {
+						"text": "En d\u00e9veloppement de logiciel, l\u2019internationalisation1 (abr\u00e9g\u00e9 en i18n1, o\u00f9 18 repr\u00e9sente le nombre de caract\u00e8res entre le i et le n dans le mot) est la mise en place d\u2019un syst\u00e8me permettant la r\u00e9gionalisation du logiciel, c\u2019est-\u00e0-dire son adaptation \u00e0 des langues et des cultures diff\u00e9rentes. "
+					}
+				},
+				{
+					"id": "IoxYZm94j5",
+					"type": "paragraph",
+					"data": {
+						"text": "L\u2019objectif de l\u2019internationalisation est donc de produire un programme unique qui puisse inclure plusieurs langues pour l\u2019interface."
+					}
+				},
+				{
+					"id": "lyVDfrMLFY",
+					"type": "paragraph",
+					"data": {
+						"text": "<b>NB<\/b>: On peut \u00e9galement cr\u00e9er des fichier i18n dans les \"app\"&nbsp; qui seront donc agr\u00e9g\u00e9s \u00e0 celui-ci afin de disposer des diff\u00e9rentes traductions du site."
+					}
+				},
+				{
+					"id": "091lUiwHti",
+					"type": "paragraph",
+					"data": {
+						"text": "Il se pr\u00e9sente sous la forme"
+					}
+				},
+				{
+					"id": "dl05-OsQFP",
+					"type": "code",
+					"data": {
+						"code": "{\n\t\"CLE SERVANT A IDENTIFIER LE TEXTE A TRADUIRE\": {\n\t\t\"fr\": \"Traduction de ce texte en fran\u00e7ais\",\n\t\t\"en\": \"Traducci\u00f3n de este texto al espa\u00f1ol\",\n\t\t\"es\": \"Translation of this text into English\"\n\t},\n\t\n}"
+					}
+				},
+				{
+					"id": "MRpDTu5dp-",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
 					}
 				},
 				{
@@ -300,11 +383,53 @@
 					}
 				},
 				{
+					"id": "XXfJvIoftM",
+					"type": "paragraph",
+					"data": {
+						"text": "ce fichier permet de g\u00e9rer les routes \"par d\u00e9faut\" du site."
+					}
+				},
+				{
+					"id": "sVAELZWLzT",
+					"type": "paragraph",
+					"data": {
+						"text": "En g\u00e9n\u00e9ral, on utilisera plut\u00f4t les fichiers de routes qui se trouvent \u00e0 la racine des \"app\""
+					}
+				},
+				{
+					"id": "2uBljhwTAb",
+					"type": "paragraph",
+					"data": {
+						"text": "(voir chapitre sur le rooting)<br>"
+					}
+				},
+				{
+					"id": "dGmFIb9Pem",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
 					"id": "5XDBEU-5dU",
 					"type": "header",
 					"data": {
 						"text": "site_config.json",
 						"level": 3
+					}
+				},
+				{
+					"id": "yMN65AQa-k",
+					"type": "paragraph",
+					"data": {
+						"text": "Ce fichier sert \u00e0 stocker des variables utiles pour le fonctionnement du site et ou des applications."
+					}
+				},
+				{
+					"id": "N7AUHuZjjY",
+					"type": "code",
+					"data": {
+						"code": "{\n\t\"debug\": true,\n\t\"autodebug\": false,\n\t\"title\": \"Framework Sidunis\",\n\t\"core\": {\n\t\t\"path\": \"cores\/core\/\"\n\t},\n\t\"documentation\": {\n\t\t\"editmode\": false\n\t},\n\t\"twig\": {\n\t\t\"templates\": \"templates\/\",\n\t\t\"extensions\": [\"\\\\Core\\\\Twig\\\\TranslatorExtension\", \"\\\\Twig\\\\Extra\\\\Inky\\\\InkyExtension\"]\n\t},\n\t\"rootUrl\": \"\/\",\n\t\"domain\": {\n\t\t\"dev\": \"https:\/\/dev.example.com\",\n\t\t\"prod\": \"https:\/\/www.example.com\"\n\t},\n\t\"expiration_session\": \"+ 1 day\"\n}"
 					}
 				}
 			],
@@ -315,7 +440,7 @@
 	"templating": {
 		"title": "Moteur de templating TWIG",
 		"content": {
-			"time": 1682673416029,
+			"time": 1682685190460,
 			"blocks": [
 				{
 					"id": "ECbrwWrTlN",
@@ -328,12 +453,238 @@
 					"id": "lZDJF1sSFl",
 					"type": "paragraph",
 					"data": {
-						"text": "Les templates sont stock\u00e9s dans le r\u00e9pertoire \"\/templates\"<br>Il est cependant possible d'ajouter des r\u00e9pertoire<br>"
+						"text": "Les templates sont stock\u00e9s dans le r\u00e9pertoire \"\/templates\"<br>Lorsque vous devrez sp\u00e9cifier le chemin d'un template TWIG, il devra \u00eatre <b>imp\u00e9rativement <\/b>relatif \u00e0 ce r\u00e9pertoire.<br>"
+					}
+				},
+				{
+					"id": "ak-ImWBnLE",
+					"type": "paragraph",
+					"data": {
+						"text": "Pour faire le rendu en HTML d'un fichier TWIG depuis un contr\u00f4leur :"
+					}
+				},
+				{
+					"id": "CoU_izeDx4",
+					"type": "code",
+					"data": {
+						"code": "<?php\nnamespace App\\Example\\Controller;\nuse Core\\Controller;\nclass MenuController extends Controller\n{\n  public function exampleRenderHtml(){\n    \/\/Le code ci-dessous fera le rendu en html du fichier \/templates\/chemin\/vers\/template.html.twig\n    $html = $this->twig->render(\"chemin\/vers\/template.html.twig\",[\"data1\" => 1, \"data2\" => \"merci\"]);\n    \/\/ code avec $html...\n  }\n}\n"
+					}
+				},
+				{
+					"id": "93uQdRpGKu",
+					"type": "paragraph",
+					"data": {
+						"text": "Dans le cas o\u00f9 vous auriez besoin de faire du rendu en dehors d'un contr\u00f4leur, il faudra d'abord r\u00e9cup\u00e9rer l'environnement TWIG, comme ceci :"
+					}
+				},
+				{
+					"id": "_0zl4u_wMe",
+					"type": "code",
+					"data": {
+						"code": "$twigEnv = \\Core\\Common\\Site::getTwigEnvironnment();\n$html = $twigEnv->render(\"chemin\/vers\/template.html.twig\",[\"data1\" => 1, \"data2\" => \"merci\"]);"
+					}
+				},
+				{
+					"id": "LAM4ojCErs",
+					"type": "paragraph",
+					"data": {
+						"text": "Notre exemple de fichier TWIG :"
+					}
+				},
+				{
+					"id": "9Dfr0K9FJR",
+					"type": "code",
+					"data": {
+						"code": "{# \/templates\/chemin\/vers\/template.html.twig #}\n<div>\n  <p>\n    Mon num\u00e9ro f\u00e9tiche est le num\u00e9ro {{data1}}\n    Et je vous dis {{data2}}\n  <\/p>\n<\/div>"
+					}
+				},
+				{
+					"id": "qtk3atbl8r",
+					"type": "paragraph",
+					"data": {
+						"text": "sera transform\u00e9 en :"
+					}
+				},
+				{
+					"id": "BW0XBCriyg",
+					"type": "code",
+					"data": {
+						"code": "<div>\n  <p>\n    Mon num\u00e9ro f\u00e9tiche est le num\u00e9ro 1\n    Et je vous dis merci\n  <\/p>\n<\/div>"
+					}
+				},
+				{
+					"id": "Ntq1gCCIgz",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "vFnVPvDbPF",
+					"type": "header",
+					"data": {
+						"text": "Usage habituel dans le contr\u00f4leur",
+						"level": 4
+					}
+				},
+				{
+					"id": "DNS9cOzTRZ",
+					"type": "paragraph",
+					"data": {
+						"text": "Dans un contr\u00f4leur, nous utilisons la fonction h\u00e9rit\u00e9 de la classe \"\\Core\\Controller\" : \"display\".<br>Celle-ci fais le rendu du HTML et l'affiche juste apr\u00e8s dans le navigateur. Tout code \u00e9cris apr\u00e8s ne sera pas \u00e9xecut\u00e9"
+					}
+				},
+				{
+					"id": "lGe2ql9s07",
+					"type": "code",
+					"data": {
+						"code": "<?php\nnamespace App\\Example\\Controller;\nuse Core\\Controller;\nclass ExampleController extends Controller\n{\n  public function exampleRenderHtml()\n  {\n    return $this->display(\"chemin\/vers\/template.html.twig\",[\"data1\" => 1,\"data2\" => \"merci\"]);\n  }\n}\n"
+					}
+				},
+				{
+					"id": "cqcLIWt89e",
+					"type": "paragraph",
+					"data": {
+						"text": "Habituellement nous ne renseignons pas les param\u00e8tres de cette fonction, car nous les sp\u00e9cifions ailleurs."
+					}
+				},
+				{
+					"id": "XACAKQk_GP",
+					"type": "paragraph",
+					"data": {
+						"text": "Nous pouvons sp\u00e9cifier le template directement dans la route :"
+					}
+				},
+				{
+					"id": "91MXVnE_yq",
+					"type": "code",
+					"data": {
+						"code": "{\n  \"\/exemple\/\": {\n    \"alias\": \"example\",\n    \"vars\": {\n      \"p\": \"example:example:exampleRenderHtml\",\n      \"template\": \"chemin\/vers\/template.html.twig\"\n    }\n  }\n}"
+					}
+				},
+				{
+					"id": "31JLU_zHfK",
+					"type": "paragraph",
+					"data": {
+						"text": "Ou en tant que propri\u00e9t\u00e9 du contr\u00f4leur :"
+					}
+				},
+				{
+					"id": "pL5xpSdMPY",
+					"type": "code",
+					"data": {
+						"code": "namespace App\\Example\\Controller;\nuse Core\\Controller;\nclass ExampleController extends Controller\n{\n  protected $template = \"chemin\/vers\/template.html.twig\";\n  public function exampleRenderHtml()\n  {\n    return $this->display(null,[\"data1\" => 1,\"data2\" => \"merci\"]);\n  }\n}\n"
+					}
+				},
+				{
+					"id": "r3sPDsVPgb",
+					"type": "paragraph",
+					"data": {
+						"text": "Quand aux datas, nous pouvons les sp\u00e9cifier au fur et \u00e0 mesure dans la propri\u00e9t\u00e9 \"datas\" du contr\u00f4leur, comme ceci :<br>"
+					}
+				},
+				{
+					"id": "dVjbOS0nhg",
+					"type": "code",
+					"data": {
+						"code": "namespace App\\Example\\Controller;\nuse Core\\Controller;\nclass ExampleController extends Controller\n{\n  protected $template = \"chemin\/vers\/template.html.twig\";\n  public function exampleRenderHtml()\n  {\n    $this->datas[\"data1\"] = 1;\n    $this->datas[\"data2\"] = \"merci\";\n    return $this->display();\n  }\n}"
+					}
+				},
+				{
+					"id": "FfIMDjFQFL",
+					"type": "paragraph",
+					"data": {
+						"text": "Pour plus d'informations concernant la syntaxe \u00e0 utiliser dans les fichiers TWIG, veuillez consulter <a href=\"https:\/\/twig.symfony.com\/doc\/\">la documentation officielle<\/a>.<br>"
 					}
 				}
 			],
 			"version": "2.26.5"
 		},
 		"fullPath": "templating"
+	},
+	"pour-commencer.arborescence.assets": {
+		"title": "Assets ( Ressources )",
+		"content": {
+			"time": 1682685164364,
+			"blocks": [
+				{
+					"id": "uRJ74un3S9",
+					"type": "paragraph",
+					"data": {
+						"text": "Le dossier \"assets\"&nbsp; sert \u00e0 stocker tous les fichiers \"publiques\". ce sont les ressources du site, tels que les fichiers javascript, les fichiers css, les images.."
+					}
+				},
+				{
+					"id": "Viky3Td2Mi",
+					"type": "image",
+					"data": {
+						"file": {
+							"url": "\/documentation\/app\/Documentation\/assets\/upload\/images\/644bbc27719cf.png"
+						},
+						"caption": "",
+						"withBorder": false,
+						"stretched": false,
+						"withBackground": false
+					}
+				},
+				{
+					"id": "hCZRe5ERAg",
+					"type": "paragraph",
+					"data": {
+						"text": "NB: Dans les templates, il est possible d'aller chercher les assets en utilisant des variables pr\u00e9-d\u00e9finies."
+					}
+				},
+				{
+					"id": "TAVMwqsYBC",
+					"type": "paragraph",
+					"data": {
+						"text": "par exemple :"
+					}
+				},
+				{
+					"id": "AmwO1HHk9Y",
+					"type": "code",
+					"data": {
+						"code": "    <img src=\"{{asset(\"undossierimage\/icons\/ic-wrench.svg\")}}\" ...>"
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "pour-commencer.arborescence.assets"
+	},
+	"templating.macros": {
+		"title": "Fonctions",
+		"content": {
+			"time": 1682686725426,
+			"blocks": [
+				{
+					"id": "8S0DMU9Ooj",
+					"type": "paragraph",
+					"data": {
+						"text": "test"
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "templating.macros"
+	},
+	"templating.constantes": {
+		"title": "Constantes Twig",
+		"content": {
+			"time": 1682686745739,
+			"blocks": [
+				{
+					"id": "zGhZQLlNTp",
+					"type": "paragraph",
+					"data": {
+						"text": "test"
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "templating.constantes"
 	}
 }
