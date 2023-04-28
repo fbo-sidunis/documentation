@@ -20,7 +20,38 @@
 				"name": "arborescence",
 				"title": "Arborescence",
 				"position": 2,
-				"items": []
+				"items": {
+					"app": {
+						"name": "app",
+						"title": "app",
+						"position": 0,
+						"items": []
+					},
+					"assets": {
+						"name": "assets",
+						"title": "assets",
+						"position": 1,
+						"items": []
+					},
+					"config": {
+						"name": "config",
+						"title": "config",
+						"position": 2,
+						"items": []
+					},
+					"templates": {
+						"name": "templates",
+						"title": "templates",
+						"position": 3,
+						"items": []
+					},
+					"vendor": {
+						"name": "vendor",
+						"title": "vendor",
+						"position": 4,
+						"items": []
+					}
+				}
 			},
 			"constantes": {
 				"name": "constantes",

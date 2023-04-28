@@ -4,12 +4,12 @@ namespace App\Documentation\Helpers;
 
 class File
 {
-  protected string|null $name = null;
-  protected string|null $fullPath = null;
-  protected string|null $type = null;
-  protected string|null $size = null;
-  protected string|null $tmpName = null;
-  protected string|null $error = null;
+  protected $name = null;
+  protected $fullPath = null;
+  protected $type = null;
+  protected $size = null;
+  protected $tmpName = null;
+  protected $error = null;
 
   public function __construct($file)
   {
@@ -141,7 +141,7 @@ class File
     return $this;
   }
 
-  public function save(string $path, string|null $newFileName = null)
+  public function save(string $path, $newFileName = null)
   {
     $newFileName = $newFileName ?? $this->name;
     $newFullPath = $path . $newFileName;
@@ -205,7 +205,7 @@ class File
 
   public function getRelativePathToDomain()
   {
-    return str_replace(ROOT_DIR, '/', $this->fullPath);
+    return ROOT_URL . str_replace(ROOT_DIR, '', $this->fullPath);
   }
 
   /**

@@ -224,5 +224,116 @@
 			"version": "2.26.5"
 		},
 		"fullPath": "pour-commencer.installation"
+	},
+	"pour-commencer.arborescence": {
+		"title": "Arborescence",
+		"content": {
+			"time": 1682672849536,
+			"blocks": [
+				{
+					"id": "gG15hB_sgl",
+					"type": "paragraph",
+					"data": {
+						"text": "Les&nbsp; principaux dossiers du framework sont les suivants:"
+					}
+				},
+				{
+					"id": "Y2SOeGsVY6",
+					"type": "list",
+					"data": {
+						"style": "unordered",
+						"items": [
+							"app",
+							"assets",
+							"config",
+							"templates",
+							"vendor<br>"
+						]
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "pour-commencer.arborescence"
+	},
+	"pour-commencer.arborescence.config": {
+		"title": "config",
+		"content": {
+			"time": 1682673710509,
+			"blocks": [
+				{
+					"id": "0efllkW-84",
+					"type": "paragraph",
+					"data": {
+						"text": "Ce dossier contient les principaux fichiers de configuration du site ainsi que le fichier de route par d\u00e9faut et le fichier de langues."
+					}
+				},
+				{
+					"id": "SVKF3_lZOQ",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "S_6VjVGe_2",
+					"type": "header",
+					"data": {
+						"text": "bdd.json",
+						"level": 3
+					}
+				},
+				{
+					"id": "-dj6e4uEzB",
+					"type": "header",
+					"data": {
+						"text": "i18n.json",
+						"level": 3
+					}
+				},
+				{
+					"id": "UTiq4bBl1o",
+					"type": "header",
+					"data": {
+						"text": "routes.json",
+						"level": 3
+					}
+				},
+				{
+					"id": "5XDBEU-5dU",
+					"type": "header",
+					"data": {
+						"text": "site_config.json",
+						"level": 3
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "pour-commencer.arborescence.config"
+	},
+	"templating": {
+		"title": "Moteur de templating TWIG",
+		"content": {
+			"time": 1682673416029,
+			"blocks": [
+				{
+					"id": "ECbrwWrTlN",
+					"type": "paragraph",
+					"data": {
+						"text": "Pour g\u00e9rer nos vues HTML nous utilisons le moteur de templating de Symfony : TWIG"
+					}
+				},
+				{
+					"id": "lZDJF1sSFl",
+					"type": "paragraph",
+					"data": {
+						"text": "Les templates sont stock\u00e9s dans le r\u00e9pertoire \"\/templates\"<br>Il est cependant possible d'ajouter des r\u00e9pertoire<br>"
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "templating"
 	}
 }
