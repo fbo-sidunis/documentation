@@ -23,7 +23,7 @@
       {{ script('cores/common/js/class/Route.js') }}
       {{ script('vendor/components/jquery/jquery.min.js') }}
       {{ script('cores/common/js/ajax.js') }}
-      {{ script('vendor/npm-asset/twig/twig.min.js') }}
+      {{ script('libs/twig/twig.min.js') }}
       {{ script('vendor/twbs/bootstrap/dist/js/bootstrap.min.js') }}
       {{ style('vendor/twbs/bootstrap/dist/css/bootstrap.min.css') }}
       {{ style('libs/font-awesome/css/fontawesome.min.css') }}
@@ -33,7 +33,7 @@
       {{ script('libs/bootstrap-select/i18n/defaults-fr_FR.min.js') }}
       {{ icon('favicon.ico') }}
       {% block include_libs %}
-        {{ style('css/dist/styles.css') }}
+        {{ style('css/dist/styles_documentation.css') }}
         {{ script('js/common.js') }}
       {% endblock %}
       {% block include_additional_libs %}{% endblock %}

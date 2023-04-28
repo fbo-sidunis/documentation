@@ -15,7 +15,11 @@ class Branch extends Tree
    * @var Branch[]
    */
   public array $children = [];
-  protected Tree|Branch $parent;
+  /**
+   * 
+   * @var Tree|Branch
+   */
+  protected $parent;
   public static array $renamed = [];
 
   function __construct($item, $parent)

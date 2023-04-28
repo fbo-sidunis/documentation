@@ -33,12 +33,12 @@ class MenuController extends Controller
     $title = $datas["title"] ?? null;
     $branch = $this->tree->getByPath($fullPath);
     if (!$branch) {
-      return errorResponse(message: "Branch not found");
+      return errorResponse([], "Branch not found");
     }
     try {
       $branch->setName($itemName);
     } catch (\Exception $e) {
-      return errorResponse(message: $e->getMessage());
+      return errorResponse([], $e->getMessage());
     }
     $branch->title = $title;
     $this->tree->save();
@@ -52,7 +52,7 @@ class MenuController extends Controller
     $fullPath = getRequest("fullPath");
     $branch = $this->tree->getByPath($fullPath);
     if (!$branch) {
-      return errorResponse(message: "Branch not found");
+      return errorResponse([], "Branch not found");
     }
     $branch->remove();
     $this->tree->save();
@@ -67,7 +67,7 @@ class MenuController extends Controller
     $direction = getRequest("direction"); //"up" ou "down"
     $branch = $this->tree->getByPath($fullPath);
     if (!$branch) {
-      return errorResponse(message: "Branch not found");
+      return errorResponse([], "Branch not found");
     }
     $branch->move($direction);
     $this->tree->save();
@@ -84,7 +84,7 @@ class MenuController extends Controller
     $name = $item["itemName"];
     $branch = $path ? $this->tree->getByPath($path) : $this->tree;
     if (!$branch) {
-      return errorResponse(message: "Branch not found");
+      return errorResponse([], "Branch not found");
     }
     $branch->addChild($name, $title);
     $this->tree->save();
