@@ -117,13 +117,17 @@ export let Page = (() => {
           self.title.innerText = response.data.title ?? "Aucun titre";
           self.content.innerHTML = response.data.page ? self.parser.parse(response.data.page) : "Aucun contenu";
           hljs.highlightAll();
-          self.btnEdition.dataset.fullPath = fullPath;
+          if (parseInt(EDITPAGE)){
+            self.btnEdition.dataset.fullPath = fullPath;
+          }
           self.changeUrl(fullPath);
         },
       });
     },
     init() {
-      this.edition.init();
+      if (parseInt(EDITPAGE)){
+        this.edition.init();
+      }
       let page = STATE.page ?? "pour-commencer";
 			this.show(page);
     },

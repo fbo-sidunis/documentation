@@ -13,7 +13,7 @@ export let Menu = (() => {
 		},
 		buildMenu: () => {
 			let template = Twig.twig({ data: document.querySelector("#twig_template_menu").innerHTML });
-			self.container.innerHTML = template.render({ menus: self.datas, editmode: true });
+			self.container.innerHTML = template.render({ menus: self.datas, editmode: parseInt(EDITMENU) ? true : false });
 			self.editItem.applyEvents();
 			self.setActive(Page.data.fullPath);
 		},

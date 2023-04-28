@@ -2,6 +2,8 @@
 
 {% block include_additional_libs %}
 	{{ jsconst('STATE', STATE) }}
+	{{ jsconst('EDITMENU', EDITMENU) }}
+	{{ jsconst('EDITPAGE', EDITPAGE) }}
 	{{ script('helpers/js/Form.js') }}
 	{{ script('libs/highlight/highlight.min.js') }}
 	{{ style('libs/highlight/themes/atom-one-dark.min.css') }}
@@ -43,9 +45,11 @@
 						<h2 id="h2_page_title"
 							class="card-title d-flex justify-content-between">
 							<span></span>
-							<button id="button_page_edit" class="btn btn-dark">
-								<i class="fass fa-edit"></i>
-							</button>
+							{% if EDITPAGE %}
+								<button id="button_page_edit" class="btn btn-dark">
+									<i class="fass fa-edit"></i>
+								</button>
+							{% endif %}
 						</h2>
 						<hr />
 						<div id="div_page_content"></div>
