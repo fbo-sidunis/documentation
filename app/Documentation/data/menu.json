@@ -55,15 +55,40 @@
 			}
 		}
 	},
+	"fonctions": {
+		"name": "fonctions",
+		"title": "Fonctions utiles",
+		"position": 3,
+		"items": {
+			"js": {
+				"name": "js",
+				"title": "Javascript",
+				"position": 0,
+				"items": []
+			},
+			"php": {
+				"name": "php",
+				"title": "PHP",
+				"position": 1,
+				"items": []
+			}
+		}
+	},
 	"templating": {
 		"name": "templating",
 		"title": "Templating",
-		"position": 3,
+		"position": 4,
 		"items": {
 			"macros": {
 				"name": "macros",
 				"title": "Macros Twig",
 				"position": 0,
+				"items": []
+			},
+			"constantes": {
+				"name": "constantes",
+				"title": "Constantes",
+				"position": 1,
 				"items": []
 			}
 		}
