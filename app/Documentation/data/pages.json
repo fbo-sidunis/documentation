@@ -259,7 +259,7 @@
 	"pour-commencer.arborescence.config": {
 		"title": "config",
 		"content": {
-			"time": 1682684446619,
+			"time": 1684737523104,
 			"blocks": [
 				{
 					"id": "0efllkW-84",
@@ -364,7 +364,7 @@
 					"id": "dl05-OsQFP",
 					"type": "code",
 					"data": {
-						"code": "{\n\t\"CLE SERVANT A IDENTIFIER LE TEXTE A TRADUIRE\": {\n\t\t\"fr\": \"Traduction de ce texte en fran\u00e7ais\",\n\t\t\"en\": \"Traducci\u00f3n de este texto al espa\u00f1ol\",\n\t\t\"es\": \"Translation of this text into English\"\n\t},\n\t\n}"
+						"code": "{\n\t\"CLE SERVANT A IDENTIFIER LE TEXTE A TRADUIRE\": {\n\t\t\"fr\": \"Traduction de ce texte en fran\u00e7ais\",\n\t\t\"es\": \"Traducci\u00f3n de este texto al espa\u00f1ol\",\n\t\t\"en\": \"Translation of this text into English\"\n\t},\n\t\n}"
 					}
 				},
 				{
@@ -605,13 +605,13 @@
 	"pour-commencer.arborescence.assets": {
 		"title": "Assets ( Ressources )",
 		"content": {
-			"time": 1682685164364,
+			"time": 1683617253107,
 			"blocks": [
 				{
 					"id": "uRJ74un3S9",
 					"type": "paragraph",
 					"data": {
-						"text": "Le dossier \"assets\"&nbsp; sert \u00e0 stocker tous les fichiers \"publiques\". ce sont les ressources du site, tels que les fichiers javascript, les fichiers css, les images.."
+						"text": "Le dossier \"assets\"&nbsp; sert \u00e0 stocker tous les fichiers \"publics\". ce sont les ressources du site, tels que les fichiers javascript, les fichiers css, les images.."
 					}
 				},
 				{
@@ -946,5 +946,183 @@
 			"version": "2.26.5"
 		},
 		"fullPath": "templating.constantes"
+	},
+	"routing": {
+		"title": "Cr\u00e9ation d'une route",
+		"content": {
+			"time": 1684834129545,
+			"blocks": [
+				{
+					"id": "_MWS_Mjgj9",
+					"type": "paragraph",
+					"data": {
+						"text": "Il faut cr\u00e9er un fichier dans le \"module\" (application) portant le nom&nbsp; routes_cequonveut.json"
+					}
+				},
+				{
+					"id": "wkbRfXH989",
+					"type": "paragraph",
+					"data": {
+						"text": "Il faut renseigner l'URL qui serat utilis\u00e9e pour atteindre cette route ainsi que son alias et les variables permettant d'indiquer l'app, le controlleur et la fonction appell\u00e9e."
+					}
+				},
+				{
+					"id": "qAi-V0_qOk",
+					"type": "image",
+					"data": {
+						"file": {
+							"url": "\/documentation\/app\/Documentation\/assets\/upload\/images\/646c874d44650.png"
+						},
+						"caption": "",
+						"withBorder": false,
+						"stretched": false,
+						"withBackground": false
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "routing"
+	},
+	"premier-module.controller": {
+		"title": "Le Controller",
+		"content": {
+			"time": 1684835314381,
+			"blocks": [
+				{
+					"id": "bRjVSVhzKH",
+					"type": "paragraph",
+					"data": {
+						"text": "Le controller est le point central&nbsp; du modul. Il fait le lien entre la vue et les mod\u00e8les"
+					}
+				},
+				{
+					"id": "7j3_AxsJ1p",
+					"type": "paragraph",
+					"data": {
+						"text": "Son nom est de la forme&nbsp; CeqauejeveuxController.class"
+					}
+				},
+				{
+					"id": "7jmxr8cmyj",
+					"type": "image",
+					"data": {
+						"file": {
+							"url": "\/documentation\/app\/Documentation\/assets\/upload\/images\/646c8bc9c5e89.png"
+						},
+						"caption": "",
+						"withBorder": false,
+						"stretched": false,
+						"withBackground": false
+					}
+				},
+				{
+					"id": "azvXH-zUQs",
+					"type": "image",
+					"data": {
+						"file": {
+							"url": "\/documentation\/app\/Documentation\/assets\/upload\/images\/646c8bd560c98.png"
+						},
+						"caption": "",
+						"withBorder": false,
+						"stretched": false,
+						"withBackground": false
+					}
+				},
+				{
+					"id": "7jtE7sKCp0",
+					"type": "paragraph",
+					"data": {
+						"text": "NB: Ne pas oublier de renommer la CLASS avec le m\u00eame nom que le Fichier"
+					}
+				},
+				{
+					"id": "hEuSZbre6A",
+					"type": "paragraph",
+					"data": {
+						"text": "NB\u00b2: Penser \u00e0 modifier le NAMESPACE"
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "premier-module.controller"
+	},
+	"premier-module.template": {
+		"title": "Les Templates de mon app",
+		"content": {
+			"time": 1684836708111,
+			"blocks": [
+				{
+					"id": "5tnANwiBrc",
+					"type": "paragraph",
+					"data": {
+						"text": "Pour indiquer le template \u00e0 utiliser lors de l'affichage, plusieurs possibilit\u00e9s :"
+					}
+				},
+				{
+					"id": "7u0CQ2qtrf",
+					"type": "paragraph",
+					"data": {
+						"text": "1 - Mettre le template dans la route (via la variable \"t\" )"
+					}
+				},
+				{
+					"id": "skPNNQJ6cb",
+					"type": "image",
+					"data": {
+						"file": {
+							"url": "\/documentation\/app\/Documentation\/assets\/upload\/images\/646c8c7b10ce6.png"
+						},
+						"caption": "",
+						"withBorder": false,
+						"stretched": false,
+						"withBackground": false
+					}
+				},
+				{
+					"id": "tq39zgsnZG",
+					"type": "paragraph",
+					"data": {
+						"text": "2 - D\u00e9finir le template dans une propri\u00e9t\u00e9 du controller."
+					}
+				},
+				{
+					"id": "QcYNe-riTT",
+					"type": "image",
+					"data": {
+						"file": {
+							"url": "\/documentation\/app\/Documentation\/assets\/upload\/images\/646c8ee58073c.png"
+						},
+						"caption": "",
+						"withBorder": false,
+						"stretched": false,
+						"withBackground": false
+					}
+				},
+				{
+					"id": "vQRigPJRa3",
+					"type": "paragraph",
+					"data": {
+						"text": "3 - D\u00e9finir le template en param\u00e8tre de la fonction display"
+					}
+				},
+				{
+					"id": "zBZBMYtfBG",
+					"type": "image",
+					"data": {
+						"file": {
+							"url": "\/documentation\/app\/Documentation\/assets\/upload\/images\/646c915ba7621.png"
+						},
+						"caption": "",
+						"withBorder": false,
+						"stretched": false,
+						"withBackground": false
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "premier-module.template"
 	}
 }

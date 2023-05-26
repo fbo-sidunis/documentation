@@ -123,5 +123,36 @@
 				"items": []
 			}
 		}
+	},
+	"premier-module": {
+		"name": "premier-module",
+		"title": "Notre premier module",
+		"position": 5,
+		"items": {
+			"routes": {
+				"name": "routes",
+				"title": "Cr\u00e9ation des routes",
+				"position": 0,
+				"items": []
+			},
+			"controller": {
+				"name": "controller",
+				"title": "Controller",
+				"position": 1,
+				"items": []
+			},
+			"models": {
+				"name": "models",
+				"title": "Models",
+				"position": 2,
+				"items": []
+			},
+			"template": {
+				"name": "template",
+				"title": "Template",
+				"position": 3,
+				"items": []
+			}
+		}
 	}
 }
