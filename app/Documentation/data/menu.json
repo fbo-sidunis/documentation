@@ -16,10 +16,16 @@
 				"position": 1,
 				"items": []
 			},
+			"schema_bdd": {
+				"name": "schema_bdd",
+				"title": "Sch\u00e9ma de la BDD",
+				"position": 2,
+				"items": []
+			},
 			"arborescence": {
 				"name": "arborescence",
 				"title": "Arborescence",
-				"position": 2,
+				"position": 3,
 				"items": {
 					"app": {
 						"name": "app",
@@ -56,7 +62,7 @@
 			"constantes": {
 				"name": "constantes",
 				"title": "Constantes",
-				"position": 3,
+				"position": 4,
 				"items": []
 			}
 		}

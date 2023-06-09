@@ -259,7 +259,7 @@
 	"pour-commencer.arborescence.config": {
 		"title": "config",
 		"content": {
-			"time": 1684737523104,
+			"time": 1685430054472,
 			"blocks": [
 				{
 					"id": "0efllkW-84",
@@ -400,7 +400,7 @@
 					"id": "2uBljhwTAb",
 					"type": "paragraph",
 					"data": {
-						"text": "(voir chapitre sur le rooting)<br>"
+						"text": "(voir chapitre sur le routing)<br>"
 					}
 				},
 				{
@@ -605,7 +605,7 @@
 	"pour-commencer.arborescence.assets": {
 		"title": "Assets ( Ressources )",
 		"content": {
-			"time": 1683617253107,
+			"time": 1685457564063,
 			"blocks": [
 				{
 					"id": "uRJ74un3S9",
@@ -631,7 +631,7 @@
 					"id": "hCZRe5ERAg",
 					"type": "paragraph",
 					"data": {
-						"text": "NB: Dans les templates, il est possible d'aller chercher les assets en utilisant des variables pr\u00e9-d\u00e9finies."
+						"text": "NB: Dans les templates, il est possible d'aller chercher les assets en utilisant des variables pr\u00e9-d\u00e9finies. Le chemin du fichier doit \u00eatre relatif au dossier assets<br>"
 					}
 				},
 				{
@@ -985,22 +985,64 @@
 		"fullPath": "routing"
 	},
 	"premier-module.controller": {
-		"title": "Le Controller",
+		"title": "Le contr\u00f4leur",
 		"content": {
-			"time": 1684835314381,
+			"time": 1685458170715,
 			"blocks": [
 				{
-					"id": "bRjVSVhzKH",
+					"id": "gFLtm6CiF1",
 					"type": "paragraph",
 					"data": {
-						"text": "Le controller est le point central&nbsp; du modul. Il fait le lien entre la vue et les mod\u00e8les"
+						"text": "Un contr\u00f4leur est une composante cl\u00e9 charg\u00e9e de g\u00e9rer les requ\u00eates HTTP entrantes et de contr\u00f4ler le flux de l'application. Son r\u00f4le principal est de recevoir les requ\u00eates des utilisateurs, d'effectuer les actions n\u00e9cessaires et de renvoyer une r\u00e9ponse appropri\u00e9e."
+					}
+				},
+				{
+					"id": "r5vohzLrEX",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici quelques-unes des principales fonctions d'un contr\u00f4leur dans EzFrame :"
+					}
+				},
+				{
+					"id": "kXzz5AAHBI",
+					"type": "list",
+					"data": {
+						"style": "ordered",
+						"items": [
+							"Gestion des routes : Un contr\u00f4leur est associ\u00e9 \u00e0 une ou plusieurs routes d\u00e9finies dans le fichier de configuration routes(_xxx).json de l'application. Il re\u00e7oit les requ\u00eates HTTP correspondant \u00e0 ces routes et d\u00e9termine les actions \u00e0 entreprendre.",
+							"Traitement des requ\u00eates : Le contr\u00f4leur analyse les param\u00e8tres de la requ\u00eate (tels que les param\u00e8tres d'URL, les donn\u00e9es de formulaire, les en-t\u00eates, etc.) et effectue les op\u00e9rations n\u00e9cessaires pour r\u00e9pondre \u00e0 la demande de l'utilisateur. Cela peut inclure la r\u00e9cup\u00e9ration ou la manipulation de donn\u00e9es \u00e0 partir d'une base de donn\u00e9es, l'appel de services ou la gestion de la logique m\u00e9tier.",
+							"Renvoi de la r\u00e9ponse : Une fois que le contr\u00f4leur a termin\u00e9 le traitement de la requ\u00eate, il renvoie une r\u00e9ponse au client. Cela peut \u00eatre sous la forme d'une page HTML g\u00e9n\u00e9r\u00e9e (TWIG), d'un document JSON (jsonResponse,successResponse,errorResponse), d'un fichier t\u00e9l\u00e9chargeable ou de tout autre format de r\u00e9ponse appropri\u00e9 \u00e0 la demande.",
+							"Int\u00e9gration avec les vues : Dans le mod\u00e8le MVC (Mod\u00e8le-Vue-Contr\u00f4leur) de EzFrame, le contr\u00f4leur est responsable de l'interm\u00e9diation entre les donn\u00e9es du mod\u00e8le et la vue qui les affiche. Il peut transmettre les donn\u00e9es n\u00e9cessaires \u00e0 une vue sp\u00e9cifique et g\u00e9rer les \u00e9ventuelles redirections vers d'autres vues.",
+							"Gestion des erreurs : Les contr\u00f4leurs peuvent \u00e9galement g\u00e9rer les erreurs survenues lors du traitement des requ\u00eates. Ils peuvent renvoyer des r\u00e9ponses d'erreur appropri\u00e9es ou rediriger vers des pages d'erreur sp\u00e9cifiques."
+						]
+					}
+				},
+				{
+					"id": "SV9sgauslR",
+					"type": "paragraph",
+					"data": {
+						"text": "En r\u00e9sum\u00e9, les contr\u00f4leurs dans Symfony jouent un r\u00f4le crucial dans la gestion des requ\u00eates, l'ex\u00e9cution des actions n\u00e9cessaires et le renvoi des r\u00e9ponses. Ils permettent de structurer le code de l'application en suivant le mod\u00e8le MVC et facilitent le d\u00e9veloppement d'applications Web robustes et modulaires."
 					}
 				},
 				{
 					"id": "7j3_AxsJ1p",
 					"type": "paragraph",
 					"data": {
-						"text": "Son nom est de la forme&nbsp; CeqauejeveuxController.class"
+						"text": "L'emplacement d'un contr\u00f4leur sera toujours dans le dossier \"Controller\" \u00e0 la racine de votre module (Attention \u00e0 la casse!)"
+					}
+				},
+				{
+					"id": "yTszVtLyud",
+					"type": "paragraph",
+					"data": {
+						"text": "Le nom du fichier et la classe contenue dans ce dernier doivent correspondre.<br>Ils ont toujours ce format : [Sujet]Controller"
+					}
+				},
+				{
+					"id": "O002_A4kVQ",
+					"type": "paragraph",
+					"data": {
+						"text": "Exemple ci-dessous<br>"
 					}
 				},
 				{
@@ -1027,20 +1069,6 @@
 						"withBorder": false,
 						"stretched": false,
 						"withBackground": false
-					}
-				},
-				{
-					"id": "7jtE7sKCp0",
-					"type": "paragraph",
-					"data": {
-						"text": "NB: Ne pas oublier de renommer la CLASS avec le m\u00eame nom que le Fichier"
-					}
-				},
-				{
-					"id": "hEuSZbre6A",
-					"type": "paragraph",
-					"data": {
-						"text": "NB\u00b2: Penser \u00e0 modifier le NAMESPACE"
 					}
 				}
 			],
@@ -1124,5 +1152,523 @@
 			"version": "2.26.5"
 		},
 		"fullPath": "premier-module.template"
+	},
+	"pour-commencer.schema_bdd": {
+		"title": "Sch\u00e9ma de la base donn\u00e9es",
+		"content": {
+			"time": 1685429720785,
+			"blocks": [
+				{
+					"id": "axZH3eK1Gs",
+					"type": "paragraph",
+					"data": {
+						"text": "Depuis la version 1.5.x du Framework<br>Il est possible de g\u00e9n\u00e9rer les bases de donn\u00e9es depuis des sch\u00e9mas d\u00e9finis au format JSON.<br>La mise \u00e0 jour des tables peut alors \u00eatre lanc\u00e9e avec cette commande :<br>"
+					}
+				},
+				{
+					"id": "51cBnCZ0yo",
+					"type": "code",
+					"data": {
+						"code": "php vendor\/groupefbo\/ezframe\/bin\/generateSchema.php"
+					}
+				},
+				{
+					"id": "DrJBEzBqcu",
+					"type": "paragraph",
+					"data": {
+						"text": "Les sch\u00e9mas de table par d\u00e9faut se trouvent dans \"config\/schema\/\""
+					}
+				},
+				{
+					"id": "YdkQrrKXZP",
+					"type": "paragraph",
+					"data": {
+						"text": "Il est possible d'en ajouter dans les modules de la m\u00eame fa\u00e7on que les routes en les ajoutant dans \"app\/MonModule\/schema\/\""
+					}
+				},
+				{
+					"id": "MVX3AeayEz",
+					"type": "paragraph",
+					"data": {
+						"text": "Le fichier devra avoir le m\u00eame nom que la table qu'il cr\u00e9\u00e9 dans la base de donn\u00e9es, exemple : un sch\u00e9ma devant cr\u00e9er la table \"user\" doit d'appeler \"user.json\""
+					}
+				},
+				{
+					"id": "JShPO-hfjb",
+					"type": "paragraph",
+					"data": {
+						"text": "Le contenu d'un des ces fichiers ressemble \u00e0 ceci <br>"
+					}
+				},
+				{
+					"id": "P7TZyTPyKo",
+					"type": "code",
+					"data": {
+						"code": "{\n  \"name\": \"sessions\", \/\/nom de la table\n  \"columns\": [ \/\/colonnes dans un tableau\n    {\n      \"name\": \"id\", \/\/nom de la colonne \n      \"type\": \"BIGINT\", \/\/type de la colonne\n      \"autoIncrement\": true, \/\/Auto-incr\u00e9ment si besoin\n      \"primary\": true, \/\/Cl\u00e9 primaire\n      \"null\": false, \/\/Non nullable\n      \"unsigned\": true, \/\/Pour ne pas avoir de valeur n\u00e9gative\n      \"comment\": \"Identifiant de la session\" \/\/Pour d\u00e9crire un peu l'utilit\u00e9 de la colonne\n    }, \n    \/\/...\n  ],\n  \"comment\": \"Table des sessions utilisateurs\" \/\/commentaire pour d\u00e9crire la table\n}"
+					}
+				},
+				{
+					"id": "qv7926lZcT",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "Ko6z5sOh7X",
+					"type": "header",
+					"data": {
+						"text": "Propri\u00e9t\u00e9s d'une table",
+						"level": 4
+					}
+				},
+				{
+					"id": "a-OEdsn_Ry",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom<br>",
+								"Type<br>",
+								"Valeur par d\u00e9faut<br>",
+								"Commentaire"
+							],
+							[
+								"name",
+								"string",
+								"\u274c",
+								"Nom de la table<br>"
+							],
+							[
+								"columns",
+								"array",
+								"\u274c",
+								"Colonnes du tableau, leur contenu est sp\u00e9cifi\u00e9 plus bas<br>"
+							],
+							[
+								"comment",
+								"string<br>",
+								"\"\"<br>",
+								"Commentaire pour d\u00e9crire la table<br>"
+							],
+							[
+								"engine",
+								"string",
+								"\"InnoDB\"",
+								"Moteur utilis\u00e9<br>"
+							],
+							[
+								"charset",
+								"string",
+								"\"utf8mb4\"",
+								"Codage des caract\u00e8res<br>"
+							],
+							[
+								"collation",
+								"string",
+								"\"utf8mb4_unicode_ci\"",
+								"Configuration de tri et comparaison des caract\u00e8res<br>"
+							]
+						]
+					}
+				},
+				{
+					"id": "cEZrd2i0AL",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "ga3LuZ5meL",
+					"type": "header",
+					"data": {
+						"text": "Propri\u00e9t\u00e9s d'une colonne",
+						"level": 3
+					}
+				},
+				{
+					"id": "PFFByfOdV4",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom",
+								"Type",
+								"Valeur par d\u00e9faut<br>",
+								"Commentaire"
+							],
+							[
+								"name",
+								"string",
+								"\u274c",
+								"Nom de la colonne<br>"
+							],
+							[
+								"type",
+								"string",
+								"\u274c",
+								"Type de la colonne<br>"
+							],
+							[
+								"length",
+								"int|string|null",
+								"null",
+								"Longueur de la colonne<br>"
+							],
+							[
+								"default",
+								"int|string|null",
+								"null",
+								"Valeur par d\u00e9faut de la colonne<br>"
+							],
+							[
+								"onUpdate",
+								"int|string|null",
+								"null",
+								"Valeur de la colonne \u00e0 la mise \u00e0 jour de la ligne<br>"
+							],
+							[
+								"comment",
+								"string|null",
+								"null",
+								"Commentaire de la colonne<br>"
+							],
+							[
+								"null",
+								"bool",
+								"false",
+								"Colonne nullable<br>"
+							],
+							[
+								"autoIncrement",
+								"bool",
+								"false",
+								"Auto-incr\u00e9mentation"
+							],
+							[
+								"primary",
+								"bool",
+								"false",
+								"Si true, la colonne sera une cl\u00e9 primaire<br>"
+							],
+							[
+								"unique",
+								"bool",
+								"false",
+								"Si true, la colonne sera unique<br>"
+							],
+							[
+								"index",
+								"bool",
+								"false",
+								"Si true, la colonne sera un index<br>"
+							],
+							[
+								"unsigned",
+								"bool",
+								"false",
+								"Si true, la colonne ne pourra pas avoir une valeur n\u00e9gative<br>"
+							],
+							[
+								"referenceColumn",
+								"string|null",
+								"null",
+								"Colonne de r\u00e9f\u00e9rence en cas de cl\u00e9 \u00e9trang\u00e8re<br>"
+							],
+							[
+								"referenceTable",
+								"string|null",
+								"null",
+								"Table de r\u00e9f\u00e9rence en cas de cl\u00e9 \u00e9trang\u00e8re<br>"
+							],
+							[
+								"cascadeOnDelete",
+								"bool",
+								"false",
+								"Si true, cette ligne sera supprim\u00e9e si la ligne r\u00e9f\u00e9renc\u00e9e l'est aussi<br>"
+							],
+							[
+								"cascadeOnUpdate",
+								"bool",
+								"false",
+								"Si true, cette colonne sera mise \u00e0 jour avec la nouvelle valeur de la colonne de la ligne r\u00e9f\u00e9renc\u00e9e si elle est chang\u00e9e<br>"
+							],
+							[
+								"enumValues",
+								"array|null",
+								"null",
+								"Valeurs possibles, obligatoire si le type est \"ENUM\"<br>"
+							]
+						]
+					}
+				},
+				{
+					"id": "HyCp67wjB6",
+					"type": "paragraph",
+					"data": {
+						"text": "Id\u00e9es d'\u00e9volutions :<br>"
+					}
+				},
+				{
+					"id": "ZpeeOl1lzG",
+					"type": "list",
+					"data": {
+						"style": "unordered",
+						"items": [
+							"G\u00e9rer les renommage de colonne (attribut \"oldNames\" de type array ?)",
+							"G\u00e9rer les renommage de table (m\u00eame fonctionnement)<br>"
+						]
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "pour-commencer.schema_bdd"
+	},
+	"pour-commencer.constantes": {
+		"title": "Constantes",
+		"content": {
+			"time": 1685113035241,
+			"blocks": [
+				{
+					"id": "0mhTfmc157",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici des constantes accessibles depuis n'importe quelle partie du Framework"
+					}
+				},
+				{
+					"id": "k21iXVHu0n",
+					"type": "table",
+					"data": {
+						"withHeadings": false,
+						"content": [
+							[
+								"Nom",
+								"Type",
+								"Description"
+							],
+							[
+								"ROOT_DIR",
+								"string",
+								"Chemin complet du r\u00e9pertoire contenant le projet, se termine par un \"\/\"<br>"
+							],
+							[
+								"APP_DIR",
+								"string",
+								"Chemin complet du r\u00e9pertoire \"app\" contenant les modules, se termine par un \"\/\""
+							],
+							[
+								"LIBRARY_DIR",
+								"string",
+								"Chemin complet du r\u00e9pertoire contenant les fichiers de la librarie du framework dans vendor, se termine par un \"\/\"<br>"
+							],
+							[
+								"TEMPLATES",
+								"string",
+								"R\u00e9pertoire par d\u00e9faut des templates, d\u00e9fini dans config\/site_config.json \u00e0 \"twig.templates\""
+							],
+							[
+								"SITE_TITLE",
+								"string",
+								"Titre du site, d\u00e9fini dans config\/site_config.json \u00e0 \"title\"<br>"
+							],
+							[
+								"DEBUG",
+								"bool",
+								"\u00c9tat de l'affichage du debug sur les pages du site, d\u00e9fini dans config\/site_config.json \u00e0 \"debug\"<br>"
+							],
+							[
+								"AUTODEBUG",
+								"bool",
+								"Si true, ajoute automatiquement le param\u00e8tre GET xdebug=1 \u00e0 toutes les URLS, pour afficher le debug automatiquement, d\u00e9fini dans config\/site_config.json \u00e0 \"autodebug\""
+							],
+							[
+								"ROOT_URL",
+								"string",
+								"Url relative au domaine de la racine du site, calcul\u00e9 automatiquement si requ\u00eate Web.<br>Si lanc\u00e9 depuis la console, il prends la valeur d\u00e9finie dans config\/site_config.json \u00e0 \"rootUrl\"<br>"
+							],
+							[
+								"LIBRARY_URL",
+								"string",
+								"Url relative au domaine du r\u00e9pertoire contenant les fichiers librairie du framework, calcul\u00e9 \u00e0 partir de ROOT_URL<br>"
+							],
+							[
+								"DOMAIN",
+								"string",
+								"Domaine complet du site, contient le protocole (http,https)<br>Calcul\u00e9 automatiquement si requ\u00eate Web.<br>Si lanc\u00e9 depuis la console, il prends la valeur d\u00e9finie dans config\/site_config.json \u00e0 \"domain.$ENV\" (ou $ENV est l'environnement d\u00e9finie dans .env \u00e0 la racine du site)<br>"
+							]
+						]
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "pour-commencer.constantes"
+	},
+	"bdd.class": {
+		"title": "La classe \/Core\/Db",
+		"content": {
+			"time": 1685113289202,
+			"blocks": [
+				{
+					"id": "DxXge7NXir",
+					"type": "paragraph",
+					"data": {
+						"text": "Cette classe est parente de toutes nos classes Model, ainsi elles h\u00e9ritent toutes de ses fonctions<br>"
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "bdd.class"
+	},
+	"premier-module.models": {
+		"title": "Le mod\u00e8le",
+		"content": {
+			"time": 1685460539679,
+			"blocks": [
+				{
+					"id": "cRShf0gfZ-",
+					"type": "paragraph",
+					"data": {
+						"text": "Dans le framework EzFrame, les mod\u00e8les sont utilis\u00e9s pour interagir avec la base de donn\u00e9es. Un mod\u00e8le est une classe qui \u00e9tend la classe de base \\Core\\Db et fournit des m\u00e9thodes pour effectuer des op\u00e9rations courantes telles que la r\u00e9cup\u00e9ration, la mise \u00e0 jour, l'ajout et la suppression de donn\u00e9es dans une table sp\u00e9cifique."
+					}
+				},
+				{
+					"id": "TZTHscO3RM",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "x8OnUAELjw",
+					"type": "header",
+					"data": {
+						"text": "Cr\u00e9ation du mod\u00e8le",
+						"level": 4
+					}
+				},
+				{
+					"id": "xOO00VEkZk",
+					"type": "paragraph",
+					"data": {
+						"text": "Dans le dossier de votre module (app\/MonModule\/Model\/), cr\u00e9ez un fichier PHP pour votre mod\u00e8le. Par convention, vous pouvez nommer le fichier MyModel.php. Dans ce fichier, commencez par d\u00e9clarer votre classe en sp\u00e9cifiant le namespace \"App\\\", le nom de votre module suivi de \"Model\" puis du nom de votre class.<br>Par exemple :"
+					}
+				},
+				{
+					"id": "CGMYeZWr_G",
+					"type": "code",
+					"data": {
+						"code": "namespace App\\MonModule\\Model;\n\nclass MyModel extends \\Core\\Db\n{\n    \/\/ Vos m\u00e9thodes de mod\u00e8le seront ajout\u00e9es ici\n}"
+					}
+				},
+				{
+					"id": "8Kft0rn1TK",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "Z2yQUiU_sT",
+					"type": "header",
+					"data": {
+						"text": "D\u00e9finition des propri\u00e9t\u00e9s du mod\u00e8le",
+						"level": 4
+					}
+				},
+				{
+					"id": "gsRhVks35P",
+					"type": "paragraph",
+					"data": {
+						"text": "Dans votre mod\u00e8le, vous devez d\u00e9finir deux propri\u00e9t\u00e9s statiques : $pkey et $tbl. Ces propri\u00e9t\u00e9s sont n\u00e9cessaires pour que les m\u00e9thodes h\u00e9rit\u00e9es fonctionnent correctement."
+					}
+				},
+				{
+					"id": "v12i_NGDWn",
+					"type": "list",
+					"data": {
+						"style": "unordered",
+						"items": [
+							"$pkey : D\u00e9finissez cette propri\u00e9t\u00e9 comme le nom du champ cl\u00e9 primaire de votre table. Par exemple, si votre champ cl\u00e9 primaire est \"id\", vous pouvez l'initialiser comme suit :"
+						]
+					}
+				},
+				{
+					"id": "pEdSBv7DxE",
+					"type": "code",
+					"data": {
+						"code": "public static $pkey = 'id';\n"
+					}
+				},
+				{
+					"id": "z-NTot8oQq",
+					"type": "list",
+					"data": {
+						"style": "unordered",
+						"items": [
+							"$tbl : D\u00e9finissez cette propri\u00e9t\u00e9 comme le nom de votre table. Par exemple, si votre table s'appelle \"users\", vous pouvez l'initialiser comme suit :"
+						]
+					}
+				},
+				{
+					"id": "cZvoQqAhnU",
+					"type": "code",
+					"data": {
+						"code": "public static $tbl = 'users';"
+					}
+				},
+				{
+					"id": "GorbFdlJ-1",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "Tl1KMjw_qu",
+					"type": "header",
+					"data": {
+						"text": "Utilisation des m\u00e9thodes h\u00e9rit\u00e9es",
+						"level": 4
+					}
+				},
+				{
+					"id": "O5MUZmQG4C",
+					"type": "paragraph",
+					"data": {
+						"text": "Votre mod\u00e8le h\u00e9rite des m\u00e9thodes statiques de la classe \\Core\\Db. Voici un aper\u00e7u des m\u00e9thodes h\u00e9rit\u00e9es et de leur utilisation dans un contr\u00f4leur par exemple :"
+					}
+				},
+				{
+					"id": "hTnM5YNMko",
+					"type": "code",
+					"data": {
+						"code": "use App\\MonModule\\Model\\MyModel;\n\n\/\/ R\u00e9cup\u00e9rer tous les enregistrements de la table\n$listeEnregistrements = MyModel::getList();\n\n\/\/ R\u00e9cup\u00e9rer un enregistrement sp\u00e9cifique en fonction de la valeur d'un champ donn\u00e9\n$enregistrement = MyModel::getBy(1, 'id');\n\n\/\/ R\u00e9cup\u00e9rer tous les enregistrements correspondant \u00e0 une valeur sp\u00e9cifique dans un champ donn\u00e9\n$listeEnregistrements = MyModel::getAllBy('John', 'name');\n\n\/\/ Supprimer un enregistrement sp\u00e9cifique en fonction de la valeur d'un champ donn\u00e9\n$suppressionReussie = MyModel::removeBy(1, 'id');\n\n\/\/ Mettre \u00e0 jour un enregistrement sp\u00e9cifique en fonction de la valeur d'un champ donn\u00e9\n$donnees = ['nom' => 'John Doe', 'age' => 30];\n$miseAJourReussie = MyModel::updateBy(1, $donnees, 'id');\n\n\/\/ Ajouter un nouvel enregistrement\n$donnees = ['nom' => 'Jane Smith', 'age' => 25];\n$nouvelEnregistrementId = MyModel::add($donnees);"
+					}
+				},
+				{
+					"id": "HfuDaZ57ff",
+					"type": "paragraph",
+					"data": {
+						"text": "Assurez-vous de remplacer 'id' par le nom du champ cl\u00e9 primaire de votre table et 'nom_de_la_table' par le nom de votre table dans les exemples ci-dessus."
+					}
+				},
+				{
+					"id": "bokli8D_L1",
+					"type": "paragraph",
+					"data": {
+						"text": "Voil\u00e0! Vous avez maintenant cr\u00e9\u00e9 votre propre mod\u00e8le dans le framework EzFrame. Vous pouvez ajouter des m\u00e9thodes suppl\u00e9mentaires \u00e0 votre mod\u00e8le pour r\u00e9pondre aux besoins sp\u00e9cifiques de votre application. N'oubliez pas de consulter la documentation officielle du framework pour en savoir plus sur les fonctionnalit\u00e9s avanc\u00e9es et les bonnes pratiques de d\u00e9veloppement avec EzFrame."
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "premier-module.models"
 	}
 }

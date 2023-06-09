@@ -5,10 +5,13 @@
   background-color: lightgray;
 }
 
-#div_page_content table td, #div_page_content table th {
+#div_page_content table tbody tr td, #div_page_content table tbody tr th {
   padding: 0.5em;
   border: 1px solid darkgray;
   border-collapse: collapse;
+}
+#div_page_content table tbody tr:first-child td, #div_page_content table tbody tr:first-child th {
+  font-weight: bold;
 }
 
 .dropdown-toggle {

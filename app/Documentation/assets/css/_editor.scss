@@ -7,10 +7,19 @@
 
 #div_page_content{
   table{
-    td,th{
-      padding:.5em;
-      border: 1px solid darkgray;
-      border-collapse: collapse;
+    tbody{
+      tr{
+        td,th{
+          padding:.5em;
+          border: 1px solid darkgray;
+          border-collapse: collapse;
+        }
+        &:first-child{
+          td,th{
+            font-weight: bold;
+          }
+        }
+      }
     }
   }
 }
