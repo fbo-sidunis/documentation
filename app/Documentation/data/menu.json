@@ -71,7 +71,20 @@
 		"name": "routing",
 		"title": "Routes",
 		"position": 1,
-		"items": []
+		"items": {
+			"creation": {
+				"name": "creation",
+				"title": "Cr\u00e9ation d'une route",
+				"position": 0,
+				"items": []
+			},
+			"sitemap": {
+				"name": "sitemap",
+				"title": "SiteMap",
+				"position": 1,
+				"items": []
+			}
+		}
 	},
 	"bdd": {
 		"name": "bdd",
@@ -130,10 +143,29 @@
 			}
 		}
 	},
+	"commandes": {
+		"name": "commandes",
+		"title": "Commandes",
+		"position": 5,
+		"items": {
+			"cree": {
+				"name": "cree",
+				"title": "Cr\u00e9er une commande",
+				"position": 0,
+				"items": []
+			},
+			"disponibles": {
+				"name": "disponibles",
+				"title": "Commandes disponibles",
+				"position": 1,
+				"items": []
+			}
+		}
+	},
 	"premier-module": {
 		"name": "premier-module",
 		"title": "Notre premier module",
-		"position": 5,
+		"position": 6,
 		"items": {
 			"routes": {
 				"name": "routes",

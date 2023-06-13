@@ -948,9 +948,9 @@
 		"fullPath": "templating.constantes"
 	},
 	"routing": {
-		"title": "Cr\u00e9ation d'une route",
+		"title": "Routes",
 		"content": {
-			"time": 1684834129545,
+			"time": 1686669618378,
 			"blocks": [
 				{
 					"id": "_MWS_Mjgj9",
@@ -1144,20 +1144,20 @@
 	"pour-commencer.schema_bdd": {
 		"title": "Sch\u00e9ma de la base donn\u00e9es",
 		"content": {
-			"time": 1685429720785,
+			"time": 1686663746745,
 			"blocks": [
 				{
 					"id": "axZH3eK1Gs",
 					"type": "paragraph",
 					"data": {
-						"text": "Depuis la version 1.5.x du Framework<br>Il est possible de g\u00e9n\u00e9rer les bases de donn\u00e9es depuis des sch\u00e9mas d\u00e9finis au format JSON.<br>La mise \u00e0 jour des tables peut alors \u00eatre lanc\u00e9e avec cette commande :<br>"
+						"text": "Depuis la version 1.5.x du Framework<br>Il est possible de g\u00e9n\u00e9rer les bases de donn\u00e9es depuis des sch\u00e9mas d\u00e9finis au format JSON.<br>La mise \u00e0 jour des tables peut alors \u00eatre lanc\u00e9e avec cette commande<br>"
 					}
 				},
 				{
 					"id": "51cBnCZ0yo",
 					"type": "code",
 					"data": {
-						"code": "php vendor\/groupefbo\/ezframe\/bin\/generateSchema.php"
+						"code": "\/\/Version < 1.6.x du framework\nphp vendor\/groupefbo\/ezframe\/bin\/generateSchema.php\n\n\/\/Version >= 1.6.x du framework\nphp bin\/ezframe core:generateSchema"
 					}
 				},
 				{
@@ -1257,6 +1257,12 @@
 								"string",
 								"\"utf8mb4_unicode_ci\"",
 								"Configuration de tri et comparaison des caract\u00e8res<br>"
+							],
+							[
+								"renameFrom",
+								"array|string|null",
+								"null",
+								"Ancien(s) nom(s) de la table, permet de la renommer et de garder ses donn\u00e9es au lieu de cr\u00e9er une nouvelle table<br>"
 							]
 						]
 					}
@@ -1389,25 +1395,13 @@
 								"array|null",
 								"null",
 								"Valeurs possibles, obligatoire si le type est \"ENUM\"<br>"
+							],
+							[
+								"renameFrom",
+								"array|string|null",
+								"null",
+								"Ancien(s) nom(s) de la colonne, permet le renommage de la colonne avec son nouveau nom (d\u00e9fini dans \"name\") sans perdre de donn\u00e9es<br>"
 							]
-						]
-					}
-				},
-				{
-					"id": "HyCp67wjB6",
-					"type": "paragraph",
-					"data": {
-						"text": "Id\u00e9es d'\u00e9volutions :<br>"
-					}
-				},
-				{
-					"id": "ZpeeOl1lzG",
-					"type": "list",
-					"data": {
-						"style": "unordered",
-						"items": [
-							"G\u00e9rer les renommage de colonne (attribut \"oldNames\" de type array ?)",
-							"G\u00e9rer les renommage de table (m\u00eame fonctionnement)<br>"
 						]
 					}
 				}
@@ -4143,5 +4137,472 @@
 			"version": "2.26.5"
 		},
 		"fullPath": "fonctions.js"
+	},
+	"commandes.disponibles": {
+		"title": "Commandes disponibles",
+		"content": {
+			"time": 1686664667260,
+			"blocks": [
+				{
+					"id": "3rLTOZJ7Yo",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici les commandes possibles out of the box<br>"
+					}
+				},
+				{
+					"id": "ylI0NpxTKw",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "J7SY6aTpqQ",
+					"type": "header",
+					"data": {
+						"text": "core:generateSchema",
+						"level": 4
+					}
+				},
+				{
+					"id": "r3jtOA5NSn",
+					"type": "paragraph",
+					"data": {
+						"text": "Permet de g\u00e9n\u00e9rer la base de donn\u00e9es \u00e0 partir des fichiers sch\u00e9mas json du site<br>"
+					}
+				},
+				{
+					"id": "KBEn4BIl3J",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "on6k2xWXFg",
+					"type": "header",
+					"data": {
+						"text": "core:generateSiteMap",
+						"level": 4
+					}
+				},
+				{
+					"id": "445duiPFZQ",
+					"type": "paragraph",
+					"data": {
+						"text": "Permet de g\u00e9n\u00e9rer le fichier sitemap.xml \u00e0 la racines du site \u00e0 partir des routes ayant l'attribut \"sitemap\" renseign\u00e9<br>"
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "commandes.disponibles"
+	},
+	"commandes": {
+		"title": "Les commandes (Depuis 1.6.x)",
+		"content": {
+			"time": 1686666056604,
+			"blocks": [
+				{
+					"id": "mvMdanrYyj",
+					"type": "paragraph",
+					"data": {
+						"text": "Nous avons mis \u00e0 disposition un fichier permettant d'\u00e9x\u00e9cuter des scripts PHP que vous auriez cr\u00e9\u00e9 dans vos module, de la m\u00eame fa\u00e7on que l'on cr\u00e9er la base de donn\u00e9es avec des sch\u00e9mas BDD : bin\/ezframe<br>"
+					}
+				},
+				{
+					"id": "ovNQRlXY2J",
+					"type": "paragraph",
+					"data": {
+						"text": "A utiliser de cette fa\u00e7on :"
+					}
+				},
+				{
+					"id": "hae3oas92H",
+					"type": "code",
+					"data": {
+						"code": "php bin\/ezframe monModule:maCommande --option1=\"1\" --option2=\"2\""
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "commandes"
+	},
+	"commandes.cree": {
+		"title": "Cr\u00e9ation d'une commande",
+		"content": {
+			"time": 1686666044091,
+			"blocks": [
+				{
+					"id": "3oOzkw4yCh",
+					"type": "paragraph",
+					"data": {
+						"text": "Des commandes personnalis\u00e9e peuvent \u00eatre cr\u00e9\u00e9 dans un module"
+					}
+				},
+				{
+					"id": "mLcMLMe--m",
+					"type": "paragraph",
+					"data": {
+						"text": "Il faut alors cr\u00e9er un fichier dans le r\u00e9pertoire Command\/ de votre module, ce r\u00e9pertoire devra \u00eatre cr\u00e9\u00e9 s'il n'existe pas. Le nom de ce fichier doit suivre la convention de nommage PascalCase car il contiendra une classe du m\u00eame nom de votre fichier. Ce nom est important car c'est celui-ci que vous utiliserez dans votre commande avec le nom de votre module."
+					}
+				},
+				{
+					"id": "R7wh_ml1_h",
+					"type": "paragraph",
+					"data": {
+						"text": "Par exemple :<br>"
+					}
+				},
+				{
+					"id": "2iSert5aus",
+					"type": "code",
+					"data": {
+						"code": "app\/\n\u251c\u2500\u2500 Demo\/\n\u2502   \u251c\u2500\u2500 Command\/\n\u2502   \u2502   \u251c\u2500\u2500 DemoCommand.php"
+					}
+				},
+				{
+					"id": "hR0vfsXtr5",
+					"type": "paragraph",
+					"data": {
+						"text": "La classe dans ce fichier devra imp\u00e9rativement \u00e9tendre la classe \\Core\\CommandHandler<br>Le script \u00e0 \u00e9x\u00e9cuter devra \u00eatre plac\u00e9 dans une fonction public \"execute\""
+					}
+				},
+				{
+					"id": "bhYsAszrZa",
+					"type": "paragraph",
+					"data": {
+						"text": "Exemple : un hello world<br>"
+					}
+				},
+				{
+					"id": "WONdhh2F3s",
+					"type": "code",
+					"data": {
+						"code": "<?php\n\nnamespace App\\Demo\\Command;\n\nclass DemoCommand extends \\Core\\CommandHandler\n{\n\n  public function execute()\n  {\n    echo \"Hello World\" . PHP_EOL;\n  }\n}"
+					}
+				},
+				{
+					"id": "LBjA_iUNSF",
+					"type": "paragraph",
+					"data": {
+						"text": "Pour ensuite \u00e9x\u00e9cuter ce script en ligne de commande \u00e0 la racine du site<br>"
+					}
+				},
+				{
+					"id": "_LwtP-DKsi",
+					"type": "code",
+					"data": {
+						"code": "php bin\/ezframe demo:demoCommand"
+					}
+				},
+				{
+					"id": "79Kjr1hE0_",
+					"type": "paragraph",
+					"data": {
+						"text": "o\u00f9 \"demo\" est le nom de votre module, et \"demoCommand\" est le nom de votre classe, notez la conversion du PascalCase en camelCase (m\u00eame si elle n'est pas n\u00e9cessaire)<br>"
+					}
+				},
+				{
+					"id": "LihPSFgb4t",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "fCiwKm8R6f",
+					"type": "header",
+					"data": {
+						"text": "Options",
+						"level": 4
+					}
+				},
+				{
+					"id": "CIlmoqWnlg",
+					"type": "paragraph",
+					"data": {
+						"text": "Dans le cas o\u00f9 vous voulez passer des options dans votre commande, vous devez le faire de cette fa\u00e7on :<br>"
+					}
+				},
+				{
+					"id": "tIixO99l7h",
+					"type": "code",
+					"data": {
+						"code": "php bin\/ezframe demo:demoCommand --nom=\"Alexandrie\""
+					}
+				},
+				{
+					"id": "bCJcHdC6-0",
+					"type": "paragraph",
+					"data": {
+						"text": "Et devra \u00eatre r\u00e9cup\u00e9r\u00e9 dans votre script de cette fa\u00e7on :"
+					}
+				},
+				{
+					"id": "qfSZjTRZYz",
+					"type": "code",
+					"data": {
+						"code": "<?php\n\nnamespace App\\Demo\\Command;\n\nclass DemoCommand extends \\Core\\CommandHandler\n{\n\n  public function execute()\n  {\n    $nom = $this->getOption(\"nom\");\n    echo \"Hello \" . $nom . PHP_EOL;\n  }\n}\n"
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "commandes.cree"
+	},
+	"routing.creation": {
+		"title": "Cr\u00e9ation d'une route",
+		"content": {
+			"time": 1686670780391,
+			"blocks": [
+				{
+					"id": "X0g5tdsUys",
+					"type": "paragraph",
+					"data": {
+						"text": "Vous pouvez ajouter une route dans le fichier config\/routes.json ou bien dans votre fichier app\/VotreModule\/routes_xxx.json"
+					}
+				},
+				{
+					"id": "BV3F17OpLu",
+					"type": "paragraph",
+					"data": {
+						"text": "Le fichier contient un objet json contenant toutes vos routes, qui seront \u00e9galement des objets, leur cl\u00e9s devront \u00eatre l'url relative \u00e0 la racine du site correspondant \u00e0 cette route. Si vous incluez plusieurs fois la m\u00eame cl\u00e9, la route pr\u00e9c\u00e9dente ayant la m\u00eame cl\u00e9 sera \u00e9cras\u00e9e"
+					}
+				},
+				{
+					"id": "dNqlYNHlqJ",
+					"type": "code",
+					"data": {
+						"code": "{\n  \"\/\": {\n    \"alias\": \"home\",\n    \"sitemap\" : true,\n    \"vars\": {\n      \"p\": \"home:default:render\" ,\n      \"fallback\" : \"login\",\n      \"t\" : \"home\/home.html.twig\"\n    }\n  },\n  \"\/admin\/\": {\n    \"sitemap\" : true,\n    \"alias\": \"admin-user\",\n    \"vars\": {\n      \"m\": \"Admin\",\n      \"c\": \"user\",\n      \"f\": \"render\"\n    }\n  }\n}"
+					}
+				},
+				{
+					"id": "8ZfYXPk3GM",
+					"type": "paragraph",
+					"data": {
+						"text": "Les param\u00e8tres d'une route sont<br>"
+					}
+				},
+				{
+					"id": "a78i-zcQF5",
+					"type": "table",
+					"data": {
+						"withHeadings": false,
+						"content": [
+							[
+								"Nom",
+								"Type",
+								"Description"
+							],
+							[
+								"alias",
+								"string<br>",
+								"L'alias de la route, on pourra r\u00e9cup\u00e9rer l'URL de la routes dans les autres parties du framework gr\u00e2ce \u00e0 celle-ci<br>"
+							],
+							[
+								"sitemap",
+								"bool|array",
+								"D\u00e9termine si l'URL doit \u00eatre inclus lors de la g\u00e9n\u00e9ration du sitemap, il est possible de fournir un tableau pour g\u00e9n\u00e9rer plusieurs url \u00e0 partir de celle-ci<br>"
+							],
+							[
+								"vars",
+								"array",
+								"Variables de la routes, d\u00e9termine o\u00f9 elle doit pointer, ses autorisations, o\u00f9 tout simplement des variables que l'on voudrait passer au contr\u00f4leur, param\u00e8tre possibles indiqu\u00e9s blus bas<br>"
+							]
+						]
+					}
+				},
+				{
+					"id": "AYlqmXLadS",
+					"type": "paragraph",
+					"data": {
+						"text": "Le param\u00e8tre vars peut contenir plusieurs param\u00e8tres \u00e9galement<br>"
+					}
+				},
+				{
+					"id": "or6710GAw3",
+					"type": "table",
+					"data": {
+						"withHeadings": false,
+						"content": [
+							[
+								"Nom",
+								"Type",
+								"Description"
+							],
+							[
+								"m",
+								"string",
+								"Le module o\u00f9 la route va pointer<br>"
+							],
+							[
+								"c",
+								"string",
+								"Le contr\u00f4leur o\u00f9 la route va pointer<br>"
+							],
+							[
+								"f",
+								"string",
+								"La fonction o\u00f9 la route va pointer<br>"
+							],
+							[
+								"p",
+								"string",
+								"Permet de concat\u00e9ner les pr\u00e9c\u00e9dents param\u00e8tres en une seule variable (m:c:f)<br>"
+							],
+							[
+								"a",
+								"array|0<br>",
+								"Roles autoris\u00e9s, si tableau vide, seul l'authentification est n\u00e9cessaire pour y acc\u00e9der, si 0 la page est accessible \u00e0 tous<br>"
+							],
+							[
+								"fallback",
+								"string",
+								"Si l'utilisateur n'a pas acc\u00e8s \u00e0 la route (voir param\u00e8tre a), il sera redirig\u00e9 \u00e0 la route dont vous renseignerez l'alias ici<br>"
+							]
+						]
+					}
+				},
+				{
+					"id": "03gaHCW5_R",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "routing.creation"
+	},
+	"routing.sitemap": {
+		"title": "SiteMap",
+		"content": {
+			"time": 1686671404696,
+			"blocks": [],
+			"version": "2.26.5"
+		},
+		"fullPath": "routing.sitemap"
+	},
+	"bdd.querybuilder": {
+		"title": "Classe SQLBuilder",
+		"content": {
+			"time": 1686671869608,
+			"blocks": [
+				{
+					"id": "fl0YsH_D-J",
+					"type": "paragraph",
+					"data": {
+						"text": "La classe SQLBuilder est utilis\u00e9e pour construire des requ\u00eates SQL dynamiques. Elle offre des m\u00e9thodes pour sp\u00e9cifier les colonnes \u00e0 s\u00e9lectionner, les tables \u00e0 joindre, les conditions de recherche, les valeurs \u00e0 ins\u00e9rer, les clauses GROUP BY et HAVING, les clauses ORDER BY, ainsi que les limites de pagination."
+					}
+				},
+				{
+					"id": "KaFt2JT4NG",
+					"type": "paragraph",
+					"data": {
+						"text": "M\u00e9thodes :"
+					}
+				},
+				{
+					"id": "D74ZgLwwKh",
+					"type": "list",
+					"data": {
+						"style": "ordered",
+						"items": [
+							"__construct($parameters = []) : voidDescription : Le constructeur de la classe. Permet d'initialiser les param\u00e8tres de la classe \u00e0 partir d'un tableau associatif.Param\u00e8tres :parameters (array) : Un tableau associatif contenant les param\u00e8tres \u00e0 d\u00e9finir. Les cl\u00e9s du tableau correspondent aux noms des param\u00e8tres de la classe, et les valeurs correspondent aux valeurs \u00e0 affecter \u00e0 ces param\u00e8tres.",
+							"parameters (array) : Un tableau associatif contenant les param\u00e8tres \u00e0 d\u00e9finir. Les cl\u00e9s du tableau correspondent aux noms des param\u00e8tres de la classe, et les valeurs correspondent aux valeurs \u00e0 affecter \u00e0 ces param\u00e8tres.",
+							"getColonnes() : arrayDescription : Retourne les colonnes s\u00e9lectionn\u00e9es.Retour : Un tableau contenant les colonnes s\u00e9lectionn\u00e9es.",
+							"getConditions() : arrayDescription : Retourne les conditions de recherche.Retour : Un tableau contenant les conditions de recherche.",
+							"getValues() : arrayDescription : Retourne les valeurs \u00e0 ins\u00e9rer.Retour : Un tableau contenant les valeurs \u00e0 ins\u00e9rer.",
+							"getTable() : stringDescription : Retourne la table principale.Retour : Une cha\u00eene de caract\u00e8res repr\u00e9sentant le nom de la table principale.",
+							"getJoinTables() : arrayDescription : Retourne les tables \u00e0 joindre.Retour : Un tableau contenant les tables \u00e0 joindre. Chaque cl\u00e9 du tableau correspond au nom de la table, et chaque valeur correspond \u00e0 la condition de liaison.",
+							"getGroupBy() : arrayDescription : Retourne les colonnes utilis\u00e9es pour regrouper les r\u00e9sultats.Retour : Un tableau contenant les colonnes utilis\u00e9es pour regrouper les r\u00e9sultats.",
+							"getHaving() : arrayDescription : Retourne les conditions de regroupement.Retour : Un tableau contenant les conditions de regroupement.",
+							"getLimit()Description : Retourne la limite de pagination.Retour : La limite de pagination.",
+							"getOffset()Description : Retourne le d\u00e9calage de pagination.Retour : Le d\u00e9calage de pagination.",
+							"getOrderBy()Description : Retourne les clauses de tri.Retour : Un tableau contenant les clauses de tri.",
+							"getUnions()Description : Retourne les requ\u00eates de l'union.Retour : Un tableau contenant les requ\u00eates de l'union.",
+							"getUnion($alias)Description : Retourne la requ\u00eate d'union correspondant \u00e0 l'alias sp\u00e9cifi\u00e9.Param\u00e8tres :alias (string) : L'alias de la requ\u00eate d'union \u00e0 r\u00e9cup\u00e9rer.Retour : La requ\u00eate d'union correspondant \u00e0 l'alias sp\u00e9cifi\u00e9, ou null si aucun alias correspondant n'est trouv\u00e9.",
+							"alias (string) : L'alias de la requ\u00eate d'union \u00e0 r\u00e9cup\u00e9rer.",
+							"getSql($force = false)Description : Retourne la requ\u00eate SQL g\u00e9n\u00e9r\u00e9e.Param\u00e8tres :force (bool) : Indique si la g\u00e9n\u00e9ration de la requ\u00eate SQL doit \u00eatre forc\u00e9e, m\u00eame si elle a d\u00e9j\u00e0 \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9e pr\u00e9c\u00e9demment.Retour : La requ\u00eate SQL g\u00e9n\u00e9r\u00e9e.",
+							"force (bool) : Indique si la g\u00e9n\u00e9ration de la requ\u00eate SQL doit \u00eatre forc\u00e9e, m\u00eame si elle a d\u00e9j\u00e0 \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9e pr\u00e9c\u00e9demment.",
+							"setColonnes($colonnes) : selfDescription : D\u00e9finit les colonnes \u00e0 s\u00e9lectionner.Param\u00e8tres :colonnes (array) : Un tableau contenant les noms des colonnes \u00e0 s\u00e9lectionner.Retour : L'instance de la classe SQLBuilder.",
+							"colonnes (array) : Un tableau contenant les noms des colonnes \u00e0 s\u00e9lectionner.",
+							"setConditions($conditions) : selfDescription : D\u00e9finit les conditions de recherche.Param\u00e8tres :conditions (array) : Un tableau contenant les conditions de recherche.Retour : L'instance de la classe SQLBuilder.",
+							"conditions (array) : Un tableau contenant les conditions de recherche.",
+							"setValues($values) : selfDescription : D\u00e9finit les valeurs \u00e0 ins\u00e9rer.Param\u00e8tres :values (array) : Un tableau associatif contenant les valeurs \u00e0 ins\u00e9rer. Les cl\u00e9s du tableau correspondent aux alias des valeurs, et les valeurs correspondent aux valeurs \u00e0 ins\u00e9rer.Retour : L'instance de la classe SQLBuilder.",
+							"values (array) : Un tableau associatif contenant les valeurs \u00e0 ins\u00e9rer. Les cl\u00e9s du tableau correspondent aux alias des valeurs, et les valeurs correspondent aux valeurs \u00e0 ins\u00e9rer.",
+							"setTable($table) : selfDescription : D\u00e9finit la table principale.Param\u00e8tres :table (string) : Le nom de la table principale.Retour : L'instance de la classe SQLBuilder.",
+							"table (string) : Le nom de la table principale.",
+							"setJoinTables($joinTables) : selfDescription : D\u00e9finit les tables \u00e0 joindre.Param\u00e8tres :joinTables (array) : Un tableau associatif contenant les tables \u00e0 joindre. Les cl\u00e9s du tableau correspondent aux noms des tables \u00e0 joindre, et les valeurs correspondent aux conditions de liaison.Retour : L'instance de la classe SQLBuilder.",
+							"joinTables (array) : Un tableau associatif contenant les tables \u00e0 joindre. Les cl\u00e9s du tableau correspondent aux noms des tables \u00e0 joindre, et les valeurs correspondent aux conditions de liaison.",
+							"generatePlaceholdersAndValues($values, $prefix = \"\") : stringDescription : G\u00e9n\u00e8re des marqueurs de param\u00e8tre et ajoute les valeurs correspondantes.Param\u00e8tres :values (array) : Un tableau associatif contenant les valeurs \u00e0 ajouter. Les cl\u00e9s du tableau correspondent aux alias des valeurs, et les valeurs correspondent aux valeurs \u00e0 ajouter.prefix (string) : Un pr\u00e9fixe \u00e0 utiliser pour les marqueurs de param\u00e8tre g\u00e9n\u00e9r\u00e9s.Retour : Une cha\u00eene de caract\u00e8res contenant les marqueurs de param\u00e8tre g\u00e9n\u00e9r\u00e9s, s\u00e9par\u00e9s par des virgules.",
+							"values (array) : Un tableau associatif contenant les valeurs \u00e0 ajouter. Les cl\u00e9s du tableau correspondent aux alias des valeurs, et les valeurs correspondent aux valeurs \u00e0 ajouter.",
+							"prefix (string) : Un pr\u00e9fixe \u00e0 utiliser pour les marqueurs de param\u00e8tre g\u00e9n\u00e9r\u00e9s.",
+							"setAutoJoinTables($autoJoinTables) : selfDescription : Ajoute automatiquement des tables de jointure en utilisant des classes et des alias sp\u00e9cifi\u00e9s.Param\u00e8tres :autoJoinTables (array) : Un tableau associatif contenant les informations des tables \u00e0 joindre automatiquement. Chaque \u00e9l\u00e9ment du tableau doit contenir les cl\u00e9s suivantes :alias : L'alias de la table de jointure.class : La classe correspondante \u00e0 la table principale.aliasJoined : L'alias de la table jointe.classJoined : La classe correspondante \u00e0 la table jointe.Retour : L'instance de la classe SQLBuilder.",
+							"autoJoinTables (array) : Un tableau associatif contenant les informations des tables \u00e0 joindre automatiquement. Chaque \u00e9l\u00e9ment du tableau doit contenir les cl\u00e9s suivantes :alias : L'alias de la table de jointure.class : La classe correspondante \u00e0 la table principale.aliasJoined : L'alias de la table jointe.classJoined : La classe correspondante \u00e0 la table jointe.",
+							"alias : L'alias de la table de jointure.",
+							"class : La classe correspondante \u00e0 la table principale.",
+							"aliasJoined : L'alias de la table jointe.",
+							"classJoined : La classe correspondante \u00e0 la table jointe.",
+							"setGroupBy($groupBy) : selfDescription : D\u00e9finit les colonnes pour le regroupement.Param\u00e8tres :groupBy (array) : Un tableau contenant les noms des colonnes pour le regroupement.Retour : L'instance de la classe SQLBuilder.",
+							"groupBy (array) : Un tableau contenant les noms des colonnes pour le regroupement.",
+							"setHaving($having) : selfDescription : D\u00e9finit les conditions de filtrage apr\u00e8s regroupement.Param\u00e8tres :having (array) : Un tableau contenant les conditions de filtrage apr\u00e8s regroupement.Retour : L'instance de la classe SQLBuilder.",
+							"having (array) : Un tableau contenant les conditions de filtrage apr\u00e8s regroupement.",
+							"setLimit($limit) : selfDescription : D\u00e9finit la limite de r\u00e9sultats \u00e0 r\u00e9cup\u00e9rer.Param\u00e8tres :limit (int|null) : Le nombre maximal de r\u00e9sultats \u00e0 r\u00e9cup\u00e9rer. Si la valeur est null, aucune limite n'est appliqu\u00e9e.Retour : L'instance de la classe SQLBuilder.",
+							"limit (int|null) : Le nombre maximal de r\u00e9sultats \u00e0 r\u00e9cup\u00e9rer. Si la valeur est null, aucune limite n'est appliqu\u00e9e.",
+							"setOffset($offset) : selfDescription : D\u00e9finit le d\u00e9calage pour la r\u00e9cup\u00e9ration des r\u00e9sultats.Param\u00e8tres :offset (int|null) : Le d\u00e9calage \u00e0 appliquer lors de la r\u00e9cup\u00e9ration des r\u00e9sultats. Si la valeur est null, aucun d\u00e9calage n'est appliqu\u00e9.Retour : L'instance de la classe SQLBuilder.",
+							"offset (int|null) : Le d\u00e9calage \u00e0 appliquer lors de la r\u00e9cup\u00e9ration des r\u00e9sultats. Si la valeur est null, aucun d\u00e9calage n'est appliqu\u00e9.",
+							"setOrderBy($orderBy) : selfDescription : D\u00e9finit l'ordre de tri des r\u00e9sultats.Param\u00e8tres :orderBy (array) : Un tableau contenant les colonnes pour l'ordre de tri des r\u00e9sultats.Retour : L'instance de la classe SQLBuilder.",
+							"orderBy (array) : Un tableau contenant les colonnes pour l'ordre de tri des r\u00e9sultats.",
+							"setUnions($unions) : selfDescription : D\u00e9finit les requ\u00eates UNION \u00e0 ajouter.Param\u00e8tres :unions (array) : Un tableau contenant les requ\u00eates UNION \u00e0 ajouter.Retour : L'instance de la classe SQLBuilder.",
+							"unions (array) : Un tableau contenant les requ\u00eates UNION \u00e0 ajouter.",
+							"addColonne($colonne)Description : Ajoute une colonne \u00e0 s\u00e9lectionner.Param\u00e8tres :colonne (string|array) : Le nom de la colonne \u00e0 ajouter ou un tableau contenant plusieurs noms de colonnes.Retour : L'instance de la classe SQLBuilder.",
+							"colonne (string|array) : Le nom de la colonne \u00e0 ajouter ou un tableau contenant plusieurs noms de colonnes.",
+							"addCondition($condition)Description : Ajoute une condition de recherche.Param\u00e8tres :condition (string|array) : La condition de recherche \u00e0 ajouter ou un tableau contenant plusieurs conditions.Retour : L'instance de la classe SQLBuilder.",
+							"condition (string|array) : La condition de recherche \u00e0 ajouter ou un tableau contenant plusieurs conditions.",
+							"addValue($value)Description : Ajoute une valeur \u00e0 ins\u00e9rer.Param\u00e8tres :value (string|array) : La valeur \u00e0 ajouter ou un tableau associatif contenant plusieurs valeurs.Retour : L'instance de la classe SQLBuilder.",
+							"value (string|array) : La valeur \u00e0 ajouter ou un tableau associatif contenant plusieurs valeurs.",
+							"addJoinTable($table)Description : Ajoute une table \u00e0 joindre.Param\u00e8tres :table (string|array) : La table \u00e0 ajouter ou un tableau associatif contenant plusieurs tables \u00e0 joindre.Retour : L'instance de la classe SQLBuilder.",
+							"table (string|array) : La table \u00e0 ajouter ou un tableau associatif contenant plusieurs tables \u00e0 joindre.",
+							"addAutoJoinTable($autoJoinTable)Description : Ajoute automatiquement une table de jointure en utilisant une classe et un alias sp\u00e9cifi\u00e9s.Param\u00e8tres :autoJoinTable (array) : Un tableau associatif contenant les informations de la table \u00e0 joindre automatiquement. Les cl\u00e9s du tableau correspondent aux informations suivantes :alias : L'alias de la table de jointure.class : La classe correspondante \u00e0 la table principale.aliasJoined : L'alias de la table jointe.classJoined : La classe correspondante \u00e0 la table jointe.Retour : L'instance de la classe SQLBuilder.",
+							"autoJoinTable (array) : Un tableau associatif contenant les informations de la table \u00e0 joindre automatiquement. Les cl\u00e9s du tableau correspondent aux informations suivantes :alias : L'alias de la table de jointure.class : La classe correspondante \u00e0 la table principale.aliasJoined : L'alias de la table jointe.classJoined : La classe correspondante \u00e0 la table jointe.",
+							"alias : L'alias de la table de jointure.",
+							"class : La classe correspondante \u00e0 la table principale.",
+							"aliasJoined : L'alias de la table jointe.",
+							"classJoined : La classe correspondante \u00e0 la table jointe.",
+							"addGroupBy($groupBy)Description : Ajoute des colonnes pour le regroupement.Param\u00e8tres :groupBy (string|array) : Les colonnes \u00e0 ajouter pour le regroupement.Retour : L'instance de la classe SQLBuilder.",
+							"groupBy (string|array) : Les colonnes \u00e0 ajouter pour le regroupement.",
+							"addHaving($having)Description : Ajoute des conditions de filtrage apr\u00e8s regroupement.Param\u00e8tres :having (string|array) : Les conditions \u00e0 ajouter pour le filtrage apr\u00e8s regroupement.Retour : L'instance de la classe SQLBuilder.",
+							"having (string|array) : Les conditions \u00e0 ajouter pour le filtrage apr\u00e8s regroupement.",
+							"addOrderBy($orderBy)Description : Ajoute des colonnes pour l'ordre de tri des r\u00e9sultats.Param\u00e8tres :orderBy (string|array) : Les colonnes \u00e0 ajouter pour l'ordre de tri des r\u00e9sultats.Retour : L'instance de la classe SQLBuilder.",
+							"orderBy (string|array) : Les colonnes \u00e0 ajouter pour l'ordre de tri des r\u00e9sultats.",
+							"addUnion($alias, $query)Description : Ajoute une requ\u00eate UNION.Param\u00e8tres :alias (string) : L'alias de la requ\u00eate UNION \u00e0 ajouter.query (string) : La requ\u00eate UNION \u00e0 ajouter.Retour : L'instance de la classe SQLBuilder.",
+							"alias (string) : L'alias de la requ\u00eate UNION \u00e0 ajouter.",
+							"query (string) : La requ\u00eate UNION \u00e0 ajouter."
+						]
+					}
+				},
+				{
+					"id": "Rfh-1g3azx",
+					"type": "paragraph",
+					"data": {
+						"text": "Cette documentation pr\u00e9sente les principales m\u00e9thodes de la classe SQLBuilder ainsi que leurs descriptions et param\u00e8tres. Vous pouvez utiliser ces m\u00e9thodes pour construire des requ\u00eates SQL dynamiques en utilisant PHP."
+					}
+				},
+				{
+					"id": "uH357WSGDQ",
+					"type": "code",
+					"data": {
+						"code": "use Core\\SQLBuilder;\n\/\/ Param\u00e8tres pour l'instanciation de SQLBuilder\n$parameters = [\n  \"colonnes\" => [\"id\", \"nom\", \"email\"],\n  \"table\" => \"utilisateurs\",\n  \"joinTables\" => [\n    \"roles\" => \"utilisateurs.role_id = roles.id\"\n  ],\n  \"conditions\" => [\n    \"statut = 'actif'\",\n    \"age >= 18\"\n  ],\n  \"values\" => [\n    \"alias1\" => \"valeur1\",\n    \"alias2\" => \"valeur2\"\n  ],\n  \"groupBy\" => [\"role_id\"],\n  \"having\" => [\"COUNT(*) > 10\"],\n  \"limit\" => 10,\n  \"offset\" => 0,\n  \"orderBy\" => [\"nom ASC\"]\n];\n\n\/\/ Instanciation de la classe SQLBuilder avec les param\u00e8tres\n$sqlBuilder = new SQLBuilder($parameters);\n\nreturn self::db_all($query->getSql(),$query->getValues());\n\n?>"
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "bdd.querybuilder"
 	}
 }
