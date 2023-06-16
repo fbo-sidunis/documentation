@@ -116,12 +116,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fbo-sidunis/ezframe.git",
-                "reference": "8637ab2b8db7ed7f803c50ffda59e247f9ffac9e"
+                "reference": "8daa54afd4a9ae13d0f6d843fb6891f868cca14f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fbo-sidunis/ezframe/zipball/8637ab2b8db7ed7f803c50ffda59e247f9ffac9e",
-                "reference": "8637ab2b8db7ed7f803c50ffda59e247f9ffac9e",
+                "url": "https://api.github.com/repos/fbo-sidunis/ezframe/zipball/8daa54afd4a9ae13d0f6d843fb6891f868cca14f",
+                "reference": "8daa54afd4a9ae13d0f6d843fb6891f868cca14f",
                 "shasum": ""
             },
             "require": {
@@ -168,7 +168,7 @@
                 "issues": "https://github.com/fbo-sidunis/ezframe/issues",
                 "source": "https://github.com/fbo-sidunis/ezframe/tree/main"
             },
-            "time": "2023-04-28T06:43:59+00:00"
+            "time": "2023-06-13T16:00:02+00:00"
         },
         {
             "name": "lorenzo/pinky",
