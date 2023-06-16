@@ -1790,825 +1790,6 @@
 			"time": 1686519554357,
 			"blocks": [
 				{
-					"id": "aFI4tF-bGt",
-					"type": "header",
-					"data": {
-						"text": "foreach",
-						"level": 4
-					}
-				},
-				{
-					"id": "oNW5xq-d1I",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction foreach est une fonction utilitaire qui permet de parcourir un tableau ou un objet et d'ex\u00e9cuter une fonction de rappel pour chaque \u00e9l\u00e9ment. Cette fonction est souvent utilis\u00e9e pour effectuer des op\u00e9rations sur chaque \u00e9l\u00e9ment d'un tableau ou d'un objet."
-					}
-				},
-				{
-					"id": "UZINrJbQhn",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"iterated",
-								"array&nbsp;ou&nbsp;object",
-								"Le tableau ou l'objet \u00e0 parcourir."
-							],
-							[
-								"callback",
-								"function",
-								"La fonction de rappel \u00e0 ex\u00e9cuter pour chaque \u00e9l\u00e9ment."
-							]
-						]
-					}
-				},
-				{
-					"id": "qB99Xm1jH9",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction foreach:"
-					}
-				},
-				{
-					"id": "k_VB9pPnYy",
-					"type": "code",
-					"data": {
-						"code": "const array = [1, 2, 3, 4, 5];\nforeach(array, function(value, index) {\n  console.log(`La valeur de l'\u00e9l\u00e9ment ${index} est ${value}`);\n});"
-					}
-				},
-				{
-					"id": "18qJ9gNZB-",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "bNzx_yl2uC",
-					"type": "header",
-					"data": {
-						"text": "objectToFormData ",
-						"level": 4
-					}
-				},
-				{
-					"id": "o9HGmLg0xS",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;objectToFormData&nbsp;est une fonction utilitaire qui permet de convertir un objet en un objet&nbsp;FormData. Cette fonction est souvent utilis\u00e9e pour envoyer des donn\u00e9es de formulaire via une requ\u00eate HTTP."
-					}
-				},
-				{
-					"id": "IAFQqZ0lto",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "NGpjNRNXOv",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"object",
-								"object",
-								"L'objet \u00e0 convertir en&nbsp;FormData."
-							]
-						]
-					}
-				},
-				{
-					"id": "AdlSCO75ul",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;objectToFormData:"
-					}
-				},
-				{
-					"id": "G88mCEcueY",
-					"type": "code",
-					"data": {
-						"code": "const object = {\n  name: 'John Doe',\n  email: 'john.doe@example.com',\n  avatar: new File(['avatar'], 'avatar.png', { type: 'image\/png' })\n};\nconst formData = objectToFormData(object);"
-					}
-				},
-				{
-					"id": "aMGz4yUTIJ",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "VIieGR7wUr",
-					"type": "header",
-					"data": {
-						"text": "isEmpty",
-						"level": 4
-					}
-				},
-				{
-					"id": "iNTxbo8UlA",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;isEmpty&nbsp;permet de v\u00e9rifier si une variable est vide ou non d\u00e9finie. Elle prend en entr\u00e9e une variable et retourne&nbsp;true&nbsp;si la variable est vide ou non d\u00e9finie, et&nbsp;false&nbsp;sinon."
-					}
-				},
-				{
-					"id": "YfFPjyohZw",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "Zy3LTdIz1j",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"variable",
-								"any",
-								"La variable \u00e0 v\u00e9rifier."
-							]
-						]
-					}
-				},
-				{
-					"id": "KnywjXWC4y",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;isEmpty:"
-					}
-				},
-				{
-					"id": "nmJT2aM89i",
-					"type": "code",
-					"data": {
-						"code": "const variable1 = undefined;\nconst variable2 = null;\nconst variable3 = '';\nconst variable4 = 'Hello, world!';\nconst variable5 = { foo: 'bar' };\nconst variable6 = 0;\nconst variable7 = false;\n\nconsole.log(isEmpty(variable1)); \/\/ true\nconsole.log(isEmpty(variable2)); \/\/ true\nconsole.log(isEmpty(variable3)); \/\/ true\nconsole.log(isEmpty(variable4)); \/\/ false\nconsole.log(isEmpty(variable5)); \/\/ false\nconsole.log(isEmpty(variable6)); \/\/ true\nconsole.log(isEmpty(variable7)); \/\/ true"
-					}
-				},
-				{
-					"id": "DhLdykGq6T",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "ZVxWReqKpS",
-					"type": "header",
-					"data": {
-						"text": "isNode",
-						"level": 4
-					}
-				},
-				{
-					"id": "WytbwN-W8n",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;isNode&nbsp;permet de v\u00e9rifier si un objet est un n\u0153ud DOM. Elle prend en entr\u00e9e un objet et retourne&nbsp;true&nbsp;si l'objet est un n\u0153ud DOM, et&nbsp;false&nbsp;sinon."
-					}
-				},
-				{
-					"id": "tMHYpwAeQ4",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "W0JC3AaoX9",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"o",
-								"any",
-								"L'objet \u00e0 v\u00e9rifier."
-							]
-						]
-					}
-				},
-				{
-					"id": "3ASxP1FXQH",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;isNode:"
-					}
-				},
-				{
-					"id": "F7e4wJh58A",
-					"type": "code",
-					"data": {
-						"code": "const div = document.createElement('div');\nconst span = document.createElement('span');\nconst text = document.createTextNode('Hello, world!');\n\ndiv.appendChild(span);\nspan.appendChild(text);\n\nconsole.log(isNode(div)); \/\/ true\nconsole.log(isNode(span)); \/\/ true\nconsole.log(isNode(text)); \/\/ true\nconsole.log(isNode({})); \/\/ false\nconsole.log(isNode(null)); \/\/ false\nconsole.log(isNode(undefined)); \/\/ false"
-					}
-				},
-				{
-					"id": "OQMFvCGZdo",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "6JtMcmBeA8",
-					"type": "header",
-					"data": {
-						"text": "isElement",
-						"level": 4
-					}
-				},
-				{
-					"id": "siZq6nFycQ",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;isElement&nbsp;permet de v\u00e9rifier si un objet est un \u00e9l\u00e9ment DOM. Elle prend en entr\u00e9e un objet et retourne&nbsp;true&nbsp;si l'objet est un \u00e9l\u00e9ment DOM, et&nbsp;false&nbsp;sinon."
-					}
-				},
-				{
-					"id": "pmtAJnwrWf",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "ndQQlOx7zU",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"o",
-								"any",
-								"L'objet \u00e0 v\u00e9rifier."
-							]
-						]
-					}
-				},
-				{
-					"id": "uiMZ9gm-xG",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;isElement:"
-					}
-				},
-				{
-					"id": "Fj5Pn8BFDA",
-					"type": "code",
-					"data": {
-						"code": "const div = document.createElement('div');\nconst span = document.createElement('span');\nconst text = document.createTextNode('Hello, world!');\n\ndiv.appendChild(span);\nspan.appendChild(text);\n\nconsole.log(isElement(div)); \/\/ true\nconsole.log(isElement(span)); \/\/ true\nconsole.log(isElement(text)); \/\/ false\nconsole.log(isElement({})); \/\/ false\nconsole.log(isElement(null)); \/\/ false\nconsole.log(isElement(undefined)); \/\/ false"
-					}
-				},
-				{
-					"id": "8lnWeUQ1e2",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "T7qCflsHyj",
-					"type": "header",
-					"data": {
-						"text": "getVariable",
-						"level": 4
-					}
-				},
-				{
-					"id": "DYiML5qBdw",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;getVariable&nbsp;permet de r\u00e9cup\u00e9rer la valeur d'une variable si elle n'est pas vide, sinon elle retourne une valeur par d\u00e9faut. Elle prend en entr\u00e9e deux param\u00e8tres: la variable \u00e0 v\u00e9rifier et la valeur par d\u00e9faut \u00e0 retourner si la variable est vide."
-					}
-				},
-				{
-					"id": "7ClPpiLkhf",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "qqzVxUkNww",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"variable",
-								"any",
-								"La variable \u00e0 v\u00e9rifier."
-							],
-							[
-								"defaultValue",
-								"any",
-								"La valeur par d\u00e9faut \u00e0 retourner si la variable est vide."
-							]
-						]
-					}
-				},
-				{
-					"id": "gHezyzmcBQ",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;getVariable:"
-					}
-				},
-				{
-					"id": "gsmBzyVnTJ",
-					"type": "code",
-					"data": {
-						"code": "const variable1 = '';\nconst variable2 = 'Hello, world!';\nconst variable3 = null;\nconst variable4 = undefined;\n\nconsole.log(getVariable(variable1, 'default value')); \/\/ 'default value'\nconsole.log(getVariable(variable2, 'default value')); \/\/ 'Hello, world!'\nconsole.log(getVariable(variable3, 'default value')); \/\/ 'default value'\nconsole.log(getVariable(variable4, 'default value')); \/\/ 'default value'"
-					}
-				},
-				{
-					"id": "YLNV1BG7kw",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "kBFnxKMtxk",
-					"type": "header",
-					"data": {
-						"text": "pad",
-						"level": 4
-					}
-				},
-				{
-					"id": "qhEKwVQ6J6",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;pad&nbsp;permet de compl\u00e9ter un nombre avec des z\u00e9ros \u00e0 gauche pour atteindre une longueur donn\u00e9e. Elle prend en entr\u00e9e deux param\u00e8tres: le nombre \u00e0 compl\u00e9ter et la longueur souhait\u00e9e. Si la longueur n'est pas sp\u00e9cifi\u00e9e, elle est par d\u00e9faut de 2."
-					}
-				},
-				{
-					"id": "ohj89-CDPj",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "NubFKXMP0b",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"number",
-								"number",
-								"Le nombre \u00e0 compl\u00e9ter."
-							],
-							[
-								"length",
-								"number",
-								"La longueur souhait\u00e9e."
-							]
-						]
-					}
-				},
-				{
-					"id": "Vppj5_Gbxh",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;pad:"
-					}
-				},
-				{
-					"id": "dHrdNfDcHw",
-					"type": "code",
-					"data": {
-						"code": "console.log(pad(5)); \/\/ '05'\nconsole.log(pad(42, 4)); \/\/ '0042'\nconsole.log(pad(123456789, 5)); \/\/ '123456789'"
-					}
-				},
-				{
-					"id": "C-D0pcWD82",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "7dCHZZNspS",
-					"type": "header",
-					"data": {
-						"text": "getUrlVars",
-						"level": 4
-					}
-				},
-				{
-					"id": "1EUSpWPXfj",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;getUrlVars&nbsp;permet de r\u00e9cup\u00e9rer les param\u00e8tres d'une URL sous forme d'un tableau associatif. Elle prend en entr\u00e9e l'URL \u00e0 analyser et retourne un tableau associatif contenant les param\u00e8tres de l'URL."
-					}
-				},
-				{
-					"id": "AFObAoPbd8",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "vy62IGRd2I",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"url",
-								"string",
-								"L'URL \u00e0 analyser."
-							]
-						]
-					}
-				},
-				{
-					"id": "iZDVaApNZA",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;getUrlVars:"
-					}
-				},
-				{
-					"id": "GVAZa3AzAt",
-					"type": "code",
-					"data": {
-						"code": "\/\/ URL: https:\/\/example.com\/?foo=bar&baz=qux\nconst urlParams = getUrlVars(window.location.href);\n\nconsole.log(urlParams['foo']); \/\/ 'bar'\nconsole.log(urlParams['baz']); \/\/ 'qux'"
-					}
-				},
-				{
-					"id": "VwCqttnfXE",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "W9_MaQeiZ3",
-					"type": "header",
-					"data": {
-						"text": "getUrlParam",
-						"level": 4
-					}
-				},
-				{
-					"id": "fQBe5rPGZr",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;getUrlParam&nbsp;permet de r\u00e9cup\u00e9rer la valeur d'un param\u00e8tre d'une URL. Elle prend en entr\u00e9e deux param\u00e8tres: le nom du param\u00e8tre \u00e0 r\u00e9cup\u00e9rer et la valeur par d\u00e9faut \u00e0 retourner si le param\u00e8tre n'est pas pr\u00e9sent dans l'URL."
-					}
-				},
-				{
-					"id": "1qrb-hoidk",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "nAUWkdDCwI",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"parameter",
-								"string",
-								"Le nom du param\u00e8tre \u00e0 r\u00e9cup\u00e9rer."
-							],
-							[
-								"defaultvalue",
-								"any",
-								"La valeur par d\u00e9faut \u00e0 retourner si le param\u00e8tre n'est pas pr\u00e9sent dans l'URL."
-							]
-						]
-					}
-				},
-				{
-					"id": "JHuZ5lHMOA",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;getUrlParam:"
-					}
-				},
-				{
-					"id": "m4WZ15zO57",
-					"type": "code",
-					"data": {
-						"code": "\/\/ URL: https:\/\/example.com\/?foo=bar&baz=qux\nconst foo = getUrlParam('foo', 'default value'); \/\/ 'bar'\nconst bar = getUrlParam('bar', 'default value'); \/\/ 'default value'"
-					}
-				},
-				{
-					"id": "s8vD_WsXvP",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "6Q38Vx5EFa",
-					"type": "header",
-					"data": {
-						"text": "isIE",
-						"level": 4
-					}
-				},
-				{
-					"id": "EfkYBKjsIR",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;isIE&nbsp;permet de d\u00e9tecter si le navigateur de l'utilisateur est Internet Explorer ou non. Elle prend en entr\u00e9e un param\u00e8tre optionnel&nbsp;userAgent&nbsp;qui permet de sp\u00e9cifier une cha\u00eene de caract\u00e8res repr\u00e9sentant l'agent utilisateur du navigateur. Si ce param\u00e8tre n'est pas sp\u00e9cifi\u00e9, la fonction utilise la propri\u00e9t\u00e9&nbsp;navigator.userAgent&nbsp;du navigateur."
-					}
-				},
-				{
-					"id": "GoBUYoVQEC",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "N5PWvHNUDP",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"userAgent",
-								"string",
-								"La cha\u00eene de caract\u00e8res repr\u00e9sentant l'agent utilisateur du navigateur."
-							]
-						]
-					}
-				},
-				{
-					"id": "A7YcOG0VHI",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;isIE:"
-					}
-				},
-				{
-					"id": "MCAd8I8zjx",
-					"type": "code",
-					"data": {
-						"code": "console.log(isIE()); \/\/ true si le navigateur est Internet Explorer, false sinon\nconsole.log(isIE('Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36 Edge\/16.16299')); \/\/ false"
-					}
-				},
-				{
-					"id": "aUNhM3BByi",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "M31nRaVmWK",
-					"type": "header",
-					"data": {
-						"text": "solveDateInputs",
-						"level": 4
-					}
-				},
-				{
-					"id": "0qElNgCTcl",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;solveDateInputs&nbsp;permet de r\u00e9soudre un probl\u00e8me de compatibilit\u00e9 avec Internet Explorer concernant les champs de saisie de date. En effet, Internet Explorer ne supporte pas le format de date&nbsp;dd\/mm\/yyyy&nbsp;et utilise plut\u00f4t le format&nbsp;yyyy-mm-dd. Cette fonction permet donc de convertir les dates saisies dans le format&nbsp;dd\/mm\/yyyy&nbsp;en format&nbsp;yyyy-mm-dd&nbsp;pour les navigateurs Internet Explorer."
-					}
-				},
-				{
-					"id": "eqiHkGrLfh",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "AXeX2iP7ud",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"Aucun",
-								"",
-								"Cette fonction ne prend pas de param\u00e8tres."
-							]
-						]
-					}
-				},
-				{
-					"id": "Exnawy360g",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;solveDateInputs:"
-					}
-				},
-				{
-					"id": "cku61yOMog",
-					"type": "code",
-					"data": {
-						"code": "solveDateInputs();"
-					}
-				},
-				{
-					"id": "FA-CaCj89b",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "-otD3rUK4W",
-					"type": "header",
-					"data": {
-						"text": "IsJsonString",
-						"level": 4
-					}
-				},
-				{
-					"id": "lxj-M3NuT6",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;IsJsonString&nbsp;permet de v\u00e9rifier si une cha\u00eene de caract\u00e8res est au format JSON valide. Elle prend en entr\u00e9e une cha\u00eene de caract\u00e8res \u00e0 v\u00e9rifier."
-					}
-				},
-				{
-					"id": "PO9JOan3zC",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "1kD8hQAlu6",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"str",
-								"string",
-								"La cha\u00eene de caract\u00e8res \u00e0 v\u00e9rifier."
-							]
-						]
-					}
-				},
-				{
-					"id": "p6TJoWQDC4",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;IsJsonString:"
-					}
-				},
-				{
-					"id": "Wn3KztScrO",
-					"type": "code",
-					"data": {
-						"code": "console.log(IsJsonString('{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}')); \/\/ true\nconsole.log(IsJsonString('{\"name\":\"John\",\"age\":30,\"city\":\"New York\"')); \/\/ false"
-					}
-				},
-				{
-					"id": "sSSfmFGsVv",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "5bf7pHfXeV",
-					"type": "header",
-					"data": {
-						"text": "isFileImage",
-						"level": 4
-					}
-				},
-				{
-					"id": "JlRFuHYs7V",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;isFileImage&nbsp;permet de v\u00e9rifier si un fichier est une image ou non. Elle prend en entr\u00e9e un objet&nbsp;file&nbsp;repr\u00e9sentant le fichier \u00e0 v\u00e9rifier."
-					}
-				},
-				{
-					"id": "939YJp0UzD",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "SagRMwd8Dg",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"file",
-								"object",
-								"L'objet repr\u00e9sentant le fichier \u00e0 v\u00e9rifier."
-							]
-						]
-					}
-				},
-				{
-					"id": "Fw1eSJ7sLr",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;isFileImage:"
-					}
-				},
-				{
-					"id": "tb9N2GeNjB",
-					"type": "code",
-					"data": {
-						"code": "const file = {\n  name: 'image.jpg',\n  type: 'image\/jpeg',\n  size: 1024\n};\n\nconsole.log(isFileImage(file)); \/\/ true"
-					}
-				},
-				{
-					"id": "CvjUXWO0XR",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
 					"id": "H2u-cGayZX",
 					"type": "header",
 					"data": {
@@ -2670,1023 +1851,6 @@
 				},
 				{
 					"id": "qpkM0lqlt8",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "xBWj-P2mqb",
-					"type": "header",
-					"data": {
-						"text": "domReady",
-						"level": 4
-					}
-				},
-				{
-					"id": "EQvZRgqY4g",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;domReady&nbsp;permet d'ex\u00e9cuter une fonction lorsque le DOM est pr\u00eat. Elle prend en entr\u00e9e une fonction \u00e0 ex\u00e9cuter lorsque le DOM est pr\u00eat."
-					}
-				},
-				{
-					"id": "dx9JUjqxbb",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "kXfT-fj9Hr",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"fn",
-								"function",
-								"La fonction \u00e0 ex\u00e9cuter lorsque le DOM est pr\u00eat."
-							]
-						]
-					}
-				},
-				{
-					"id": "He0fGWwqjC",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;domReady:"
-					}
-				},
-				{
-					"id": "VT7lghNAk8",
-					"type": "code",
-					"data": {
-						"code": "domReady(function() {\n  console.log('DOM is ready!');\n});"
-					}
-				},
-				{
-					"id": "j5sbOqPT_r",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "XNwI5c2z7V",
-					"type": "header",
-					"data": {
-						"text": "getVar",
-						"level": 4
-					}
-				},
-				{
-					"id": "CvbqUDNZus",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;getVar&nbsp;permet de r\u00e9cup\u00e9rer la valeur d'une variable si elle est d\u00e9finie, sinon elle renvoie une valeur par d\u00e9faut. Elle prend en entr\u00e9e deux param\u00e8tres: la variable \u00e0 r\u00e9cup\u00e9rer et une valeur par d\u00e9faut."
-					}
-				},
-				{
-					"id": "EMPro4fU6_",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "YpF0LAxFCB",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"variable",
-								"any",
-								"La variable \u00e0 r\u00e9cup\u00e9rer."
-							],
-							[
-								"defaultValue",
-								"any",
-								"La valeur par d\u00e9faut \u00e0 renvoyer si la variable n'est pas d\u00e9finie."
-							]
-						]
-					}
-				},
-				{
-					"id": "aPuiu081Zz",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;getVar:"
-					}
-				},
-				{
-					"id": "sTV99mbCZh",
-					"type": "code",
-					"data": {
-						"code": "const myVar = 'Hello, world!';\n\nconsole.log(getVar(myVar, 'Default value')); \/\/ 'Hello, world!'\nconsole.log(getVar(myOtherVar, 'Default value')); \/\/ 'Default value'"
-					}
-				},
-				{
-					"id": "lUvRGzi0Kx",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "hVA96JPIRJ",
-					"type": "header",
-					"data": {
-						"text": "debug",
-						"level": 4
-					}
-				},
-				{
-					"id": "iG7jAfTaD1",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;debug&nbsp;permet de logguer une variable dans la console si la variable&nbsp;DEBUG&nbsp;est d\u00e9finie \u00e0&nbsp;true. Elle prend en entr\u00e9e deux param\u00e8tres: la variable \u00e0 logguer et un titre optionnel."
-					}
-				},
-				{
-					"id": "8BJ1rW4COB",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "c8QXAVKZnA",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"variable",
-								"any",
-								"La variable \u00e0 logguer."
-							],
-							[
-								"titre",
-								"any",
-								"Le titre optionnel \u00e0 afficher dans la console."
-							]
-						]
-					}
-				},
-				{
-					"id": "5_SgQ4ijJb",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;debug:"
-					}
-				},
-				{
-					"id": "BaxT7tfQ98",
-					"type": "code",
-					"data": {
-						"code": "const DEBUG = true;\n\nconst myVar = 'Hello, world!';\n\ndebug(myVar, 'My variable:'); \/\/ Affiche \"My variable: Hello, world!\" dans la console"
-					}
-				},
-				{
-					"id": "g9_YR4JCZU",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "EM0XhxDRQn",
-					"type": "header",
-					"data": {
-						"text": "toDateFR",
-						"level": 4
-					}
-				},
-				{
-					"id": "179N82LP6u",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;toDateFR&nbsp;permet de convertir une date universelle ou un timestamp en une date au format fran\u00e7ais&nbsp;d\/m\/Y. Elle prend en entr\u00e9e une date optionnelle."
-					}
-				},
-				{
-					"id": "ooubhgmeFo",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "FqvyxBcPSm",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"date",
-								"Date&nbsp;ou&nbsp;number",
-								"La date universelle ou le timestamp \u00e0 convertir. Si non d\u00e9fini, la date courante est utilis\u00e9e."
-							]
-						]
-					}
-				},
-				{
-					"id": "YeU3jxXMuT",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;toDateFR:"
-					}
-				},
-				{
-					"id": "-KH_jQM_r-",
-					"type": "code",
-					"data": {
-						"code": "const myDate = new Date('2022-01-01T00:00:00Z');\n\nconsole.log(toDateFR(myDate)); \/\/ '01\/01\/2022'\nconsole.log(toDateFR()); \/\/ Date courante au format 'd\/m\/Y'"
-					}
-				},
-				{
-					"id": "-PX2RrCv94",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "Le0AtZQFYs",
-					"type": "header",
-					"data": {
-						"text": "toHoursMinutes",
-						"level": 4
-					}
-				},
-				{
-					"id": "Bq_1rVYGtu",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;toHoursMinutes&nbsp;permet de convertir une date en une cha\u00eene de caract\u00e8res repr\u00e9sentant l'heure et les minutes de cette date. Elle prend en entr\u00e9e deux param\u00e8tres optionnels: la date \u00e0 convertir et un s\u00e9parateur optionnel entre l'heure et les minutes."
-					}
-				},
-				{
-					"id": "hYPte5xhFw",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "tNxLexWY0w",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"date",
-								"Date&nbsp;ou&nbsp;number",
-								"La date \u00e0 convertir. Si non d\u00e9fini, la date courante est utilis\u00e9e."
-							],
-							[
-								"h",
-								"string",
-								"Le s\u00e9parateur optionnel entre l'heure et les minutes. Par d\u00e9faut, le s\u00e9parateur est&nbsp;:."
-							]
-						]
-					}
-				},
-				{
-					"id": "I9vm5KgV8a",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;toHoursMinutes:"
-					}
-				},
-				{
-					"id": "_AE0gy4rty",
-					"type": "code",
-					"data": {
-						"code": "const myDate = new Date('2022-01-01T12:30:00Z');\n\nconsole.log(toHoursMinutes(myDate)); \/\/ '12:30'\nconsole.log(toHoursMinutes()); \/\/ Heure courante au format 'HH:MM'"
-					}
-				},
-				{
-					"id": "C6kZ_VmGfL",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "elba4hxyx2",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici une explication de la fonction&nbsp;toUniversalDate:"
-					}
-				},
-				{
-					"id": "QbrlkyWM_X",
-					"type": "header",
-					"data": {
-						"text": "toUniversalDate",
-						"level": 4
-					}
-				},
-				{
-					"id": "sk3pC2WjE1",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;toUniversalDate&nbsp;permet de convertir une date en une cha\u00eene de caract\u00e8res repr\u00e9sentant la date au format universel&nbsp;YYYY-MM-DD. Elle prend en entr\u00e9e une date optionnelle."
-					}
-				},
-				{
-					"id": "tIkyoVMVn9",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "TeyMkd7GSC",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"date",
-								"Date",
-								"La date \u00e0 convertir. Si non d\u00e9fini, la date courante est utilis\u00e9e."
-							]
-						]
-					}
-				},
-				{
-					"id": "vGpbTFXHIS",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;toUniversalDate:"
-					}
-				},
-				{
-					"id": "zuk1kqC1Mt",
-					"type": "code",
-					"data": {
-						"code": "const myDate = new Date('2022-01-01T00:00:00Z');\n\nconsole.log(toUniversalDate(myDate)); \/\/ '2022-01-01'\nconsole.log(toUniversalDate()); \/\/ Date courante au format 'YYYY-MM-DD'"
-					}
-				},
-				{
-					"id": "c2_JJJ9x8s",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "rOJS9loraq",
-					"type": "header",
-					"data": {
-						"text": "toLocaleDateTime",
-						"level": 4
-					}
-				},
-				{
-					"id": "OuPvJ8CVGR",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;toLocaleDateTime&nbsp;permet de convertir une date en une cha\u00eene de caract\u00e8res repr\u00e9sentant la date et l'heure au format&nbsp;YYYY-MM-DD HH:MM:SS.mmm. Elle prend en entr\u00e9e une date optionnelle."
-					}
-				},
-				{
-					"id": "flAzjBpFxl",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "RCvV51B228",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"date",
-								"Date&nbsp;ou&nbsp;number",
-								"La date \u00e0 convertir. Si non d\u00e9fini, la date courante est utilis\u00e9e."
-							]
-						]
-					}
-				},
-				{
-					"id": "opyFoalz88",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;toLocaleDateTime:"
-					}
-				},
-				{
-					"id": "J15qTSJLku",
-					"type": "code",
-					"data": {
-						"code": "const myDate = new Date('2022-01-01T12:30:00Z');\n\nconsole.log(toLocaleDateTime(myDate)); \/\/ '2022-01-01 12:30:00.000'\nconsole.log(toLocaleDateTime()); \/\/ Date courante au format 'YYYY-MM-DD HH:MM:SS.mmm'"
-					}
-				},
-				{
-					"id": "rbbykIPc1M",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "wWSDfMZh_o",
-					"type": "header",
-					"data": {
-						"text": "str_capitalize",
-						"level": 4
-					}
-				},
-				{
-					"id": "z5ztBxBibx",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;str_capitalize&nbsp;permet de mettre en majuscule la premi\u00e8re lettre de chaque mot dans une cha\u00eene de caract\u00e8res. Elle prend en entr\u00e9e une cha\u00eene de caract\u00e8res."
-					}
-				},
-				{
-					"id": "F-zyrD2ZBD",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "iN5WzU1d5E",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"string",
-								"string",
-								"La cha\u00eene de caract\u00e8res \u00e0 modifier."
-							]
-						]
-					}
-				},
-				{
-					"id": "V63oc1ETMp",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;str_capitalize:"
-					}
-				},
-				{
-					"id": "J-ZYU-z79Q",
-					"type": "code",
-					"data": {
-						"code": "const myString = 'bonjour tout le monde';\n\nconsole.log(str_capitalize(myString)); \/\/ 'Bonjour Tout Le Monde'"
-					}
-				},
-				{
-					"id": "2V1ILAu76B",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "LDMCjvrtZ2",
-					"type": "header",
-					"data": {
-						"text": "getTmpl",
-						"level": 4
-					}
-				},
-				{
-					"id": "jTaz4IxnSq",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;getTmpl&nbsp;permet de r\u00e9cup\u00e9rer le contenu HTML d'un \u00e9l\u00e9ment HTML sp\u00e9cifi\u00e9 par un s\u00e9lecteur. Elle prend en entr\u00e9e un s\u00e9lecteur CSS."
-					}
-				},
-				{
-					"id": "wMjajGGtrR",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "MI96guzuXj",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"selector",
-								"string",
-								"Le s\u00e9lecteur CSS de l'\u00e9l\u00e9ment HTML \u00e0 r\u00e9cup\u00e9rer."
-							]
-						]
-					}
-				},
-				{
-					"id": "Pg_gqER3tp",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;getTmpl:"
-					}
-				},
-				{
-					"id": "yHiyERmrRn",
-					"type": "code",
-					"data": {
-						"code": "const mySelector = '#myElement';\n\nconsole.log(getTmpl(mySelector)); \/\/ Contenu HTML de l'\u00e9l\u00e9ment avec l'id 'myElement'"
-					}
-				},
-				{
-					"id": "Efz6FIjr55",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "vwMjIl151u",
-					"type": "header",
-					"data": {
-						"text": "processTemplate",
-						"level": 4
-					}
-				},
-				{
-					"id": "1C9djHZMlj",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;processTemplate&nbsp;permet de remplacer des placeholders dans une cha\u00eene de caract\u00e8res par des valeurs sp\u00e9cifi\u00e9es dans un objet de donn\u00e9es. Elle prend en entr\u00e9e un objet de param\u00e8tres contenant un template, un s\u00e9lecteur CSS optionnel pour r\u00e9cup\u00e9rer le template depuis le DOM, et un objet de donn\u00e9es contenant les valeurs \u00e0 remplacer."
-					}
-				},
-				{
-					"id": "GN7w4VwYe7",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "FmUOxCdIdn",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"parameters",
-								"object",
-								"L'objet de param\u00e8tres contenant les propri\u00e9t\u00e9s suivantes :&nbsp;template&nbsp;(optionnel) : la cha\u00eene de caract\u00e8res contenant les placeholders \u00e0 remplacer,&nbsp;selector&nbsp;(optionnel) : le s\u00e9lecteur CSS de l'\u00e9l\u00e9ment HTML contenant le template,&nbsp;data&nbsp;(optionnel) : l'objet de donn\u00e9es contenant les valeurs \u00e0 remplacer."
-							]
-						]
-					}
-				},
-				{
-					"id": "k_u3aH_32h",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;processTemplate:"
-					}
-				},
-				{
-					"id": "yAK7-vMgab",
-					"type": "code",
-					"data": {
-						"code": "const myTemplate = 'Bonjour ${prenom} ${nom} !';\nconst myData = { prenom: 'Jean', nom: 'Dupont' };\n\nconsole.log(processTemplate({ template: myTemplate, data: myData })); \/\/ 'Bonjour Jean Dupont !'"
-					}
-				},
-				{
-					"id": "_EBsrDwOC_",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "u_Q5izyIxq",
-					"type": "header",
-					"data": {
-						"text": "getRandomArbitrary",
-						"level": 4
-					}
-				},
-				{
-					"id": "InKJ2Wji9Q",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;getRandomArbitrary&nbsp;permet de g\u00e9n\u00e9rer un nombre al\u00e9atoire compris entre deux valeurs sp\u00e9cifi\u00e9es. Elle prend en entr\u00e9e deux nombres."
-					}
-				},
-				{
-					"id": "VkF0oUB2IU",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "PUd0RVepp7",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"min",
-								"number",
-								"La valeur minimale pour le nombre al\u00e9atoire."
-							],
-							[
-								"max",
-								"number",
-								"La valeur maximale pour le nombre al\u00e9atoire."
-							]
-						]
-					}
-				},
-				{
-					"id": "B6r9DqEleQ",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;getRandomArbitrary:"
-					}
-				},
-				{
-					"id": "JfPXPtRY14",
-					"type": "code",
-					"data": {
-						"code": "console.log(getRandomArbitrary(1, 10)); \/\/ Un nombre al\u00e9atoire compris entre 1 et 10"
-					}
-				},
-				{
-					"id": "0fL9Z9vZBD",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "34oTN7skVL",
-					"type": "header",
-					"data": {
-						"text": "initToolTip",
-						"level": 4
-					}
-				},
-				{
-					"id": "pybS1s1miR",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;initToolTip&nbsp;initialise les tooltips Bootstrap sur les \u00e9l\u00e9ments HTML qui ont l'attribut&nbsp;data-toggle=\"tooltip\". Elle ne prend aucun param\u00e8tre en entr\u00e9e."
-					}
-				},
-				{
-					"id": "XRe3beuvm4",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;initToolTip:"
-					}
-				},
-				{
-					"id": "tu6JEHD11o",
-					"type": "code",
-					"data": {
-						"code": "<button type=\"button\" class=\"btn btn-secondary\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Tooltip on top\">\n  Tooltip on top\n<\/button>\n\n<script>\n  initToolTip();\n<\/script>"
-					}
-				},
-				{
-					"id": "iH-xbRzoeq",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "YDkQsGpd_2",
-					"type": "header",
-					"data": {
-						"text": "createPlaceholderFunction",
-						"level": 4
-					}
-				},
-				{
-					"id": "xGxfxOtoyv",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;createPlaceholderFunction&nbsp;retourne une fonction qui s'appelle toutes les 0,25 secondes jusqu'\u00e0 ce qu'elle prenne une nouvelle valeur. Elle prend en entr\u00e9e un param\u00e8tre optionnel&nbsp;timer&nbsp;qui sp\u00e9cifie le temps en millisecondes entre chaque appel de la fonction."
-					}
-				},
-				{
-					"id": "fcNt1fTrnn",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "PyoTgymx8C",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"timer",
-								"`number",
-								"null"
-							]
-						]
-					}
-				},
-				{
-					"id": "bGY9WXrV0H",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;createPlaceholderFunction:"
-					}
-				},
-				{
-					"id": "CiGlWPngEH",
-					"type": "code",
-					"data": {
-						"code": "const myFunction = createPlaceholderFunction(500);\n\n\/\/ Appelle la fonction toutes les 500 millisecondes\nmyFunction();"
-					}
-				},
-				{
-					"id": "OUGPtyn3tl",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "yZ19FWRT0S",
-					"type": "header",
-					"data": {
-						"text": "getNextDayOfWeek",
-						"level": 4
-					}
-				},
-				{
-					"id": "ceadIr9M4x",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;getNextDayOfWeek&nbsp;prend en entr\u00e9e une date et un jour de la semaine (0 pour dimanche, 1 pour lundi, etc.) et retourne la prochaine occurrence de ce jour de la semaine apr\u00e8s la date renseign\u00e9e."
-					}
-				},
-				{
-					"id": "JG4uWhG4eK",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "hRFuWDwQsP",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"date",
-								"Date",
-								"La date \u00e0 partir de laquelle chercher la prochaine occurrence du jour de la semaine."
-							],
-							[
-								"dayOfWeek",
-								"number",
-								"Le jour de la semaine \u00e0 chercher, repr\u00e9sent\u00e9 par un nombre entre 0 (dimanche) et 6 (samedi)."
-							]
-						]
-					}
-				},
-				{
-					"id": "4jXQEdEEic",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;getNextDayOfWeek:"
-					}
-				},
-				{
-					"id": "ScY4iBuPCs",
-					"type": "code",
-					"data": {
-						"code": "const date = new Date('2022-01-01');\nconst nextMonday = getNextDayOfWeek(date, 1); \/\/ Cherche le prochain lundi apr\u00e8s le 1er janvier 2022\n\nconsole.log(nextMonday); \/\/ Affiche la date du lundi suivant, le 3 janvier 2022"
-					}
-				},
-				{
-					"id": "SKX6LOHdVq",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "i4ZUjazTOx",
-					"type": "header",
-					"data": {
-						"text": "getGET",
-						"level": 4
-					}
-				},
-				{
-					"id": "xSRuGdYpo4",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;getGET&nbsp;permet de r\u00e9cup\u00e9rer la valeur d'un param\u00e8tre GET dans l'URL de la page. Elle prend en entr\u00e9e le nom du param\u00e8tre \u00e0 r\u00e9cup\u00e9rer et retourne sa valeur."
-					}
-				},
-				{
-					"id": "aeJt5z2U4F",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "u7E-3O7Oih",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"name",
-								"string",
-								"Le nom du param\u00e8tre GET \u00e0 r\u00e9cup\u00e9rer."
-							]
-						]
-					}
-				},
-				{
-					"id": "GjoO1Zs1n5",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;getGET:"
-					}
-				},
-				{
-					"id": "LVPu-2jjth",
-					"type": "paragraph",
-					"data": {
-						"text": "Supposons que l'URL de la page soit&nbsp;http:\/\/example.com\/index.html?param1=value1&amp;param2=value2. Pour r\u00e9cup\u00e9rer la valeur du param\u00e8tre&nbsp;param1, on peut utiliser la fonction&nbsp;getGET&nbsp;de la mani\u00e8re suivante:"
-					}
-				},
-				{
-					"id": "eNpP2P3k9j",
-					"type": "code",
-					"data": {
-						"code": "const param1Value = getGET('param1');\nconsole.log(param1Value); \/\/ Affiche \"value1\""
-					}
-				},
-				{
-					"id": "3Sq-6am51z",
-					"type": "raw",
-					"data": {
-						"html": "<hr>"
-					}
-				},
-				{
-					"id": "YK7qJlnl-S",
-					"type": "header",
-					"data": {
-						"text": "getParent",
-						"level": 4
-					}
-				},
-				{
-					"id": "otJpMtSwUV",
-					"type": "paragraph",
-					"data": {
-						"text": "La fonction&nbsp;getParent&nbsp;prend en entr\u00e9e un \u00e9l\u00e9ment HTML et un s\u00e9lecteur CSS et retourne le parent le plus proche de l'\u00e9l\u00e9ment qui correspond au s\u00e9lecteur donn\u00e9."
-					}
-				},
-				{
-					"id": "EzPs4Knjf3",
-					"type": "paragraph",
-					"data": {
-						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
-					}
-				},
-				{
-					"id": "CbenzKDZhV",
-					"type": "table",
-					"data": {
-						"withHeadings": true,
-						"content": [
-							[
-								"Nom de la variable",
-								"Type",
-								"Description"
-							],
-							[
-								"element",
-								"HTMLElement",
-								"L'\u00e9l\u00e9ment dont on doit chercher le plus proche parent avec le s\u00e9lecteur donn\u00e9."
-							],
-							[
-								"selectorString",
-								"string",
-								"Le s\u00e9lecteur CSS utilis\u00e9 pour chercher le parent."
-							]
-						]
-					}
-				},
-				{
-					"id": "_MTVaj7lWI",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;getParent:"
-					}
-				},
-				{
-					"id": "YzfaIoOJwG",
-					"type": "code",
-					"data": {
-						"code": "<div class=\"parent\">\n  <div class=\"child\">\n    <div class=\"grandchild\"><\/div>\n  <\/div>\n<\/div>"
-					}
-				},
-				{
-					"id": "vn5DbzY46a",
-					"type": "code",
-					"data": {
-						"code": "const grandchild = document.querySelector('.grandchild');\nconst parent = getParent(grandchild, '.parent');\n\nconsole.log(parent); \/\/ Affiche l'\u00e9l\u00e9ment avec la classe \"parent\""
-					}
-				},
-				{
-					"id": "o2DIIL950X",
 					"type": "raw",
 					"data": {
 						"html": "<hr>"
@@ -3780,29 +1944,29 @@
 					}
 				},
 				{
-					"id": "pb06eMqHYL",
+					"id": "YDkQsGpd_2",
 					"type": "header",
 					"data": {
-						"text": "objectMap",
+						"text": "createPlaceholderFunction",
 						"level": 4
 					}
 				},
 				{
-					"id": "B6zmSZ_yIL",
+					"id": "xGxfxOtoyv",
 					"type": "paragraph",
 					"data": {
-						"text": "La fonction&nbsp;objectMap&nbsp;prend en entr\u00e9e un objet et une fonction de mappage et retourne un nouvel objet avec les m\u00eames cl\u00e9s que l'objet d'entr\u00e9e, mais avec les valeurs transform\u00e9es par la fonction de mappage."
+						"text": "La fonction&nbsp;createPlaceholderFunction&nbsp;retourne une fonction qui s'appelle toutes les 0,25 secondes jusqu'\u00e0 ce qu'elle prenne une nouvelle valeur. Elle prend en entr\u00e9e un param\u00e8tre optionnel&nbsp;timer&nbsp;qui sp\u00e9cifie le temps en millisecondes entre chaque appel de la fonction."
 					}
 				},
 				{
-					"id": "3fDNojrl8p",
+					"id": "fcNt1fTrnn",
 					"type": "paragraph",
 					"data": {
 						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
 					}
 				},
 				{
-					"id": "-0Aismmb7o",
+					"id": "PyoTgymx8C",
 					"type": "table",
 					"data": {
 						"withHeadings": true,
@@ -3813,41 +1977,1295 @@
 								"Description"
 							],
 							[
-								"object",
-								"object",
-								"L'objet \u00e0 mapper."
-							],
-							[
-								"mapFn",
-								"Function",
-								"La fonction de mappage \u00e0 appliquer \u00e0 chaque valeur de l'objet. Cette fonction prend en entr\u00e9e la valeur et la cl\u00e9 de l'objet et retourne la valeur transform\u00e9e."
+								"timer",
+								"`number",
+								"null"
 							]
 						]
 					}
 				},
 				{
-					"id": "cCwyjc9lEz",
+					"id": "bGY9WXrV0H",
 					"type": "paragraph",
 					"data": {
-						"text": "La fonction&nbsp;objectMap&nbsp;retourne un nouvel objet avec les m\u00eames cl\u00e9s que l'objet d'entr\u00e9e, mais avec les valeurs transform\u00e9es par la fonction de mappage."
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;createPlaceholderFunction:"
 					}
 				},
 				{
-					"id": "fTSFfmCO0k",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;objectMap:"
-					}
-				},
-				{
-					"id": "5ixgDVbYeJ",
+					"id": "CiGlWPngEH",
 					"type": "code",
 					"data": {
-						"code": "const myObject = {\n  a: 1,\n  b: 2,\n  c: 3\n};\n\nconst mappedObject = objectMap(myObject, function(value, key) {\n  return value * 2;\n});\n\nconsole.log(mappedObject); \/\/ Affiche { a: 2, b: 4, c: 6 }"
+						"code": "const myFunction = createPlaceholderFunction(500);\n\n\/\/ Appelle la fonction toutes les 500 millisecondes\nmyFunction();"
 					}
 				},
 				{
-					"id": "2tX2U86gnV",
+					"id": "OUGPtyn3tl",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "hVA96JPIRJ",
+					"type": "header",
+					"data": {
+						"text": "debug",
+						"level": 4
+					}
+				},
+				{
+					"id": "iG7jAfTaD1",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;debug&nbsp;permet de logguer une variable dans la console si la variable&nbsp;DEBUG&nbsp;est d\u00e9finie \u00e0&nbsp;true. Elle prend en entr\u00e9e deux param\u00e8tres: la variable \u00e0 logguer et un titre optionnel."
+					}
+				},
+				{
+					"id": "8BJ1rW4COB",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "c8QXAVKZnA",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"variable",
+								"any",
+								"La variable \u00e0 logguer."
+							],
+							[
+								"titre",
+								"any",
+								"Le titre optionnel \u00e0 afficher dans la console."
+							]
+						]
+					}
+				},
+				{
+					"id": "5_SgQ4ijJb",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;debug:"
+					}
+				},
+				{
+					"id": "BaxT7tfQ98",
+					"type": "code",
+					"data": {
+						"code": "const DEBUG = true;\n\nconst myVar = 'Hello, world!';\n\ndebug(myVar, 'My variable:'); \/\/ Affiche \"My variable: Hello, world!\" dans la console"
+					}
+				},
+				{
+					"id": "g9_YR4JCZU",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "3QOQQwqxe7",
+					"type": "header",
+					"data": {
+						"text": "deepMerge",
+						"level": 4
+					}
+				},
+				{
+					"id": "jo1QrsSJ8E",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;deepMerge&nbsp;permet de fusionner deux objets en un seul objet. Elle prend en entr\u00e9e deux objets et retourne un nouvel objet qui contient toutes les propri\u00e9t\u00e9s des deux objets d'origine."
+					}
+				},
+				{
+					"id": "oLYTrFdQ8y",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "SVAU_Z78vo",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"obj1",
+								"object",
+								"Le premier objet \u00e0 fusionner."
+							],
+							[
+								"obj2",
+								"object",
+								"Le deuxi\u00e8me objet \u00e0 fusionner."
+							]
+						]
+					}
+				},
+				{
+					"id": "wbgUMMO9d8",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;deepMerge&nbsp;parcourt chaque propri\u00e9t\u00e9 de&nbsp;obj1&nbsp;et compare sa valeur \u00e0 la valeur correspondante dans&nbsp;obj2. Si la propri\u00e9t\u00e9 n'existe pas dans&nbsp;obj2, elle est ajout\u00e9e \u00e0 l'objet de sortie. Si la propri\u00e9t\u00e9 existe dans les deux objets et est elle-m\u00eame un objet, la fonction&nbsp;deepMerge&nbsp;est appel\u00e9e r\u00e9cursivement pour fusionner les deux objets. Sinon, la valeur de&nbsp;obj2&nbsp;est utilis\u00e9e pour remplacer la valeur de&nbsp;obj1."
+					}
+				},
+				{
+					"id": "CXs4b1z1Yw",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;deepMerge:"
+					}
+				},
+				{
+					"id": "C1GVo-wKq7",
+					"type": "code",
+					"data": {
+						"code": "const obj1 = {\n  name: 'John',\n  age: 30,\n  address: {\n    street: '123 Main St',\n    city: 'Anytown',\n    state: 'CA'\n  }\n};\n\nconst obj2 = {\n  age: 35,\n  address: {\n    city: 'Othertown'\n  },\n  phone: '555-555-1212'\n};\n\nconst mergedObj = deepMerge(obj1, obj2);\n\nconsole.log(mergedObj);\n\/*\nAffiche:\n{\n  name: 'John',\n  age: 35,\n  address: {\n    street: '123 Main St',\n    city: 'Othertown',\n    state: 'CA'\n  },\n  phone: '555-555-1212'\n}\n*\/"
+					}
+				},
+				{
+					"id": "xBWj-P2mqb",
+					"type": "header",
+					"data": {
+						"text": "domReady",
+						"level": 4
+					}
+				},
+				{
+					"id": "EQvZRgqY4g",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;domReady&nbsp;permet d'ex\u00e9cuter une fonction lorsque le DOM est pr\u00eat. Elle prend en entr\u00e9e une fonction \u00e0 ex\u00e9cuter lorsque le DOM est pr\u00eat."
+					}
+				},
+				{
+					"id": "dx9JUjqxbb",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "kXfT-fj9Hr",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"fn",
+								"function",
+								"La fonction \u00e0 ex\u00e9cuter lorsque le DOM est pr\u00eat."
+							]
+						]
+					}
+				},
+				{
+					"id": "He0fGWwqjC",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;domReady:"
+					}
+				},
+				{
+					"id": "VT7lghNAk8",
+					"type": "code",
+					"data": {
+						"code": "domReady(function() {\n  console.log('DOM is ready!');\n});"
+					}
+				},
+				{
+					"id": "j5sbOqPT_r",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "aFI4tF-bGt",
+					"type": "header",
+					"data": {
+						"text": "foreach",
+						"level": 4
+					}
+				},
+				{
+					"id": "oNW5xq-d1I",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction foreach est une fonction utilitaire qui permet de parcourir un tableau ou un objet et d'ex\u00e9cuter une fonction de rappel pour chaque \u00e9l\u00e9ment. Cette fonction est souvent utilis\u00e9e pour effectuer des op\u00e9rations sur chaque \u00e9l\u00e9ment d'un tableau ou d'un objet."
+					}
+				},
+				{
+					"id": "UZINrJbQhn",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"iterated",
+								"array&nbsp;ou&nbsp;object",
+								"Le tableau ou l'objet \u00e0 parcourir."
+							],
+							[
+								"callback",
+								"function",
+								"La fonction de rappel \u00e0 ex\u00e9cuter pour chaque \u00e9l\u00e9ment."
+							]
+						]
+					}
+				},
+				{
+					"id": "qB99Xm1jH9",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction foreach:"
+					}
+				},
+				{
+					"id": "k_VB9pPnYy",
+					"type": "code",
+					"data": {
+						"code": "const array = [1, 2, 3, 4, 5];\nforeach(array, function(value, index) {\n  console.log(`La valeur de l'\u00e9l\u00e9ment ${index} est ${value}`);\n});"
+					}
+				},
+				{
+					"id": "18qJ9gNZB-",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "i4ZUjazTOx",
+					"type": "header",
+					"data": {
+						"text": "getGET",
+						"level": 4
+					}
+				},
+				{
+					"id": "xSRuGdYpo4",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;getGET&nbsp;permet de r\u00e9cup\u00e9rer la valeur d'un param\u00e8tre GET dans l'URL de la page. Elle prend en entr\u00e9e le nom du param\u00e8tre \u00e0 r\u00e9cup\u00e9rer et retourne sa valeur."
+					}
+				},
+				{
+					"id": "aeJt5z2U4F",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "u7E-3O7Oih",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"name",
+								"string",
+								"Le nom du param\u00e8tre GET \u00e0 r\u00e9cup\u00e9rer."
+							]
+						]
+					}
+				},
+				{
+					"id": "GjoO1Zs1n5",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;getGET:"
+					}
+				},
+				{
+					"id": "LVPu-2jjth",
+					"type": "paragraph",
+					"data": {
+						"text": "Supposons que l'URL de la page soit&nbsp;http:\/\/example.com\/index.html?param1=value1&amp;param2=value2. Pour r\u00e9cup\u00e9rer la valeur du param\u00e8tre&nbsp;param1, on peut utiliser la fonction&nbsp;getGET&nbsp;de la mani\u00e8re suivante:"
+					}
+				},
+				{
+					"id": "eNpP2P3k9j",
+					"type": "code",
+					"data": {
+						"code": "const param1Value = getGET('param1');\nconsole.log(param1Value); \/\/ Affiche \"value1\""
+					}
+				},
+				{
+					"id": "3Sq-6am51z",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "yZ19FWRT0S",
+					"type": "header",
+					"data": {
+						"text": "getNextDayOfWeek",
+						"level": 4
+					}
+				},
+				{
+					"id": "ceadIr9M4x",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;getNextDayOfWeek&nbsp;prend en entr\u00e9e une date et un jour de la semaine (0 pour dimanche, 1 pour lundi, etc.) et retourne la prochaine occurrence de ce jour de la semaine apr\u00e8s la date renseign\u00e9e."
+					}
+				},
+				{
+					"id": "JG4uWhG4eK",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "hRFuWDwQsP",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"date",
+								"Date",
+								"La date \u00e0 partir de laquelle chercher la prochaine occurrence du jour de la semaine."
+							],
+							[
+								"dayOfWeek",
+								"number",
+								"Le jour de la semaine \u00e0 chercher, repr\u00e9sent\u00e9 par un nombre entre 0 (dimanche) et 6 (samedi)."
+							]
+						]
+					}
+				},
+				{
+					"id": "4jXQEdEEic",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;getNextDayOfWeek:"
+					}
+				},
+				{
+					"id": "ScY4iBuPCs",
+					"type": "code",
+					"data": {
+						"code": "const date = new Date('2022-01-01');\nconst nextMonday = getNextDayOfWeek(date, 1); \/\/ Cherche le prochain lundi apr\u00e8s le 1er janvier 2022\n\nconsole.log(nextMonday); \/\/ Affiche la date du lundi suivant, le 3 janvier 2022"
+					}
+				},
+				{
+					"id": "SKX6LOHdVq",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "YK7qJlnl-S",
+					"type": "header",
+					"data": {
+						"text": "getParent",
+						"level": 4
+					}
+				},
+				{
+					"id": "otJpMtSwUV",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;getParent&nbsp;prend en entr\u00e9e un \u00e9l\u00e9ment HTML et un s\u00e9lecteur CSS et retourne le parent le plus proche de l'\u00e9l\u00e9ment qui correspond au s\u00e9lecteur donn\u00e9."
+					}
+				},
+				{
+					"id": "EzPs4Knjf3",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "CbenzKDZhV",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"element",
+								"HTMLElement",
+								"L'\u00e9l\u00e9ment dont on doit chercher le plus proche parent avec le s\u00e9lecteur donn\u00e9."
+							],
+							[
+								"selectorString",
+								"string",
+								"Le s\u00e9lecteur CSS utilis\u00e9 pour chercher le parent."
+							]
+						]
+					}
+				},
+				{
+					"id": "_MTVaj7lWI",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;getParent:"
+					}
+				},
+				{
+					"id": "YzfaIoOJwG",
+					"type": "code",
+					"data": {
+						"code": "<div class=\"parent\">\n  <div class=\"child\">\n    <div class=\"grandchild\"><\/div>\n  <\/div>\n<\/div>"
+					}
+				},
+				{
+					"id": "vn5DbzY46a",
+					"type": "code",
+					"data": {
+						"code": "const grandchild = document.querySelector('.grandchild');\nconst parent = getParent(grandchild, '.parent');\n\nconsole.log(parent); \/\/ Affiche l'\u00e9l\u00e9ment avec la classe \"parent\""
+					}
+				},
+				{
+					"id": "o2DIIL950X",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "u_Q5izyIxq",
+					"type": "header",
+					"data": {
+						"text": "getRandomArbitrary",
+						"level": 4
+					}
+				},
+				{
+					"id": "InKJ2Wji9Q",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;getRandomArbitrary&nbsp;permet de g\u00e9n\u00e9rer un nombre al\u00e9atoire compris entre deux valeurs sp\u00e9cifi\u00e9es. Elle prend en entr\u00e9e deux nombres."
+					}
+				},
+				{
+					"id": "VkF0oUB2IU",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "PUd0RVepp7",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"min",
+								"number",
+								"La valeur minimale pour le nombre al\u00e9atoire."
+							],
+							[
+								"max",
+								"number",
+								"La valeur maximale pour le nombre al\u00e9atoire."
+							]
+						]
+					}
+				},
+				{
+					"id": "B6r9DqEleQ",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;getRandomArbitrary:"
+					}
+				},
+				{
+					"id": "JfPXPtRY14",
+					"type": "code",
+					"data": {
+						"code": "console.log(getRandomArbitrary(1, 10)); \/\/ Un nombre al\u00e9atoire compris entre 1 et 10"
+					}
+				},
+				{
+					"id": "0fL9Z9vZBD",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "LDMCjvrtZ2",
+					"type": "header",
+					"data": {
+						"text": "getTmpl",
+						"level": 4
+					}
+				},
+				{
+					"id": "jTaz4IxnSq",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;getTmpl&nbsp;permet de r\u00e9cup\u00e9rer le contenu HTML d'un \u00e9l\u00e9ment HTML sp\u00e9cifi\u00e9 par un s\u00e9lecteur. Elle prend en entr\u00e9e un s\u00e9lecteur CSS."
+					}
+				},
+				{
+					"id": "wMjajGGtrR",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "MI96guzuXj",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"selector",
+								"string",
+								"Le s\u00e9lecteur CSS de l'\u00e9l\u00e9ment HTML \u00e0 r\u00e9cup\u00e9rer."
+							]
+						]
+					}
+				},
+				{
+					"id": "Pg_gqER3tp",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;getTmpl:"
+					}
+				},
+				{
+					"id": "yHiyERmrRn",
+					"type": "code",
+					"data": {
+						"code": "const mySelector = '#myElement';\n\nconsole.log(getTmpl(mySelector)); \/\/ Contenu HTML de l'\u00e9l\u00e9ment avec l'id 'myElement'"
+					}
+				},
+				{
+					"id": "Efz6FIjr55",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "W9_MaQeiZ3",
+					"type": "header",
+					"data": {
+						"text": "getUrlParam",
+						"level": 4
+					}
+				},
+				{
+					"id": "fQBe5rPGZr",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;getUrlParam&nbsp;permet de r\u00e9cup\u00e9rer la valeur d'un param\u00e8tre d'une URL. Elle prend en entr\u00e9e deux param\u00e8tres: le nom du param\u00e8tre \u00e0 r\u00e9cup\u00e9rer et la valeur par d\u00e9faut \u00e0 retourner si le param\u00e8tre n'est pas pr\u00e9sent dans l'URL."
+					}
+				},
+				{
+					"id": "1qrb-hoidk",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "nAUWkdDCwI",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"parameter",
+								"string",
+								"Le nom du param\u00e8tre \u00e0 r\u00e9cup\u00e9rer."
+							],
+							[
+								"defaultvalue",
+								"any",
+								"La valeur par d\u00e9faut \u00e0 retourner si le param\u00e8tre n'est pas pr\u00e9sent dans l'URL."
+							]
+						]
+					}
+				},
+				{
+					"id": "JHuZ5lHMOA",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;getUrlParam:"
+					}
+				},
+				{
+					"id": "m4WZ15zO57",
+					"type": "code",
+					"data": {
+						"code": "\/\/ URL: https:\/\/example.com\/?foo=bar&baz=qux\nconst foo = getUrlParam('foo', 'default value'); \/\/ 'bar'\nconst bar = getUrlParam('bar', 'default value'); \/\/ 'default value'"
+					}
+				},
+				{
+					"id": "s8vD_WsXvP",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "7dCHZZNspS",
+					"type": "header",
+					"data": {
+						"text": "getUrlVars",
+						"level": 4
+					}
+				},
+				{
+					"id": "1EUSpWPXfj",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;getUrlVars&nbsp;permet de r\u00e9cup\u00e9rer les param\u00e8tres d'une URL sous forme d'un tableau associatif. Elle prend en entr\u00e9e l'URL \u00e0 analyser et retourne un tableau associatif contenant les param\u00e8tres de l'URL."
+					}
+				},
+				{
+					"id": "AFObAoPbd8",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "vy62IGRd2I",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"url",
+								"string",
+								"L'URL \u00e0 analyser."
+							]
+						]
+					}
+				},
+				{
+					"id": "iZDVaApNZA",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;getUrlVars:"
+					}
+				},
+				{
+					"id": "GVAZa3AzAt",
+					"type": "code",
+					"data": {
+						"code": "\/\/ URL: https:\/\/example.com\/?foo=bar&baz=qux\nconst urlParams = getUrlVars(window.location.href);\n\nconsole.log(urlParams['foo']); \/\/ 'bar'\nconsole.log(urlParams['baz']); \/\/ 'qux'"
+					}
+				},
+				{
+					"id": "VwCqttnfXE",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "XNwI5c2z7V",
+					"type": "header",
+					"data": {
+						"text": "getVar",
+						"level": 4
+					}
+				},
+				{
+					"id": "CvbqUDNZus",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;getVar&nbsp;permet de r\u00e9cup\u00e9rer la valeur d'une variable si elle est d\u00e9finie, sinon elle renvoie une valeur par d\u00e9faut. Elle prend en entr\u00e9e deux param\u00e8tres: la variable \u00e0 r\u00e9cup\u00e9rer et une valeur par d\u00e9faut."
+					}
+				},
+				{
+					"id": "EMPro4fU6_",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "YpF0LAxFCB",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"variable",
+								"any",
+								"La variable \u00e0 r\u00e9cup\u00e9rer."
+							],
+							[
+								"defaultValue",
+								"any",
+								"La valeur par d\u00e9faut \u00e0 renvoyer si la variable n'est pas d\u00e9finie."
+							]
+						]
+					}
+				},
+				{
+					"id": "aPuiu081Zz",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;getVar:"
+					}
+				},
+				{
+					"id": "sTV99mbCZh",
+					"type": "code",
+					"data": {
+						"code": "const myVar = 'Hello, world!';\n\nconsole.log(getVar(myVar, 'Default value')); \/\/ 'Hello, world!'\nconsole.log(getVar(myOtherVar, 'Default value')); \/\/ 'Default value'"
+					}
+				},
+				{
+					"id": "lUvRGzi0Kx",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "T7qCflsHyj",
+					"type": "header",
+					"data": {
+						"text": "getVariable",
+						"level": 4
+					}
+				},
+				{
+					"id": "DYiML5qBdw",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;getVariable&nbsp;permet de r\u00e9cup\u00e9rer la valeur d'une variable si elle n'est pas vide, sinon elle retourne une valeur par d\u00e9faut. Elle prend en entr\u00e9e deux param\u00e8tres: la variable \u00e0 v\u00e9rifier et la valeur par d\u00e9faut \u00e0 retourner si la variable est vide."
+					}
+				},
+				{
+					"id": "7ClPpiLkhf",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "qqzVxUkNww",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"variable",
+								"any",
+								"La variable \u00e0 v\u00e9rifier."
+							],
+							[
+								"defaultValue",
+								"any",
+								"La valeur par d\u00e9faut \u00e0 retourner si la variable est vide."
+							]
+						]
+					}
+				},
+				{
+					"id": "gHezyzmcBQ",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;getVariable:"
+					}
+				},
+				{
+					"id": "gsmBzyVnTJ",
+					"type": "code",
+					"data": {
+						"code": "const variable1 = '';\nconst variable2 = 'Hello, world!';\nconst variable3 = null;\nconst variable4 = undefined;\n\nconsole.log(getVariable(variable1, 'default value')); \/\/ 'default value'\nconsole.log(getVariable(variable2, 'default value')); \/\/ 'Hello, world!'\nconsole.log(getVariable(variable3, 'default value')); \/\/ 'default value'\nconsole.log(getVariable(variable4, 'default value')); \/\/ 'default value'"
+					}
+				},
+				{
+					"id": "YLNV1BG7kw",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "34oTN7skVL",
+					"type": "header",
+					"data": {
+						"text": "initToolTip",
+						"level": 4
+					}
+				},
+				{
+					"id": "pybS1s1miR",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;initToolTip&nbsp;initialise les tooltips Bootstrap sur les \u00e9l\u00e9ments HTML qui ont l'attribut&nbsp;data-toggle=\"tooltip\". Elle ne prend aucun param\u00e8tre en entr\u00e9e."
+					}
+				},
+				{
+					"id": "XRe3beuvm4",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;initToolTip:"
+					}
+				},
+				{
+					"id": "tu6JEHD11o",
+					"type": "code",
+					"data": {
+						"code": "<button type=\"button\" class=\"btn btn-secondary\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Tooltip on top\">\n  Tooltip on top\n<\/button>\n\n<script>\n  initToolTip();\n<\/script>"
+					}
+				},
+				{
+					"id": "iH-xbRzoeq",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "6JtMcmBeA8",
+					"type": "header",
+					"data": {
+						"text": "isElement",
+						"level": 4
+					}
+				},
+				{
+					"id": "siZq6nFycQ",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;isElement&nbsp;permet de v\u00e9rifier si un objet est un \u00e9l\u00e9ment DOM. Elle prend en entr\u00e9e un objet et retourne&nbsp;true&nbsp;si l'objet est un \u00e9l\u00e9ment DOM, et&nbsp;false&nbsp;sinon."
+					}
+				},
+				{
+					"id": "pmtAJnwrWf",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "ndQQlOx7zU",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"o",
+								"any",
+								"L'objet \u00e0 v\u00e9rifier."
+							]
+						]
+					}
+				},
+				{
+					"id": "uiMZ9gm-xG",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;isElement:"
+					}
+				},
+				{
+					"id": "Fj5Pn8BFDA",
+					"type": "code",
+					"data": {
+						"code": "const div = document.createElement('div');\nconst span = document.createElement('span');\nconst text = document.createTextNode('Hello, world!');\n\ndiv.appendChild(span);\nspan.appendChild(text);\n\nconsole.log(isElement(div)); \/\/ true\nconsole.log(isElement(span)); \/\/ true\nconsole.log(isElement(text)); \/\/ false\nconsole.log(isElement({})); \/\/ false\nconsole.log(isElement(null)); \/\/ false\nconsole.log(isElement(undefined)); \/\/ false"
+					}
+				},
+				{
+					"id": "8lnWeUQ1e2",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "VIieGR7wUr",
+					"type": "header",
+					"data": {
+						"text": "isEmpty",
+						"level": 4
+					}
+				},
+				{
+					"id": "iNTxbo8UlA",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;isEmpty&nbsp;permet de v\u00e9rifier si une variable est vide ou non d\u00e9finie. Elle prend en entr\u00e9e une variable et retourne&nbsp;true&nbsp;si la variable est vide ou non d\u00e9finie, et&nbsp;false&nbsp;sinon."
+					}
+				},
+				{
+					"id": "YfFPjyohZw",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "Zy3LTdIz1j",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"variable",
+								"any",
+								"La variable \u00e0 v\u00e9rifier."
+							]
+						]
+					}
+				},
+				{
+					"id": "KnywjXWC4y",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;isEmpty:"
+					}
+				},
+				{
+					"id": "nmJT2aM89i",
+					"type": "code",
+					"data": {
+						"code": "const variable1 = undefined;\nconst variable2 = null;\nconst variable3 = '';\nconst variable4 = 'Hello, world!';\nconst variable5 = { foo: 'bar' };\nconst variable6 = 0;\nconst variable7 = false;\n\nconsole.log(isEmpty(variable1)); \/\/ true\nconsole.log(isEmpty(variable2)); \/\/ true\nconsole.log(isEmpty(variable3)); \/\/ true\nconsole.log(isEmpty(variable4)); \/\/ false\nconsole.log(isEmpty(variable5)); \/\/ false\nconsole.log(isEmpty(variable6)); \/\/ true\nconsole.log(isEmpty(variable7)); \/\/ true"
+					}
+				},
+				{
+					"id": "DhLdykGq6T",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "5bf7pHfXeV",
+					"type": "header",
+					"data": {
+						"text": "isFileImage",
+						"level": 4
+					}
+				},
+				{
+					"id": "JlRFuHYs7V",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;isFileImage&nbsp;permet de v\u00e9rifier si un fichier est une image ou non. Elle prend en entr\u00e9e un objet&nbsp;file&nbsp;repr\u00e9sentant le fichier \u00e0 v\u00e9rifier."
+					}
+				},
+				{
+					"id": "939YJp0UzD",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "SagRMwd8Dg",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"file",
+								"object",
+								"L'objet repr\u00e9sentant le fichier \u00e0 v\u00e9rifier."
+							]
+						]
+					}
+				},
+				{
+					"id": "Fw1eSJ7sLr",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;isFileImage:"
+					}
+				},
+				{
+					"id": "tb9N2GeNjB",
+					"type": "code",
+					"data": {
+						"code": "const file = {\n  name: 'image.jpg',\n  type: 'image\/jpeg',\n  size: 1024\n};\n\nconsole.log(isFileImage(file)); \/\/ true"
+					}
+				},
+				{
+					"id": "CvjUXWO0XR",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "6Q38Vx5EFa",
+					"type": "header",
+					"data": {
+						"text": "isIE",
+						"level": 4
+					}
+				},
+				{
+					"id": "EfkYBKjsIR",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;isIE&nbsp;permet de d\u00e9tecter si le navigateur de l'utilisateur est Internet Explorer ou non. Elle prend en entr\u00e9e un param\u00e8tre optionnel&nbsp;userAgent&nbsp;qui permet de sp\u00e9cifier une cha\u00eene de caract\u00e8res repr\u00e9sentant l'agent utilisateur du navigateur. Si ce param\u00e8tre n'est pas sp\u00e9cifi\u00e9, la fonction utilise la propri\u00e9t\u00e9&nbsp;navigator.userAgent&nbsp;du navigateur."
+					}
+				},
+				{
+					"id": "GoBUYoVQEC",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "N5PWvHNUDP",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"userAgent",
+								"string",
+								"La cha\u00eene de caract\u00e8res repr\u00e9sentant l'agent utilisateur du navigateur."
+							]
+						]
+					}
+				},
+				{
+					"id": "A7YcOG0VHI",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;isIE:"
+					}
+				},
+				{
+					"id": "MCAd8I8zjx",
+					"type": "code",
+					"data": {
+						"code": "console.log(isIE()); \/\/ true si le navigateur est Internet Explorer, false sinon\nconsole.log(isIE('Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/58.0.3029.110 Safari\/537.36 Edge\/16.16299')); \/\/ false"
+					}
+				},
+				{
+					"id": "aUNhM3BByi",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "-otD3rUK4W",
+					"type": "header",
+					"data": {
+						"text": "IsJsonString",
+						"level": 4
+					}
+				},
+				{
+					"id": "lxj-M3NuT6",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;IsJsonString&nbsp;permet de v\u00e9rifier si une cha\u00eene de caract\u00e8res est au format JSON valide. Elle prend en entr\u00e9e une cha\u00eene de caract\u00e8res \u00e0 v\u00e9rifier."
+					}
+				},
+				{
+					"id": "PO9JOan3zC",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "1kD8hQAlu6",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"str",
+								"string",
+								"La cha\u00eene de caract\u00e8res \u00e0 v\u00e9rifier."
+							]
+						]
+					}
+				},
+				{
+					"id": "p6TJoWQDC4",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;IsJsonString:"
+					}
+				},
+				{
+					"id": "Wn3KztScrO",
+					"type": "code",
+					"data": {
+						"code": "console.log(IsJsonString('{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}')); \/\/ true\nconsole.log(IsJsonString('{\"name\":\"John\",\"age\":30,\"city\":\"New York\"')); \/\/ false"
+					}
+				},
+				{
+					"id": "sSSfmFGsVv",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "ZVxWReqKpS",
+					"type": "header",
+					"data": {
+						"text": "isNode",
+						"level": 4
+					}
+				},
+				{
+					"id": "WytbwN-W8n",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;isNode&nbsp;permet de v\u00e9rifier si un objet est un n\u0153ud DOM. Elle prend en entr\u00e9e un objet et retourne&nbsp;true&nbsp;si l'objet est un n\u0153ud DOM, et&nbsp;false&nbsp;sinon."
+					}
+				},
+				{
+					"id": "tMHYpwAeQ4",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "W0JC3AaoX9",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"o",
+								"any",
+								"L'objet \u00e0 v\u00e9rifier."
+							]
+						]
+					}
+				},
+				{
+					"id": "3ASxP1FXQH",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;isNode:"
+					}
+				},
+				{
+					"id": "F7e4wJh58A",
+					"type": "code",
+					"data": {
+						"code": "const div = document.createElement('div');\nconst span = document.createElement('span');\nconst text = document.createTextNode('Hello, world!');\n\ndiv.appendChild(span);\nspan.appendChild(text);\n\nconsole.log(isNode(div)); \/\/ true\nconsole.log(isNode(span)); \/\/ true\nconsole.log(isNode(text)); \/\/ true\nconsole.log(isNode({})); \/\/ false\nconsole.log(isNode(null)); \/\/ false\nconsole.log(isNode(undefined)); \/\/ false"
+					}
+				},
+				{
+					"id": "OQMFvCGZdo",
 					"type": "raw",
 					"data": {
 						"html": "<hr>"
@@ -3993,6 +3411,395 @@
 					}
 				},
 				{
+					"id": "pb06eMqHYL",
+					"type": "header",
+					"data": {
+						"text": "objectMap",
+						"level": 4
+					}
+				},
+				{
+					"id": "B6zmSZ_yIL",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;objectMap&nbsp;prend en entr\u00e9e un objet et une fonction de mappage et retourne un nouvel objet avec les m\u00eames cl\u00e9s que l'objet d'entr\u00e9e, mais avec les valeurs transform\u00e9es par la fonction de mappage."
+					}
+				},
+				{
+					"id": "3fDNojrl8p",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "-0Aismmb7o",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"object",
+								"object",
+								"L'objet \u00e0 mapper."
+							],
+							[
+								"mapFn",
+								"Function",
+								"La fonction de mappage \u00e0 appliquer \u00e0 chaque valeur de l'objet. Cette fonction prend en entr\u00e9e la valeur et la cl\u00e9 de l'objet et retourne la valeur transform\u00e9e."
+							]
+						]
+					}
+				},
+				{
+					"id": "cCwyjc9lEz",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;objectMap&nbsp;retourne un nouvel objet avec les m\u00eames cl\u00e9s que l'objet d'entr\u00e9e, mais avec les valeurs transform\u00e9es par la fonction de mappage."
+					}
+				},
+				{
+					"id": "fTSFfmCO0k",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;objectMap:"
+					}
+				},
+				{
+					"id": "5ixgDVbYeJ",
+					"type": "code",
+					"data": {
+						"code": "const myObject = {\n  a: 1,\n  b: 2,\n  c: 3\n};\n\nconst mappedObject = objectMap(myObject, function(value, key) {\n  return value * 2;\n});\n\nconsole.log(mappedObject); \/\/ Affiche { a: 2, b: 4, c: 6 }"
+					}
+				},
+				{
+					"id": "2tX2U86gnV",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "bNzx_yl2uC",
+					"type": "header",
+					"data": {
+						"text": "objectToFormData ",
+						"level": 4
+					}
+				},
+				{
+					"id": "o9HGmLg0xS",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;objectToFormData&nbsp;est une fonction utilitaire qui permet de convertir un objet en un objet&nbsp;FormData. Cette fonction est souvent utilis\u00e9e pour envoyer des donn\u00e9es de formulaire via une requ\u00eate HTTP."
+					}
+				},
+				{
+					"id": "IAFQqZ0lto",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "NGpjNRNXOv",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"object",
+								"object",
+								"L'objet \u00e0 convertir en&nbsp;FormData."
+							]
+						]
+					}
+				},
+				{
+					"id": "AdlSCO75ul",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;objectToFormData:"
+					}
+				},
+				{
+					"id": "G88mCEcueY",
+					"type": "code",
+					"data": {
+						"code": "const object = {\n  name: 'John Doe',\n  email: 'john.doe@example.com',\n  avatar: new File(['avatar'], 'avatar.png', { type: 'image\/png' })\n};\nconst formData = objectToFormData(object);"
+					}
+				},
+				{
+					"id": "aMGz4yUTIJ",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "kBFnxKMtxk",
+					"type": "header",
+					"data": {
+						"text": "pad",
+						"level": 4
+					}
+				},
+				{
+					"id": "qhEKwVQ6J6",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;pad&nbsp;permet de compl\u00e9ter un nombre avec des z\u00e9ros \u00e0 gauche pour atteindre une longueur donn\u00e9e. Elle prend en entr\u00e9e deux param\u00e8tres: le nombre \u00e0 compl\u00e9ter et la longueur souhait\u00e9e. Si la longueur n'est pas sp\u00e9cifi\u00e9e, elle est par d\u00e9faut de 2."
+					}
+				},
+				{
+					"id": "ohj89-CDPj",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "NubFKXMP0b",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"number",
+								"number",
+								"Le nombre \u00e0 compl\u00e9ter."
+							],
+							[
+								"length",
+								"number",
+								"La longueur souhait\u00e9e."
+							]
+						]
+					}
+				},
+				{
+					"id": "Vppj5_Gbxh",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;pad:"
+					}
+				},
+				{
+					"id": "dHrdNfDcHw",
+					"type": "code",
+					"data": {
+						"code": "console.log(pad(5)); \/\/ '05'\nconsole.log(pad(42, 4)); \/\/ '0042'\nconsole.log(pad(123456789, 5)); \/\/ '123456789'"
+					}
+				},
+				{
+					"id": "C-D0pcWD82",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "vwMjIl151u",
+					"type": "header",
+					"data": {
+						"text": "processTemplate",
+						"level": 4
+					}
+				},
+				{
+					"id": "1C9djHZMlj",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;processTemplate&nbsp;permet de remplacer des placeholders dans une cha\u00eene de caract\u00e8res par des valeurs sp\u00e9cifi\u00e9es dans un objet de donn\u00e9es. Elle prend en entr\u00e9e un objet de param\u00e8tres contenant un template, un s\u00e9lecteur CSS optionnel pour r\u00e9cup\u00e9rer le template depuis le DOM, et un objet de donn\u00e9es contenant les valeurs \u00e0 remplacer."
+					}
+				},
+				{
+					"id": "GN7w4VwYe7",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "FmUOxCdIdn",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"parameters",
+								"object",
+								"L'objet de param\u00e8tres contenant les propri\u00e9t\u00e9s suivantes :&nbsp;template&nbsp;(optionnel) : la cha\u00eene de caract\u00e8res contenant les placeholders \u00e0 remplacer,&nbsp;selector&nbsp;(optionnel) : le s\u00e9lecteur CSS de l'\u00e9l\u00e9ment HTML contenant le template,&nbsp;data&nbsp;(optionnel) : l'objet de donn\u00e9es contenant les valeurs \u00e0 remplacer."
+							]
+						]
+					}
+				},
+				{
+					"id": "k_u3aH_32h",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;processTemplate:"
+					}
+				},
+				{
+					"id": "yAK7-vMgab",
+					"type": "code",
+					"data": {
+						"code": "const myTemplate = 'Bonjour ${prenom} ${nom} !';\nconst myData = { prenom: 'Jean', nom: 'Dupont' };\n\nconsole.log(processTemplate({ template: myTemplate, data: myData })); \/\/ 'Bonjour Jean Dupont !'"
+					}
+				},
+				{
+					"id": "_EBsrDwOC_",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "M31nRaVmWK",
+					"type": "header",
+					"data": {
+						"text": "solveDateInputs",
+						"level": 4
+					}
+				},
+				{
+					"id": "0qElNgCTcl",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;solveDateInputs&nbsp;permet de r\u00e9soudre un probl\u00e8me de compatibilit\u00e9 avec Internet Explorer concernant les champs de saisie de date. En effet, Internet Explorer ne supporte pas le format de date&nbsp;dd\/mm\/yyyy&nbsp;et utilise plut\u00f4t le format&nbsp;yyyy-mm-dd. Cette fonction permet donc de convertir les dates saisies dans le format&nbsp;dd\/mm\/yyyy&nbsp;en format&nbsp;yyyy-mm-dd&nbsp;pour les navigateurs Internet Explorer."
+					}
+				},
+				{
+					"id": "eqiHkGrLfh",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "AXeX2iP7ud",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"Aucun",
+								"",
+								"Cette fonction ne prend pas de param\u00e8tres."
+							]
+						]
+					}
+				},
+				{
+					"id": "Exnawy360g",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;solveDateInputs:"
+					}
+				},
+				{
+					"id": "cku61yOMog",
+					"type": "code",
+					"data": {
+						"code": "solveDateInputs();"
+					}
+				},
+				{
+					"id": "FA-CaCj89b",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "wWSDfMZh_o",
+					"type": "header",
+					"data": {
+						"text": "str_capitalize",
+						"level": 4
+					}
+				},
+				{
+					"id": "z5ztBxBibx",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;str_capitalize&nbsp;permet de mettre en majuscule la premi\u00e8re lettre de chaque mot dans une cha\u00eene de caract\u00e8res. Elle prend en entr\u00e9e une cha\u00eene de caract\u00e8res."
+					}
+				},
+				{
+					"id": "F-zyrD2ZBD",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "iN5WzU1d5E",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"string",
+								"string",
+								"La cha\u00eene de caract\u00e8res \u00e0 modifier."
+							]
+						]
+					}
+				},
+				{
+					"id": "V63oc1ETMp",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;str_capitalize:"
+					}
+				},
+				{
+					"id": "J-ZYU-z79Q",
+					"type": "code",
+					"data": {
+						"code": "const myString = 'bonjour tout le monde';\n\nconsole.log(str_capitalize(myString)); \/\/ 'Bonjour Tout Le Monde'"
+					}
+				},
+				{
+					"id": "2V1ILAu76B",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
 					"id": "xkSeIrKypA",
 					"type": "header",
 					"data": {
@@ -4067,29 +3874,29 @@
 					}
 				},
 				{
-					"id": "3QOQQwqxe7",
+					"id": "EM0XhxDRQn",
 					"type": "header",
 					"data": {
-						"text": "deepMerge",
+						"text": "toDateFR",
 						"level": 4
 					}
 				},
 				{
-					"id": "jo1QrsSJ8E",
+					"id": "179N82LP6u",
 					"type": "paragraph",
 					"data": {
-						"text": "La fonction&nbsp;deepMerge&nbsp;permet de fusionner deux objets en un seul objet. Elle prend en entr\u00e9e deux objets et retourne un nouvel objet qui contient toutes les propri\u00e9t\u00e9s des deux objets d'origine."
+						"text": "La fonction&nbsp;toDateFR&nbsp;permet de convertir une date universelle ou un timestamp en une date au format fran\u00e7ais&nbsp;d\/m\/Y. Elle prend en entr\u00e9e une date optionnelle."
 					}
 				},
 				{
-					"id": "oLYTrFdQ8y",
+					"id": "ooubhgmeFo",
 					"type": "paragraph",
 					"data": {
 						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
 					}
 				},
 				{
-					"id": "SVAU_Z78vo",
+					"id": "FqvyxBcPSm",
 					"type": "table",
 					"data": {
 						"withHeadings": true,
@@ -4100,37 +3907,230 @@
 								"Description"
 							],
 							[
-								"obj1",
-								"object",
-								"Le premier objet \u00e0 fusionner."
-							],
-							[
-								"obj2",
-								"object",
-								"Le deuxi\u00e8me objet \u00e0 fusionner."
+								"date",
+								"Date&nbsp;ou&nbsp;number",
+								"La date universelle ou le timestamp \u00e0 convertir. Si non d\u00e9fini, la date courante est utilis\u00e9e."
 							]
 						]
 					}
 				},
 				{
-					"id": "wbgUMMO9d8",
+					"id": "YeU3jxXMuT",
 					"type": "paragraph",
 					"data": {
-						"text": "La fonction&nbsp;deepMerge&nbsp;parcourt chaque propri\u00e9t\u00e9 de&nbsp;obj1&nbsp;et compare sa valeur \u00e0 la valeur correspondante dans&nbsp;obj2. Si la propri\u00e9t\u00e9 n'existe pas dans&nbsp;obj2, elle est ajout\u00e9e \u00e0 l'objet de sortie. Si la propri\u00e9t\u00e9 existe dans les deux objets et est elle-m\u00eame un objet, la fonction&nbsp;deepMerge&nbsp;est appel\u00e9e r\u00e9cursivement pour fusionner les deux objets. Sinon, la valeur de&nbsp;obj2&nbsp;est utilis\u00e9e pour remplacer la valeur de&nbsp;obj1."
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;toDateFR:"
 					}
 				},
 				{
-					"id": "CXs4b1z1Yw",
-					"type": "paragraph",
-					"data": {
-						"text": "Voici un exemple d'utilisation de la fonction&nbsp;deepMerge:"
-					}
-				},
-				{
-					"id": "C1GVo-wKq7",
+					"id": "-KH_jQM_r-",
 					"type": "code",
 					"data": {
-						"code": "const obj1 = {\n  name: 'John',\n  age: 30,\n  address: {\n    street: '123 Main St',\n    city: 'Anytown',\n    state: 'CA'\n  }\n};\n\nconst obj2 = {\n  age: 35,\n  address: {\n    city: 'Othertown'\n  },\n  phone: '555-555-1212'\n};\n\nconst mergedObj = deepMerge(obj1, obj2);\n\nconsole.log(mergedObj);\n\/*\nAffiche:\n{\n  name: 'John',\n  age: 35,\n  address: {\n    street: '123 Main St',\n    city: 'Othertown',\n    state: 'CA'\n  },\n  phone: '555-555-1212'\n}\n*\/"
+						"code": "const myDate = new Date('2022-01-01T00:00:00Z');\n\nconsole.log(toDateFR(myDate)); \/\/ '01\/01\/2022'\nconsole.log(toDateFR()); \/\/ Date courante au format 'd\/m\/Y'"
+					}
+				},
+				{
+					"id": "-PX2RrCv94",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "Le0AtZQFYs",
+					"type": "header",
+					"data": {
+						"text": "toHoursMinutes",
+						"level": 4
+					}
+				},
+				{
+					"id": "Bq_1rVYGtu",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;toHoursMinutes&nbsp;permet de convertir une date en une cha\u00eene de caract\u00e8res repr\u00e9sentant l'heure et les minutes de cette date. Elle prend en entr\u00e9e deux param\u00e8tres optionnels: la date \u00e0 convertir et un s\u00e9parateur optionnel entre l'heure et les minutes."
+					}
+				},
+				{
+					"id": "hYPte5xhFw",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "tNxLexWY0w",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"date",
+								"Date&nbsp;ou&nbsp;number",
+								"La date \u00e0 convertir. Si non d\u00e9fini, la date courante est utilis\u00e9e."
+							],
+							[
+								"h",
+								"string",
+								"Le s\u00e9parateur optionnel entre l'heure et les minutes. Par d\u00e9faut, le s\u00e9parateur est&nbsp;:."
+							]
+						]
+					}
+				},
+				{
+					"id": "I9vm5KgV8a",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;toHoursMinutes:"
+					}
+				},
+				{
+					"id": "_AE0gy4rty",
+					"type": "code",
+					"data": {
+						"code": "const myDate = new Date('2022-01-01T12:30:00Z');\n\nconsole.log(toHoursMinutes(myDate)); \/\/ '12:30'\nconsole.log(toHoursMinutes()); \/\/ Heure courante au format 'HH:MM'"
+					}
+				},
+				{
+					"id": "C6kZ_VmGfL",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "elba4hxyx2",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici une explication de la fonction&nbsp;toUniversalDate:"
+					}
+				},
+				{
+					"id": "rOJS9loraq",
+					"type": "header",
+					"data": {
+						"text": "toLocaleDateTime",
+						"level": 4
+					}
+				},
+				{
+					"id": "OuPvJ8CVGR",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;toLocaleDateTime&nbsp;permet de convertir une date en une cha\u00eene de caract\u00e8res repr\u00e9sentant la date et l'heure au format&nbsp;YYYY-MM-DD HH:MM:SS.mmm. Elle prend en entr\u00e9e une date optionnelle."
+					}
+				},
+				{
+					"id": "flAzjBpFxl",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "RCvV51B228",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"date",
+								"Date&nbsp;ou&nbsp;number",
+								"La date \u00e0 convertir. Si non d\u00e9fini, la date courante est utilis\u00e9e."
+							]
+						]
+					}
+				},
+				{
+					"id": "opyFoalz88",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;toLocaleDateTime:"
+					}
+				},
+				{
+					"id": "J15qTSJLku",
+					"type": "code",
+					"data": {
+						"code": "const myDate = new Date('2022-01-01T12:30:00Z');\n\nconsole.log(toLocaleDateTime(myDate)); \/\/ '2022-01-01 12:30:00.000'\nconsole.log(toLocaleDateTime()); \/\/ Date courante au format 'YYYY-MM-DD HH:MM:SS.mmm'"
+					}
+				},
+				{
+					"id": "rbbykIPc1M",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
+					}
+				},
+				{
+					"id": "QbrlkyWM_X",
+					"type": "header",
+					"data": {
+						"text": "toUniversalDate",
+						"level": 4
+					}
+				},
+				{
+					"id": "sk3pC2WjE1",
+					"type": "paragraph",
+					"data": {
+						"text": "La fonction&nbsp;toUniversalDate&nbsp;permet de convertir une date en une cha\u00eene de caract\u00e8res repr\u00e9sentant la date au format universel&nbsp;YYYY-MM-DD. Elle prend en entr\u00e9e une date optionnelle."
+					}
+				},
+				{
+					"id": "tIkyoVMVn9",
+					"type": "paragraph",
+					"data": {
+						"text": "Le tableau des param\u00e8tres de cette fonction est le suivant:"
+					}
+				},
+				{
+					"id": "TeyMkd7GSC",
+					"type": "table",
+					"data": {
+						"withHeadings": true,
+						"content": [
+							[
+								"Nom de la variable",
+								"Type",
+								"Description"
+							],
+							[
+								"date",
+								"Date",
+								"La date \u00e0 convertir. Si non d\u00e9fini, la date courante est utilis\u00e9e."
+							]
+						]
+					}
+				},
+				{
+					"id": "vGpbTFXHIS",
+					"type": "paragraph",
+					"data": {
+						"text": "Voici un exemple d'utilisation de la fonction&nbsp;toUniversalDate:"
+					}
+				},
+				{
+					"id": "zuk1kqC1Mt",
+					"type": "code",
+					"data": {
+						"code": "const myDate = new Date('2022-01-01T00:00:00Z');\n\nconsole.log(toUniversalDate(myDate)); \/\/ '2022-01-01'\nconsole.log(toUniversalDate()); \/\/ Date courante au format 'YYYY-MM-DD'"
+					}
+				},
+				{
+					"id": "c2_JJJ9x8s",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
 					}
 				}
 			],
@@ -4141,7 +4141,7 @@
 	"commandes.disponibles": {
 		"title": "Commandes disponibles",
 		"content": {
-			"time": 1686664667260,
+			"time": 1686744181940,
 			"blocks": [
 				{
 					"id": "3rLTOZJ7Yo",
@@ -4191,7 +4191,7 @@
 					"id": "445duiPFZQ",
 					"type": "paragraph",
 					"data": {
-						"text": "Permet de g\u00e9n\u00e9rer le fichier sitemap.xml \u00e0 la racines du site \u00e0 partir des routes ayant l'attribut \"sitemap\" renseign\u00e9<br>"
+						"text": "Permet de g\u00e9n\u00e9rer le fichier sitemap.xml \u00e0 la racine du site \u00e0 partir des routes ayant l'attribut \"sitemap\" renseign\u00e9<br>"
 					}
 				}
 			],
@@ -4490,7 +4490,7 @@
 	"bdd.querybuilder": {
 		"title": "Classe SQLBuilder",
 		"content": {
-			"time": 1686671869608,
+			"time": 1686918543650,
 			"blocks": [
 				{
 					"id": "fl0YsH_D-J",
@@ -4512,75 +4512,75 @@
 					"data": {
 						"style": "ordered",
 						"items": [
-							"__construct($parameters = []) : voidDescription : Le constructeur de la classe. Permet d'initialiser les param\u00e8tres de la classe \u00e0 partir d'un tableau associatif.Param\u00e8tres :parameters (array) : Un tableau associatif contenant les param\u00e8tres \u00e0 d\u00e9finir. Les cl\u00e9s du tableau correspondent aux noms des param\u00e8tres de la classe, et les valeurs correspondent aux valeurs \u00e0 affecter \u00e0 ces param\u00e8tres.",
+							"__construct($parameters = []) : void<br>Description : Le constructeur de la classe. Permet d'initialiser les param\u00e8tres de la classe \u00e0 partir d'un tableau associatif.<br>Param\u00e8tres :parameters (array) : Un tableau associatif contenant les param\u00e8tres \u00e0 d\u00e9finir. Les cl\u00e9s du tableau correspondent aux noms des param\u00e8tres de la classe, et les valeurs correspondent aux valeurs \u00e0 affecter \u00e0 ces param\u00e8tres.",
 							"parameters (array) : Un tableau associatif contenant les param\u00e8tres \u00e0 d\u00e9finir. Les cl\u00e9s du tableau correspondent aux noms des param\u00e8tres de la classe, et les valeurs correspondent aux valeurs \u00e0 affecter \u00e0 ces param\u00e8tres.",
-							"getColonnes() : arrayDescription : Retourne les colonnes s\u00e9lectionn\u00e9es.Retour : Un tableau contenant les colonnes s\u00e9lectionn\u00e9es.",
-							"getConditions() : arrayDescription : Retourne les conditions de recherche.Retour : Un tableau contenant les conditions de recherche.",
-							"getValues() : arrayDescription : Retourne les valeurs \u00e0 ins\u00e9rer.Retour : Un tableau contenant les valeurs \u00e0 ins\u00e9rer.",
-							"getTable() : stringDescription : Retourne la table principale.Retour : Une cha\u00eene de caract\u00e8res repr\u00e9sentant le nom de la table principale.",
-							"getJoinTables() : arrayDescription : Retourne les tables \u00e0 joindre.Retour : Un tableau contenant les tables \u00e0 joindre. Chaque cl\u00e9 du tableau correspond au nom de la table, et chaque valeur correspond \u00e0 la condition de liaison.",
-							"getGroupBy() : arrayDescription : Retourne les colonnes utilis\u00e9es pour regrouper les r\u00e9sultats.Retour : Un tableau contenant les colonnes utilis\u00e9es pour regrouper les r\u00e9sultats.",
-							"getHaving() : arrayDescription : Retourne les conditions de regroupement.Retour : Un tableau contenant les conditions de regroupement.",
-							"getLimit()Description : Retourne la limite de pagination.Retour : La limite de pagination.",
-							"getOffset()Description : Retourne le d\u00e9calage de pagination.Retour : Le d\u00e9calage de pagination.",
-							"getOrderBy()Description : Retourne les clauses de tri.Retour : Un tableau contenant les clauses de tri.",
-							"getUnions()Description : Retourne les requ\u00eates de l'union.Retour : Un tableau contenant les requ\u00eates de l'union.",
-							"getUnion($alias)Description : Retourne la requ\u00eate d'union correspondant \u00e0 l'alias sp\u00e9cifi\u00e9.Param\u00e8tres :alias (string) : L'alias de la requ\u00eate d'union \u00e0 r\u00e9cup\u00e9rer.Retour : La requ\u00eate d'union correspondant \u00e0 l'alias sp\u00e9cifi\u00e9, ou null si aucun alias correspondant n'est trouv\u00e9.",
+							"getColonnes() : array<br>Description : Retourne les colonnes s\u00e9lectionn\u00e9es.<br>Retour : Un tableau contenant les colonnes s\u00e9lectionn\u00e9es.",
+							"getConditions() : array<br>Description : Retourne les conditions de recherche.<br>Retour : Un tableau contenant les conditions de recherche.",
+							"getValues() : array<br>Description : Retourne les valeurs \u00e0 ins\u00e9rer.<br>Retour : Un tableau contenant les valeurs \u00e0 ins\u00e9rer.",
+							"getTable() : string<br>Description : Retourne la table principale.<br>Retour : Une cha\u00eene de caract\u00e8res repr\u00e9sentant le nom de la table principale.",
+							"getJoinTables() : array<br>Description : Retourne les tables \u00e0 joindre.<br>Retour : Un tableau contenant les tables \u00e0 joindre. Chaque cl\u00e9 du tableau correspond au nom de la table, et chaque valeur correspond \u00e0 la condition de liaison.",
+							"getGroupBy() : array<br>Description : Retourne les colonnes utilis\u00e9es pour regrouper les r\u00e9sultats.<br>Retour : Un tableau contenant les colonnes utilis\u00e9es pour regrouper les r\u00e9sultats.",
+							"getHaving() : array<br>Description : Retourne les conditions de regroupement.<br>Retour : Un tableau contenant les conditions de regroupement.",
+							"getLimit()<br>Description : Retourne la limite de pagination.<br>Retour : La limite de pagination.",
+							"getOffset()<br>Description : Retourne le d\u00e9calage de pagination.<br>Retour : Le d\u00e9calage de pagination.",
+							"getOrderBy()<br>Description : Retourne les clauses de tri.<br>Retour : Un tableau contenant les clauses de tri.",
+							"getUnions()<br>Description : Retourne les requ\u00eates de l'union.<br>Retour : Un tableau contenant les requ\u00eates de l'union.",
+							"getUnion($alias)<br>Description : Retourne la requ\u00eate d'union correspondant \u00e0 l'alias sp\u00e9cifi\u00e9.<br>Param\u00e8tres :alias (string) : L'alias de la requ\u00eate d'union \u00e0 r\u00e9cup\u00e9rer.<br>Retour : La requ\u00eate d'union correspondant \u00e0 l'alias sp\u00e9cifi\u00e9, ou null si aucun alias correspondant n'est trouv\u00e9.",
 							"alias (string) : L'alias de la requ\u00eate d'union \u00e0 r\u00e9cup\u00e9rer.",
-							"getSql($force = false)Description : Retourne la requ\u00eate SQL g\u00e9n\u00e9r\u00e9e.Param\u00e8tres :force (bool) : Indique si la g\u00e9n\u00e9ration de la requ\u00eate SQL doit \u00eatre forc\u00e9e, m\u00eame si elle a d\u00e9j\u00e0 \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9e pr\u00e9c\u00e9demment.Retour : La requ\u00eate SQL g\u00e9n\u00e9r\u00e9e.",
+							"getSql($force = false)<br>Description : Retourne la requ\u00eate SQL g\u00e9n\u00e9r\u00e9e.<br>Param\u00e8tres :force (bool) : Indique si la g\u00e9n\u00e9ration de la requ\u00eate SQL doit \u00eatre forc\u00e9e, m\u00eame si elle a d\u00e9j\u00e0 \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9e pr\u00e9c\u00e9demment.<br>Retour : La requ\u00eate SQL g\u00e9n\u00e9r\u00e9e.",
 							"force (bool) : Indique si la g\u00e9n\u00e9ration de la requ\u00eate SQL doit \u00eatre forc\u00e9e, m\u00eame si elle a d\u00e9j\u00e0 \u00e9t\u00e9 g\u00e9n\u00e9r\u00e9e pr\u00e9c\u00e9demment.",
-							"setColonnes($colonnes) : selfDescription : D\u00e9finit les colonnes \u00e0 s\u00e9lectionner.Param\u00e8tres :colonnes (array) : Un tableau contenant les noms des colonnes \u00e0 s\u00e9lectionner.Retour : L'instance de la classe SQLBuilder.",
+							"setColonnes($colonnes) : self<br>Description : D\u00e9finit les colonnes \u00e0 s\u00e9lectionner.<br>Param\u00e8tres :colonnes (array) : Un tableau contenant les noms des colonnes \u00e0 s\u00e9lectionner.<br>Retour : L'instance de la classe SQLBuilder.",
 							"colonnes (array) : Un tableau contenant les noms des colonnes \u00e0 s\u00e9lectionner.",
-							"setConditions($conditions) : selfDescription : D\u00e9finit les conditions de recherche.Param\u00e8tres :conditions (array) : Un tableau contenant les conditions de recherche.Retour : L'instance de la classe SQLBuilder.",
+							"setConditions($conditions) : self<br>Description : D\u00e9finit les conditions de recherche.<br>Param\u00e8tres :conditions (array) : Un tableau contenant les conditions de recherche.<br>Retour : L'instance de la classe SQLBuilder.",
 							"conditions (array) : Un tableau contenant les conditions de recherche.",
-							"setValues($values) : selfDescription : D\u00e9finit les valeurs \u00e0 ins\u00e9rer.Param\u00e8tres :values (array) : Un tableau associatif contenant les valeurs \u00e0 ins\u00e9rer. Les cl\u00e9s du tableau correspondent aux alias des valeurs, et les valeurs correspondent aux valeurs \u00e0 ins\u00e9rer.Retour : L'instance de la classe SQLBuilder.",
+							"setValues($values) : self<br>Description : D\u00e9finit les valeurs \u00e0 ins\u00e9rer.<br>Param\u00e8tres :values (array) : Un tableau associatif contenant les valeurs \u00e0 ins\u00e9rer. Les cl\u00e9s du tableau correspondent aux alias des valeurs, et les valeurs correspondent aux valeurs \u00e0 ins\u00e9rer.<br>Retour : L'instance de la classe SQLBuilder.",
 							"values (array) : Un tableau associatif contenant les valeurs \u00e0 ins\u00e9rer. Les cl\u00e9s du tableau correspondent aux alias des valeurs, et les valeurs correspondent aux valeurs \u00e0 ins\u00e9rer.",
-							"setTable($table) : selfDescription : D\u00e9finit la table principale.Param\u00e8tres :table (string) : Le nom de la table principale.Retour : L'instance de la classe SQLBuilder.",
+							"setTable($table) : self<br>Description : D\u00e9finit la table principale.<br>Param\u00e8tres :table (string) : Le nom de la table principale.<br>Retour : L'instance de la classe SQLBuilder.",
 							"table (string) : Le nom de la table principale.",
-							"setJoinTables($joinTables) : selfDescription : D\u00e9finit les tables \u00e0 joindre.Param\u00e8tres :joinTables (array) : Un tableau associatif contenant les tables \u00e0 joindre. Les cl\u00e9s du tableau correspondent aux noms des tables \u00e0 joindre, et les valeurs correspondent aux conditions de liaison.Retour : L'instance de la classe SQLBuilder.",
+							"setJoinTables($joinTables) : self<br>Description : D\u00e9finit les tables \u00e0 joindre.<br>Param\u00e8tres :joinTables (array) : Un tableau associatif contenant les tables \u00e0 joindre. Les cl\u00e9s du tableau correspondent aux noms des tables \u00e0 joindre, et les valeurs correspondent aux conditions de liaison.<br>Retour : L'instance de la classe SQLBuilder.",
 							"joinTables (array) : Un tableau associatif contenant les tables \u00e0 joindre. Les cl\u00e9s du tableau correspondent aux noms des tables \u00e0 joindre, et les valeurs correspondent aux conditions de liaison.",
-							"generatePlaceholdersAndValues($values, $prefix = \"\") : stringDescription : G\u00e9n\u00e8re des marqueurs de param\u00e8tre et ajoute les valeurs correspondantes.Param\u00e8tres :values (array) : Un tableau associatif contenant les valeurs \u00e0 ajouter. Les cl\u00e9s du tableau correspondent aux alias des valeurs, et les valeurs correspondent aux valeurs \u00e0 ajouter.prefix (string) : Un pr\u00e9fixe \u00e0 utiliser pour les marqueurs de param\u00e8tre g\u00e9n\u00e9r\u00e9s.Retour : Une cha\u00eene de caract\u00e8res contenant les marqueurs de param\u00e8tre g\u00e9n\u00e9r\u00e9s, s\u00e9par\u00e9s par des virgules.",
+							"generatePlaceholdersAndValues($values, $prefix = \"\") : string<br>Description : G\u00e9n\u00e8re des marqueurs de param\u00e8tre et ajoute les valeurs correspondantes.<br>Param\u00e8tres :values (array) : Un tableau associatif contenant les valeurs \u00e0 ajouter. Les cl\u00e9s du tableau correspondent aux alias des valeurs, et les valeurs correspondent aux valeurs \u00e0 ajouter.prefix (string) : Un pr\u00e9fixe \u00e0 utiliser pour les marqueurs de param\u00e8tre g\u00e9n\u00e9r\u00e9s.<br>Retour : Une cha\u00eene de caract\u00e8res contenant les marqueurs de param\u00e8tre g\u00e9n\u00e9r\u00e9s, s\u00e9par\u00e9s par des virgules.",
 							"values (array) : Un tableau associatif contenant les valeurs \u00e0 ajouter. Les cl\u00e9s du tableau correspondent aux alias des valeurs, et les valeurs correspondent aux valeurs \u00e0 ajouter.",
 							"prefix (string) : Un pr\u00e9fixe \u00e0 utiliser pour les marqueurs de param\u00e8tre g\u00e9n\u00e9r\u00e9s.",
-							"setAutoJoinTables($autoJoinTables) : selfDescription : Ajoute automatiquement des tables de jointure en utilisant des classes et des alias sp\u00e9cifi\u00e9s.Param\u00e8tres :autoJoinTables (array) : Un tableau associatif contenant les informations des tables \u00e0 joindre automatiquement. Chaque \u00e9l\u00e9ment du tableau doit contenir les cl\u00e9s suivantes :alias : L'alias de la table de jointure.class : La classe correspondante \u00e0 la table principale.aliasJoined : L'alias de la table jointe.classJoined : La classe correspondante \u00e0 la table jointe.Retour : L'instance de la classe SQLBuilder.",
+							"setAutoJoinTables($autoJoinTables) : self<br>Description : Ajoute automatiquement des tables de jointure en utilisant des classes et des alias sp\u00e9cifi\u00e9s.<br>Param\u00e8tres :autoJoinTables (array) : Un tableau associatif contenant les informations des tables \u00e0 joindre automatiquement. Chaque \u00e9l\u00e9ment du tableau doit contenir les cl\u00e9s suivantes :alias : L'alias de la table de jointure.class : La classe correspondante \u00e0 la table principale.aliasJoined : L'alias de la table jointe.classJoined : La classe correspondante \u00e0 la table jointe.<br>Retour : L'instance de la classe SQLBuilder.",
 							"autoJoinTables (array) : Un tableau associatif contenant les informations des tables \u00e0 joindre automatiquement. Chaque \u00e9l\u00e9ment du tableau doit contenir les cl\u00e9s suivantes :alias : L'alias de la table de jointure.class : La classe correspondante \u00e0 la table principale.aliasJoined : L'alias de la table jointe.classJoined : La classe correspondante \u00e0 la table jointe.",
 							"alias : L'alias de la table de jointure.",
 							"class : La classe correspondante \u00e0 la table principale.",
 							"aliasJoined : L'alias de la table jointe.",
 							"classJoined : La classe correspondante \u00e0 la table jointe.",
-							"setGroupBy($groupBy) : selfDescription : D\u00e9finit les colonnes pour le regroupement.Param\u00e8tres :groupBy (array) : Un tableau contenant les noms des colonnes pour le regroupement.Retour : L'instance de la classe SQLBuilder.",
+							"setGroupBy($groupBy) : self<br>Description : D\u00e9finit les colonnes pour le regroupement.<br>Param\u00e8tres :groupBy (array) : Un tableau contenant les noms des colonnes pour le regroupement.<br>Retour : L'instance de la classe SQLBuilder.",
 							"groupBy (array) : Un tableau contenant les noms des colonnes pour le regroupement.",
-							"setHaving($having) : selfDescription : D\u00e9finit les conditions de filtrage apr\u00e8s regroupement.Param\u00e8tres :having (array) : Un tableau contenant les conditions de filtrage apr\u00e8s regroupement.Retour : L'instance de la classe SQLBuilder.",
+							"setHaving($having) : self<br>Description : D\u00e9finit les conditions de filtrage apr\u00e8s regroupement.<br>Param\u00e8tres :having (array) : Un tableau contenant les conditions de filtrage apr\u00e8s regroupement.<br>Retour : L'instance de la classe SQLBuilder.",
 							"having (array) : Un tableau contenant les conditions de filtrage apr\u00e8s regroupement.",
-							"setLimit($limit) : selfDescription : D\u00e9finit la limite de r\u00e9sultats \u00e0 r\u00e9cup\u00e9rer.Param\u00e8tres :limit (int|null) : Le nombre maximal de r\u00e9sultats \u00e0 r\u00e9cup\u00e9rer. Si la valeur est null, aucune limite n'est appliqu\u00e9e.Retour : L'instance de la classe SQLBuilder.",
+							"setLimit($limit) : self<br>Description : D\u00e9finit la limite de r\u00e9sultats \u00e0 r\u00e9cup\u00e9rer.<br>Param\u00e8tres :limit (int|null) : Le nombre maximal de r\u00e9sultats \u00e0 r\u00e9cup\u00e9rer. Si la valeur est null, aucune limite n'est appliqu\u00e9e.<br>Retour : L'instance de la classe SQLBuilder.",
 							"limit (int|null) : Le nombre maximal de r\u00e9sultats \u00e0 r\u00e9cup\u00e9rer. Si la valeur est null, aucune limite n'est appliqu\u00e9e.",
-							"setOffset($offset) : selfDescription : D\u00e9finit le d\u00e9calage pour la r\u00e9cup\u00e9ration des r\u00e9sultats.Param\u00e8tres :offset (int|null) : Le d\u00e9calage \u00e0 appliquer lors de la r\u00e9cup\u00e9ration des r\u00e9sultats. Si la valeur est null, aucun d\u00e9calage n'est appliqu\u00e9.Retour : L'instance de la classe SQLBuilder.",
+							"setOffset($offset) : self<br>Description : D\u00e9finit le d\u00e9calage pour la r\u00e9cup\u00e9ration des r\u00e9sultats.<br>Param\u00e8tres :offset (int|null) : Le d\u00e9calage \u00e0 appliquer lors de la r\u00e9cup\u00e9ration des r\u00e9sultats. Si la valeur est null, aucun d\u00e9calage n'est appliqu\u00e9.<br>Retour : L'instance de la classe SQLBuilder.",
 							"offset (int|null) : Le d\u00e9calage \u00e0 appliquer lors de la r\u00e9cup\u00e9ration des r\u00e9sultats. Si la valeur est null, aucun d\u00e9calage n'est appliqu\u00e9.",
-							"setOrderBy($orderBy) : selfDescription : D\u00e9finit l'ordre de tri des r\u00e9sultats.Param\u00e8tres :orderBy (array) : Un tableau contenant les colonnes pour l'ordre de tri des r\u00e9sultats.Retour : L'instance de la classe SQLBuilder.",
+							"setOrderBy($orderBy) : self<br>Description : D\u00e9finit l'ordre de tri des r\u00e9sultats.<br>Param\u00e8tres :orderBy (array) : Un tableau contenant les colonnes pour l'ordre de tri des r\u00e9sultats.<br>Retour : L'instance de la classe SQLBuilder.",
 							"orderBy (array) : Un tableau contenant les colonnes pour l'ordre de tri des r\u00e9sultats.",
-							"setUnions($unions) : selfDescription : D\u00e9finit les requ\u00eates UNION \u00e0 ajouter.Param\u00e8tres :unions (array) : Un tableau contenant les requ\u00eates UNION \u00e0 ajouter.Retour : L'instance de la classe SQLBuilder.",
+							"setUnions($unions) : self<br>Description : D\u00e9finit les requ\u00eates UNION \u00e0 ajouter.<br>Param\u00e8tres :unions (array) : Un tableau contenant les requ\u00eates UNION \u00e0 ajouter.<br>Retour : L'instance de la classe SQLBuilder.",
 							"unions (array) : Un tableau contenant les requ\u00eates UNION \u00e0 ajouter.",
-							"addColonne($colonne)Description : Ajoute une colonne \u00e0 s\u00e9lectionner.Param\u00e8tres :colonne (string|array) : Le nom de la colonne \u00e0 ajouter ou un tableau contenant plusieurs noms de colonnes.Retour : L'instance de la classe SQLBuilder.",
+							"addColonne($colonne)<br>Description : Ajoute une colonne \u00e0 s\u00e9lectionner.<br>Param\u00e8tres :colonne (string|array) : Le nom de la colonne \u00e0 ajouter ou un tableau contenant plusieurs noms de colonnes.<br>Retour : L'instance de la classe SQLBuilder.",
 							"colonne (string|array) : Le nom de la colonne \u00e0 ajouter ou un tableau contenant plusieurs noms de colonnes.",
-							"addCondition($condition)Description : Ajoute une condition de recherche.Param\u00e8tres :condition (string|array) : La condition de recherche \u00e0 ajouter ou un tableau contenant plusieurs conditions.Retour : L'instance de la classe SQLBuilder.",
+							"addCondition($condition)<br>Description : Ajoute une condition de recherche.<br>Param\u00e8tres :condition (string|array) : La condition de recherche \u00e0 ajouter ou un tableau contenant plusieurs conditions.<br>Retour : L'instance de la classe SQLBuilder.",
 							"condition (string|array) : La condition de recherche \u00e0 ajouter ou un tableau contenant plusieurs conditions.",
-							"addValue($value)Description : Ajoute une valeur \u00e0 ins\u00e9rer.Param\u00e8tres :value (string|array) : La valeur \u00e0 ajouter ou un tableau associatif contenant plusieurs valeurs.Retour : L'instance de la classe SQLBuilder.",
+							"addValue($value)<br>Description : Ajoute une valeur \u00e0 ins\u00e9rer.<br>Param\u00e8tres :value (string|array) : La valeur \u00e0 ajouter ou un tableau associatif contenant plusieurs valeurs.<br>Retour : L'instance de la classe SQLBuilder.",
 							"value (string|array) : La valeur \u00e0 ajouter ou un tableau associatif contenant plusieurs valeurs.",
-							"addJoinTable($table)Description : Ajoute une table \u00e0 joindre.Param\u00e8tres :table (string|array) : La table \u00e0 ajouter ou un tableau associatif contenant plusieurs tables \u00e0 joindre.Retour : L'instance de la classe SQLBuilder.",
+							"addJoinTable($table)<br>Description : Ajoute une table \u00e0 joindre.<br>Param\u00e8tres :table (string|array) : La table \u00e0 ajouter ou un tableau associatif contenant plusieurs tables \u00e0 joindre.<br>Retour : L'instance de la classe SQLBuilder.",
 							"table (string|array) : La table \u00e0 ajouter ou un tableau associatif contenant plusieurs tables \u00e0 joindre.",
-							"addAutoJoinTable($autoJoinTable)Description : Ajoute automatiquement une table de jointure en utilisant une classe et un alias sp\u00e9cifi\u00e9s.Param\u00e8tres :autoJoinTable (array) : Un tableau associatif contenant les informations de la table \u00e0 joindre automatiquement. Les cl\u00e9s du tableau correspondent aux informations suivantes :alias : L'alias de la table de jointure.class : La classe correspondante \u00e0 la table principale.aliasJoined : L'alias de la table jointe.classJoined : La classe correspondante \u00e0 la table jointe.Retour : L'instance de la classe SQLBuilder.",
+							"addAutoJoinTable($autoJoinTable)<br>Description : Ajoute automatiquement une table de jointure en utilisant une classe et un alias sp\u00e9cifi\u00e9s.<br>Param\u00e8tres :autoJoinTable (array) : Un tableau associatif contenant les informations de la table \u00e0 joindre automatiquement. Les cl\u00e9s du tableau correspondent aux informations suivantes :alias : L'alias de la table de jointure.class : La classe correspondante \u00e0 la table principale.aliasJoined : L'alias de la table jointe.classJoined : La classe correspondante \u00e0 la table jointe.<br>Retour : L'instance de la classe SQLBuilder.",
 							"autoJoinTable (array) : Un tableau associatif contenant les informations de la table \u00e0 joindre automatiquement. Les cl\u00e9s du tableau correspondent aux informations suivantes :alias : L'alias de la table de jointure.class : La classe correspondante \u00e0 la table principale.aliasJoined : L'alias de la table jointe.classJoined : La classe correspondante \u00e0 la table jointe.",
 							"alias : L'alias de la table de jointure.",
 							"class : La classe correspondante \u00e0 la table principale.",
 							"aliasJoined : L'alias de la table jointe.",
 							"classJoined : La classe correspondante \u00e0 la table jointe.",
-							"addGroupBy($groupBy)Description : Ajoute des colonnes pour le regroupement.Param\u00e8tres :groupBy (string|array) : Les colonnes \u00e0 ajouter pour le regroupement.Retour : L'instance de la classe SQLBuilder.",
+							"addGroupBy($groupBy)<br>Description : Ajoute des colonnes pour le regroupement.<br>Param\u00e8tres :groupBy (string|array) : Les colonnes \u00e0 ajouter pour le regroupement.<br>Retour : L'instance de la classe SQLBuilder.",
 							"groupBy (string|array) : Les colonnes \u00e0 ajouter pour le regroupement.",
-							"addHaving($having)Description : Ajoute des conditions de filtrage apr\u00e8s regroupement.Param\u00e8tres :having (string|array) : Les conditions \u00e0 ajouter pour le filtrage apr\u00e8s regroupement.Retour : L'instance de la classe SQLBuilder.",
+							"addHaving($having)<br>Description : Ajoute des conditions de filtrage apr\u00e8s regroupement.<br>Param\u00e8tres :having (string|array) : Les conditions \u00e0 ajouter pour le filtrage apr\u00e8s regroupement.<br>Retour : L'instance de la classe SQLBuilder.",
 							"having (string|array) : Les conditions \u00e0 ajouter pour le filtrage apr\u00e8s regroupement.",
-							"addOrderBy($orderBy)Description : Ajoute des colonnes pour l'ordre de tri des r\u00e9sultats.Param\u00e8tres :orderBy (string|array) : Les colonnes \u00e0 ajouter pour l'ordre de tri des r\u00e9sultats.Retour : L'instance de la classe SQLBuilder.",
+							"addOrderBy($orderBy)<br>Description : Ajoute des colonnes pour l'ordre de tri des r\u00e9sultats.<br>Param\u00e8tres :orderBy (string|array) : Les colonnes \u00e0 ajouter pour l'ordre de tri des r\u00e9sultats.<br>Retour : L'instance de la classe SQLBuilder.",
 							"orderBy (string|array) : Les colonnes \u00e0 ajouter pour l'ordre de tri des r\u00e9sultats.",
-							"addUnion($alias, $query)Description : Ajoute une requ\u00eate UNION.Param\u00e8tres :alias (string) : L'alias de la requ\u00eate UNION \u00e0 ajouter.query (string) : La requ\u00eate UNION \u00e0 ajouter.Retour : L'instance de la classe SQLBuilder.",
+							"addUnion($alias, $query)<br>Description : Ajoute une requ\u00eate UNION.<br>Param\u00e8tres :alias (string) : L'alias de la requ\u00eate UNION \u00e0 ajouter.query (string) : La requ\u00eate UNION \u00e0 ajouter.<br>Retour : L'instance de la classe SQLBuilder.",
 							"alias (string) : L'alias de la requ\u00eate UNION \u00e0 ajouter.",
 							"query (string) : La requ\u00eate UNION \u00e0 ajouter."
 						]
@@ -4594,10 +4594,31 @@
 					}
 				},
 				{
+					"id": "NrnTSVmU9O",
+					"type": "paragraph",
+					"data": {
+						"text": "Exemple d'instanciation de la classe :<br>"
+					}
+				},
+				{
 					"id": "uH357WSGDQ",
 					"type": "code",
 					"data": {
 						"code": "use Core\\SQLBuilder;\n\/\/ Param\u00e8tres pour l'instanciation de SQLBuilder\n$parameters = [\n  \"colonnes\" => [\"id\", \"nom\", \"email\"],\n  \"table\" => \"utilisateurs\",\n  \"joinTables\" => [\n    \"roles\" => \"utilisateurs.role_id = roles.id\"\n  ],\n  \"conditions\" => [\n    \"statut = 'actif'\",\n    \"age >= 18\"\n  ],\n  \"values\" => [\n    \"alias1\" => \"valeur1\",\n    \"alias2\" => \"valeur2\"\n  ],\n  \"groupBy\" => [\"role_id\"],\n  \"having\" => [\"COUNT(*) > 10\"],\n  \"limit\" => 10,\n  \"offset\" => 0,\n  \"orderBy\" => [\"nom ASC\"]\n];\n\n\/\/ Instanciation de la classe SQLBuilder avec les param\u00e8tres\n$sqlBuilder = new SQLBuilder($parameters);\n\nreturn self::db_all($query->getSql(),$query->getValues());\n\n?>"
+					}
+				},
+				{
+					"id": "-mMN-iKjG8",
+					"type": "paragraph",
+					"data": {
+						"text": "Exemple d'ajout de conditions<br>"
+					}
+				},
+				{
+					"id": "VeI6s9ZVN7",
+					"type": "code",
+					"data": {
+						"code": "\/\/ Instanciation de la classe SQLBuilder avec les param\u00e8tres\n$filterNom = \"DUBOIS\";\n$sqlBuilder = new SQLBuilder($parameters);\n\nif ($filterNom){\n  $query->addValue([\":nom\" => \"%$filterNom%\"]);\n  $query->addCondition(\"nom LIKE :nom\");\n}\n\nreturn self::db_all($query->getSql(),$query->getValues());"
 					}
 				}
 			],
