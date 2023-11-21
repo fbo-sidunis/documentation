@@ -4820,5 +4820,116 @@
 			"version": "2.26.5"
 		},
 		"fullPath": "bdd.querybuilder"
+	},
+	"pour-commencer.schema_bdd.generation_modeles": {
+		"title": "G\u00e9n\u00e9rations des mod\u00e8les",
+		"content": {
+			"time": 1700579724485,
+			"blocks": [
+				{
+					"id": "NS6KjAOo2E",
+					"type": "paragraph",
+					"data": {
+						"text": "\nDepuis la version 1.8.x du Framework, Il est possible de g\u00e9n\u00e9rer les mod\u00e8les et objets de donn\u00e9es depuis la console"
+					}
+				},
+				{
+					"id": "fCE271YLcg",
+					"type": "paragraph",
+					"data": {
+						"text": "La sch\u00e9ma dont s'appuie cette g\u00e9n\u00e9ration est le m\u00eame que celui de la g\u00e9n\u00e9ration du sch\u00e9ma"
+					}
+				},
+				{
+					"id": "N3cNcnzWJo",
+					"type": "code",
+					"data": {
+						"code": "#G\u00e9n\u00e9ration des mod\u00e8les\nphp bin\/ezframe core:generateModel\n\n#G\u00e9n\u00e9ration des objets de donn\u00e9es\nphp bin\/ezframe core:generateDataObject"
+					}
+				},
+				{
+					"id": "f5GRbsPO9T",
+					"type": "paragraph",
+					"data": {
+						"text": "Les mod\u00e8les et objets de donn\u00e9es r\u00e9sultant de cette g\u00e9n\u00e9ration se trouvent dans le r\u00e9pertoire \"model\/\" \u00e0 la racine du site<br>"
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "pour-commencer.schema_bdd.generation_modeles"
+	},
+	"pour-commencer.schema_bdd.extending_model": {
+		"title": "Etendre les mod\u00e8les et objets de donn\u00e9es",
+		"content": {
+			"time": 1700581307667,
+			"blocks": [
+				{
+					"id": "j_mUJ9Yw5i",
+					"type": "paragraph",
+					"data": {
+						"text": "Les mod\u00e8les et objets de donn\u00e9es sont sujet \u00e0 de l'alt\u00e9ration en cas de modification du sch\u00e9ma (ajout d'une colonne, de relations..)"
+					}
+				},
+				{
+					"id": "TKaWkMiNbQ",
+					"type": "paragraph",
+					"data": {
+						"text": "C'est pour cela qu'il est pr\u00e9f\u00e9rable, si il y a besoin de customization, d'\u00e9tendre ces mod\u00e8les et objets de donn\u00e9es et de les ajouter en override dans config\/site_config.json de cette fa\u00e7on :<br>"
+					}
+				},
+				{
+					"id": "HPyGZM-3OS",
+					"type": "code",
+					"data": {
+						"code": "<?php \/\/app\/Demo\/Model\/User.php\nnamespace App\\Demo\\Model;\n\nuse Model\\User as ModelUser;\n\nclass User extends ModelUser{\n  protected static function getColumns()\n  {\n    return [\n      self::al(\"id\"),\n      self::al(\"actif\"),\n    ];\n  }\n}"
+					}
+				},
+				{
+					"id": "hnn1hlPy_6",
+					"type": "code",
+					"data": {
+						"code": "\/\/config\/site_config.json\n{\n  ...\n  \"overrides\" : {\n    \"models\" : {\n      \"Model\\\\User\" : \"App\\\\Demo\\\\Model\\\\User\"\n    }\n  }\n}"
+					}
+				},
+				{
+					"id": "YKhQNYSzvr",
+					"type": "paragraph",
+					"data": {
+						"text": "Pourquoi ces overrides ? C'est pour que l'objet de donn\u00e9e utilisant ce mod\u00e8le puisse utiliser automatiquement celui que vous indiquerez \u00e0 la place sans pour autant \u00e0 avoir besoin d'override l'objet de donn\u00e9e en question.<br>"
+					}
+				},
+				{
+					"id": "BWGqgau5GU",
+					"type": "paragraph",
+					"data": {
+						"text": "Pour \u00e9tendre et override un objet de donn\u00e9e :"
+					}
+				},
+				{
+					"id": "OUhe-wsVkn",
+					"type": "code",
+					"data": {
+						"code": "<?php \/\/app\/Demo\/Model\/DataObject\/User.php\n\nnamespace App\\Demo\\Model\\DataObject;\n\nuse Model\\DataObject\\User as DataObjectUser;\n\nclass User extends DataObjectUser\n{\n  public function getFullName(): string\n  {\n    return $this->getPrenom() . \" \" . $this->getNom();\n  }\n}\n"
+					}
+				},
+				{
+					"id": "gQQwWmIr6M",
+					"type": "code",
+					"data": {
+						"code": "\/\/config\/site_config.json\n{\n  ...\n  \"overrides\" : {\n    \"dataObjects\" : {\n      \"Model\\\\DataObject\\\\User\" : \"App\\\\Demo\\\\Model\\\\DataObject\\\\User\"\n    }\n  }\n}"
+					}
+				},
+				{
+					"id": "te2qlXMC9h",
+					"type": "paragraph",
+					"data": {
+						"text": "L'override est ici plus int\u00e9ressant car si je prends un objet de donn\u00e9e ayant une relation avec la classe override, et que j'utilise une de ses m\u00e9thodes pour r\u00e9cup\u00e9rer un objet Model\\DataObject\\User, un objet App\\Demo\\Model\\DataObject\\User se retourn\u00e9 \u00e0 la place<br>"
+					}
+				}
+			],
+			"version": "2.26.5"
+		},
+		"fullPath": "pour-commencer.schema_bdd.extending_model"
 	}
 }

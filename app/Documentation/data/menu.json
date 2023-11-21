@@ -20,7 +20,20 @@
 				"name": "schema_bdd",
 				"title": "Sch\u00e9ma de la BDD",
 				"position": 2,
-				"items": []
+				"items": {
+					"generation_modeles": {
+						"name": "generation_modeles",
+						"title": "G\u00e9n\u00e9ration des mod\u00e8les",
+						"position": 0,
+						"items": []
+					},
+					"extending_model": {
+						"name": "extending_model",
+						"title": "Etendre les mod\u00e8les et objets de donn\u00e9es",
+						"position": 1,
+						"items": []
+					}
+				}
 			},
 			"arborescence": {
 				"name": "arborescence",
