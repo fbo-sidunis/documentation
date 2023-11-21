@@ -127,7 +127,7 @@
 	"pour-commencer.installation": {
 		"title": "Installation du framework",
 		"content": {
-			"time": 1682600394998,
+			"time": 1688106730910,
 			"blocks": [
 				{
 					"id": "HbHyYtNZgD",
@@ -218,6 +218,36 @@
 					"type": "code",
 					"data": {
 						"code": "{\n  \"prod\": {\n    \"dbname\": \"framework_sidunis\",\n    \"host\": \"localhost\",\n    \"port\": 3306,\n    \"username\": \"admindb\",\n    \"password\": \"1P0ss!ble\",\n    \"charset\": \"utf8\"\n  },\n  \"dev\": {\n    \"dbname\": \"framework_sidunis\",\n    \"host\": \"localhost\",\n    \"port\": 3306,\n    \"username\": \"admindb\",\n    \"password\": \"1P0ss!ble\",\n    \"charset\": \"utf8\"\n  }\n}"
+					}
+				},
+				{
+					"id": "p6R2abAoEz",
+					"type": "header",
+					"data": {
+						"text": "Installer la base de donn\u00e9es",
+						"level": 3
+					}
+				},
+				{
+					"id": "WP_FBAirfa",
+					"type": "paragraph",
+					"data": {
+						"text": "Pour installer les tables necessaires au fonctionnement du framework, il faut lancer le script d'installation des tables.<br>pour cela, reportez vous au chapitre : <a href=\"http:\/\/192.168.10.221\/documentation\/doc?p=pour-commencer.schema_bdd\">http:\/\/192.168.10.221\/documentation\/doc?p=pour-commencer.schema_bdd<\/a>"
+					}
+				},
+				{
+					"id": "0s09jMaih0",
+					"type": "header",
+					"data": {
+						"text": "Installation des librairies",
+						"level": 3
+					}
+				},
+				{
+					"id": "T4Ae4infi0",
+					"type": "paragraph",
+					"data": {
+						"text": "Connectez vous au serveur en SSH&nbsp; puis faites un <b>composer update<\/b><br>"
 					}
 				}
 			],
@@ -1494,13 +1524,171 @@
 	"bdd.class": {
 		"title": "La classe \/Core\/Db",
 		"content": {
-			"time": 1685113289202,
+			"time": 1694685337752,
 			"blocks": [
 				{
 					"id": "DxXge7NXir",
 					"type": "paragraph",
 					"data": {
-						"text": "Cette classe est parente de toutes nos classes Model, ainsi elles h\u00e9ritent toutes de ses fonctions<br>"
+						"text": "Cette classe est parente de toutes nos classes Model, ainsi elles h\u00e9ritent toutes de ses fonctions"
+					}
+				},
+				{
+					"id": "kQ2aAHuIBK",
+					"type": "paragraph",
+					"data": {
+						"text": "Les Class db_ :  lafonctiopn($sql,$datas) -&gt; $sql : string contenant la requ\u00eate \u00e0 executer"
+					}
+				},
+				{
+					"id": "iRiKJyeg0_",
+					"type": "paragraph",
+					"data": {
+						"text": "  -&gt; $datas : variables (dans un array associatif) \u00e0 passer \u00e0 la requ\u00eate"
+					}
+				},
+				{
+					"id": "-IXvX67f5f",
+					"type": "header",
+					"data": {
+						"text": "db_all :",
+						"level": 3
+					}
+				},
+				{
+					"id": "iaXy7P11h2",
+					"type": "paragraph",
+					"data": {
+						"text": "&nbsp;retourne un Array contenant TOUTES les lignes du r\u00e9sultat de la requ\u00eate"
+					}
+				},
+				{
+					"id": "4qI9hlHYrS",
+					"type": "code",
+					"data": {
+						"code": "protected static function db_all($sql, $datas = NULL, $fetchmode = PDO::FETCH_ASSOC) {\n    $oDb = new Db;\n    $oDb->db_query($sql, $datas);\n    return $oDb->prepare->fetchAll($fetchmode);\n  }"
+					}
+				},
+				{
+					"id": "Zg8Aic6UJf",
+					"type": "paragraph",
+					"data": {
+						"text": "Exemple d'utilisation :"
+					}
+				},
+				{
+					"id": "oJoA7gB0ZH",
+					"type": "code",
+					"data": {
+						"code": "$sql = \"SELECT *\n         FROM maTable\"\n         WHERE qqChose = :qqchose;\n$datas = ['qqchose' => '10'];\n return parent::db_all($sql,$datas);"
+					}
+				},
+				{
+					"id": "KzZ_nmTTKd",
+					"type": "header",
+					"data": {
+						"text": "db_one :&nbsp;",
+						"level": 3
+					}
+				},
+				{
+					"id": "YAoXdBj6ZC",
+					"type": "paragraph",
+					"data": {
+						"text": "retourne un Array contenant LA PREMIERRE ligne du r\u00e9sultat de la requ\u00eate"
+					}
+				},
+				{
+					"id": "QCM4VFarNU",
+					"type": "code",
+					"data": {
+						"code": "protected static function db_one($sql, $datas = NULL, $fetchmode = PDO::FETCH_ASSOC) {\n    \n    try {\n      $oDb = new Db;\n      $oDb->db_query($sql, $datas);\n      return $oDb->prepare->fetch($fetchmode);\n    } catch (\\Exception $e) {\n      echo \"Erreur \" . $e->getMessage();\n      echo \"<br> SQL :\" . $sql;\n      echo \"<br> datas :\" . print_r($datas, true);\n    }\n  }"
+					}
+				},
+				{
+					"id": "B5IHaZXZI_",
+					"type": "paragraph",
+					"data": {
+						"text": "Exemple d'utilisation :"
+					}
+				},
+				{
+					"id": "RZbpeelYse",
+					"type": "code",
+					"data": {
+						"code": "$sql = \"SELECT *\n        FROM maTable\n        WHERE qqChose = :qqchose AND autChose = :autchose\";\n$datas = [':qqchose ' => 'toto' , ':autchose' => '10'];\nreturn parent::db_one($sql, $datas);"
+					}
+				},
+				{
+					"id": "32tflN3xEJ",
+					"type": "header",
+					"data": {
+						"text": "db_insert :",
+						"level": 3
+					}
+				},
+				{
+					"id": "RufhW3uA20",
+					"type": "paragraph",
+					"data": {
+						"text": " retourne l' ID nouvellement cr\u00e9\u00e9 par une requ\u00eate INSERT"
+					}
+				},
+				{
+					"id": "1shL4HEOik",
+					"type": "code",
+					"data": {
+						"code": "protected static function db_insert($sql, $datas = NULL, $returnId = TRUE) {\n    $oDb = new Db;\n    $oDb->db_query($sql, $datas);\n    return $returnId ? $oDb->bdd->lastInsertId() : $oDb->res;\n  }"
+					}
+				},
+				{
+					"id": "d6ZfAZYpjv",
+					"type": "paragraph",
+					"data": {
+						"text": "Exemple d'utilisation :"
+					}
+				},
+				{
+					"id": "4168Y5b8JV",
+					"type": "code",
+					"data": {
+						"code": "$sql = 'INSERT INTO maTable (qqchose,autchose VALUES (:qqchose,:autchose) )';\n    $datas = [\n        ':qqchose' => qqChose\n        ,':autchose ' => autChose\n    ];\n    return parent::db_insert($sql, $datas);"
+					}
+				},
+				{
+					"id": "RvRNWP5l9S",
+					"type": "header",
+					"data": {
+						"text": "db_exec :",
+						"level": 3
+					}
+				},
+				{
+					"id": "qYr_-1hbxV",
+					"type": "paragraph",
+					"data": {
+						"text": " Pour les requ\u00eates DELETE \/ UPDATE : retourne le nombre de lignes impact\u00e9es"
+					}
+				},
+				{
+					"id": "6qp9dxtMnt",
+					"type": "code",
+					"data": {
+						"code": "protected static function db_exec($sql, $datas = NULL) {\n    $oDb = new Db;\n    $oDb->db_query($sql, $datas);\n    return array('table' => $oDb->res, 'rowCount' => $oDb->rowCount);\n  }"
+					}
+				},
+				{
+					"id": "mzV0SLZbWL",
+					"type": "paragraph",
+					"data": {
+						"text": "Exemple d'utilisation : UPDATE et DELETE"
+					}
+				},
+				{
+					"id": "jCLjxeNwvJ",
+					"type": "code",
+					"data": {
+						"code": "$sql = 'UPDATE maTable \n        SET updated = 0 \n        WHERE qqchose = :qqchose';\n    $datas = [':qqchose ' => qqchose ];\n    return parent::db_exec($sql, $datas);\n\n\n$sql = 'DELETE FROM  maTable \n         WHERE qqchose =:qqchose';\n$datas = [':qqchose ' => qqchose ];\nreturn self::db_exec($sql);"
 					}
 				}
 			],
@@ -1656,13 +1844,13 @@
 	"premier-module": {
 		"title": "Premier module",
 		"content": {
-			"time": 1686299917284,
+			"time": 1689856347167,
 			"blocks": [
 				{
 					"id": "4IZic6xT3p",
 					"type": "paragraph",
 					"data": {
-						"text": "Ici nous expliquerons comment cr\u00e9er son premier apr\u00e8s avoir install\u00e9 le framework<br>"
+						"text": "Ici nous expliquerons comment cr\u00e9er son premier module apr\u00e8s avoir install\u00e9 le framework<br>"
 					}
 				}
 			],
@@ -1787,7 +1975,7 @@
 	"fonctions.js": {
 		"title": "Fonctions Javascript",
 		"content": {
-			"time": 1686519554357,
+			"time": 1686922671089,
 			"blocks": [
 				{
 					"id": "H2u-cGayZX",
@@ -2137,6 +2325,13 @@
 					"type": "code",
 					"data": {
 						"code": "const obj1 = {\n  name: 'John',\n  age: 30,\n  address: {\n    street: '123 Main St',\n    city: 'Anytown',\n    state: 'CA'\n  }\n};\n\nconst obj2 = {\n  age: 35,\n  address: {\n    city: 'Othertown'\n  },\n  phone: '555-555-1212'\n};\n\nconst mergedObj = deepMerge(obj1, obj2);\n\nconsole.log(mergedObj);\n\/*\nAffiche:\n{\n  name: 'John',\n  age: 35,\n  address: {\n    street: '123 Main St',\n    city: 'Othertown',\n    state: 'CA'\n  },\n  phone: '555-555-1212'\n}\n*\/"
+					}
+				},
+				{
+					"id": "-e6bcUIFAB",
+					"type": "raw",
+					"data": {
+						"html": "<hr>"
 					}
 				},
 				{
