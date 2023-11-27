@@ -1,21 +1,24 @@
 {
-	"debug": true,
-	"autodebug": false,
-	"title": "Framework Sidunis",
-	"core": {
-		"path": "cores/core/"
-	},
-	"documentation": {
-		"editmode": false
-	},
-	"twig": {
-		"templates": "templates/",
-		"extensions": ["\\Core\\Twig\\TranslatorExtension", "\\Twig\\Extra\\Inky\\InkyExtension"]
-	},
-	"rootUrl": "/",
-	"domain": {
-		"dev": "https://dev.example.com",
-		"prod": "https://www.example.com"
-	},
-	"expiration_session": "+ 1 day"
+    "debug": true,
+    "autodebug": false,
+    "title": "Framework Sidunis",
+    "core": {
+        "path": "cores\/core\/"
+    },
+    "documentation": {
+        "editmode": false
+    },
+    "twig": {
+        "templates": "templates\/",
+        "extensions": [
+            "\\Core\\Twig\\TranslatorExtension",
+            "\\Twig\\Extra\\Inky\\InkyExtension"
+        ]
+    },
+    "rootUrl": "\/",
+    "domain": {
+        "dev": "https:\/\/dev.example.com",
+        "prod": "https:\/\/www.example.com"
+    },
+    "expiration_session": "+ 1 day"
 }
