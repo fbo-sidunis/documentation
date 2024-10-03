@@ -17,9 +17,7 @@ export let Recherche = (() => {
 			self.autocomplete.init();
 		},
 		init() {
-			loadClass("Autocomplete", LIBRARY_URL + "helpers/js/Autocomplete.js", () => {
-				self.initAutocomplete();
-			});
+			self.initAutocomplete();
 		},
 	};
 	return self;

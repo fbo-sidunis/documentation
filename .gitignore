@@ -1,5 +1,4 @@
 vendor
 .vscode
 logs
-.env
 node_modules

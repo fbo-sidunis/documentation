@@ -180,7 +180,7 @@ class Branch extends Tree
    */
   public function getScore(array $terms)
   {
-    $contenu = Content::getByFullPath($this->getFullPath())->getRawTextContent();
+    $contenu = Content::getByFullPath($this->getFullPath())?->getRawTextContent() ?: "";
     $score = 0;
     foreach ($terms as $term) {
       $score += substr_count(self::cleanString($this->title), self::cleanString($term)) * 2;

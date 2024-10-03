@@ -116,10 +116,10 @@ export let Page = (() => {
         },
         callback: response => {
           self.data.fullPath = fullPath;
-          self.data.title = response.data.title;
-          self.data.content = response.data.page;
-          self.title.innerText = response.data.title ?? "Aucun titre";
-          self.content.innerHTML = response.data.page ? self.parser.parse(response.data.page) : "Aucun contenu";
+          self.data.title = response.datas.title;
+          self.data.content = response.datas.page;
+          self.title.innerText = response.datas.title ?? "Aucun titre";
+          self.content.innerHTML = response.datas.page ? self.parser.parse(response.datas.page) : "Aucun contenu";
           hljs.highlightAll();
           if (parseInt(EDITPAGE)){
             self.btnEdition.dataset.fullPath = fullPath;

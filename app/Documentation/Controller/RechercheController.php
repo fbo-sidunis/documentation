@@ -14,12 +14,15 @@ class RechercheController extends Controller
     $terms = array_filter(explode(" ", $q));
     $recherche = new Recherche($terms);
     $results = $recherche->search();
-    $results = array_map(fn ($branch) => [
+    $results = array_map(fn($branch) => [
       "title" => $branch->getFilArianeString(),
       "fullPath" => $branch->getFullPath(),
     ], $results);
-    return successResponse([
-      "choices" => $results,
+    return jsonResponse([
+      "success" => 1,
+      "result" => 1,
+      "message" => "Recherche effectuée",
+      "data" => ["choices" => $results],
     ]);
   }
 }
